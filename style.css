@@ -17,6 +17,7 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    border-bottom: 4px solid #01A9C6;
 }
 
 .navbar_container{
@@ -103,5 +104,49 @@
     padding: 10px;
 }
 
+.projects{
+    background: #fff;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    padding: 3rem 0;
+}
+
+.projects h1{
+    color:#01A9C6;
+    padding:15px;
+    font-size: 40px;
+}
+
+.projects_list{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr;
+}
+
+.projects_card{
+    margin:30px;
+    height: 425px;
+    width: 300px;
+    display:flex;
+    flex-direction:column;
+    justify-content:top;
+    color:#fff;
+    background:#000000;
+    border: 10px solid #000000;
+    font-size:18px;
+
+}
+
+.github_button{
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    justify-content:bottom;
+    
+    bottom:0;
+}
 
 
