@@ -3,17 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">    
 </head>
 <body>
-    <div>
-        <div>
-        <h1 title="Header">Jackson Nace</h1>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="navbar_container">
+            <img src="img/jacksonpxiel.png" alt="my face">
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="#home" class="navbar_links" id="home-page">Home</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="#projects" class="navbar_links" id="projects-page">Projects</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="#goals" class="navbar_links" id="goals-page">Goals</a>
+                </li>
+                <li class="navbar_btn">
+                    <a href="#contact" class="navbar_links" id="contact-page">Contact</a>
+                </li>
+            </ul>
         </div>
-        <h2 title="Job">Software Engineer + Computer Engineering Analytics Student @ UH</h2>
-        <p title="Description">Hi! My name is Jackson Nace, its great to see you took interest in my skills! I am a Software Engineer always looking for new opportunities. My hobbies include kickboxing, eating good food, and watching movies!</p>
+    </nav>
+    <!-- https://www.youtube.com/watch?v=0pBAfkZMKy0 -->
+    <!-- main hero section -->
+    <div class="hero" id="home">
+        <div class="hero_container">
+            <img class ="iconofme" src="https://media.licdn.com/dms/image/C5603AQGkk1jRUaCDVA/profile-displayphoto-shrink_400_400/0/1667864775517?e=1701302400&v=beta&t=QcEdJjBv3Y87BkxWUQ7TyBGUv1RJ029OxhEsBdhIQkY" alt="try again">
+            <!-- <img class ="iconofme" src="img/pythonimage.png" alt="reload the page, this is my tech stack!"> -->
+            <h1 class="hero_heading">Jackson Nace</h1>
+            <p class="hero_role" ><i>Software Engineer and Computer Science Student @ University of Houston</i></p>
+            <div class="tech_stack">
 
+            </div>
+            <p class="hero_description"> I am a software engineer very interested in things like web development, data visualization, and am looking into cloud technologies.<br> Hobbies of mine include kickboxing, watching tech videos, and struggling to cook. <br><br>Feel free to message me on Linkedin, check out my Github, or peek at my resume! </p>  
+            
+            <div>
+                <a href="https://www.linkedin.com/in/jacksonnace/" target="_blank"> <img class ="row" src="img/linkedinlogo.png" alt="Reload the page, this is my linkedin!"></a>
+                <a href="https://github.com/JacksonNace" target="_blank"> <img class ="row" src="img/gitublogo.png" alt="Reload the page, this is my GitHub profile!"></a>
+                <a href="img/Jackson_s_Resume.jpg" target="_blank"> <img class ="row" src="img/resumeportfolio.png" alt="Reload the page, this is my resume!"></a>   
+            </div>
+
+        </div>
     </div>
+    <!-- Projects Section -->
+    <script src="app.js"></script>
 </body>
 </html>
