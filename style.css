@@ -154,21 +154,32 @@
     border-radius: 20px;
 }
 
+@media screen and (max-width: 1300px) {
+    .projects_list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 768px) {
+    .projects_list {
+        grid-template-columns:1fr;
+    }
+}
+
 .buttons{
     background:#333333;
     justify-content:center;
-    position:bottom;
+    position:flex;
+    bottom: 0;
     height:60px;
     margin:0;
     padding:0;
-    display:flex;
+    display: flex;
     border-radius: 12px;
 
 }
 .glinkbox{
     background:#333333;
     justify-content:center;
-    position:bottom;
     height:60px;
     width:146px;
     display:flex;
