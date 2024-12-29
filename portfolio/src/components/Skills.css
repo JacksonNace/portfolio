@@ -1,0 +1,23 @@
+.coding-languages img,
+.technologies img {
+  max-width: 100px;
+  max-height: 100px;
+  /* width: 100%; */
+  height: auto;
+}
+
+.coding-languages,
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .coding-languages img,
+  .technologies img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
