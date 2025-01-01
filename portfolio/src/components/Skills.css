@@ -1,23 +1,67 @@
-.coding-languages img,
-.technologies img {
-  max-width: 100px;
-  max-height: 100px;
-  /* width: 100%; */
-  height: auto;
+.skills-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 30px;
+  padding: 20px;
+}
+
+.skills-section {
+  width: 100%;
+  display: block; 
+  margin-bottom: 20px; 
+}
+
+.skills-title {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .coding-languages,
 .technologies {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  display: flex; 
+  flex-wrap: wrap;   
+  gap: 20px;    
+  justify-content: center; 
 }
 
-@media (max-width: 600px) {
+.coding-languages img,
+.technologies img {
+  max-width: 100px;
+  height: auto;
+}
+
+
+@media (max-width: 1200px) {
+  .skills-title {
+    font-size: 1.3rem;
+  }
+
+  .coding-languages img,
+  .technologies img {
+    max-width: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 1.2rem;
+  }
+
   .coding-languages img,
   .technologies img {
     max-width: 80px;
-    max-height: 80px;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-title {
+    font-size: 1rem;
+  }
+
+  .coding-languages img,
+  .technologies img {
+    max-width: 70px;
   }
 }
