@@ -1,25 +1,27 @@
 /* Hero.css */
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: lightblue; /* Dark brown background */
-  color: #5C4033; /* White text color */
-  padding: 20px;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  height: 100vh; /* Full screen height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #AEDCAE; /* Dark brown background */
+  background-color: lightblue; /* Dark brown background */
   color: #5C4033; /* White text color */
-  padding: 20px;
   text-align: center;
   font-family: 'Arial', sans-serif;
+  height: 100vh; /* Full screen height */
+  height: 100vh; /* Full screen height */
+  width: 100vw; /* Full screen width */
 }
 
 .hero-content {

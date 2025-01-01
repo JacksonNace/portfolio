@@ -17,31 +17,7 @@
 .profile-image {
   max-width: 200px;
   height: auto;
-  border-radius: 50%;
-}
-
-@media (min-width: 768px) {
-  .about-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .about-text {
-    text-align: left;
-    margin-right: 20px;
-    flex: 1;
-  }
-
-  .about-image {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .profile-image {
-    max-width: 200px;
-  }
+  border-radius: 5%;
 }
 
 .about-image {
@@ -49,11 +25,6 @@
   justify-content: center;
 }
 
-.profile-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
 
 @media (min-width: 768px) {
   .about-container {

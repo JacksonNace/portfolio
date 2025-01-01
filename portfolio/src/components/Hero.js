@@ -1,9 +1,9 @@
 import React from 'react';
-import Skills from './Skills';
 import './Hero.css'; 
 import me from '../images/ichigopfp.jpg';
 import GithubImage from '../images/Github.svg'; 
 import LinkedinImage from '../images/LinkedIn.png';
+
 
 const Hero = () => {
   return (
@@ -23,9 +23,6 @@ const Hero = () => {
           <a href="https://www.linkedin.com/in/jacksonnace/" target="_blank" rel="noopener noreferrer">
             <img src={LinkedinImage} alt="LinkedIn" />
           </a>
-        </div>
-        <div className="hero-skills">
-          <Skills />  
         </div>
       </div>
     </section>
