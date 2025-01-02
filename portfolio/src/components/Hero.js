@@ -10,8 +10,10 @@ const Hero = () => {
     <section className="hero">
       <div className="hero-content">
         <div className="hero-text">
-          <h1>Welcome to My Portfolio</h1>
-          <p>Hi, I'm Jackson. I am a student djeowfjoijweifkepqwjdqpiwjepowjpejpjr</p>
+          <h1>Hey, I'm Jackson!</h1>
+          <p>Studying computer science with a minor in math @ the University of Houston.</p>
+          <h3>Working @ University of Houston</h3>
+          <h3>Developing solutions 4 hackathons @ CodeRED</h3>
         </div>
         <div className="hero-image">
           <img src={me} alt="profile picture" />

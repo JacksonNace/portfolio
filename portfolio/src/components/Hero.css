@@ -89,7 +89,11 @@ html, body {
 
 .hero p {
   font-size: 1em;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+.hero h3{
+  font-size:0.9em;
+  margin-bottom:10px;
 }
 
 .hero button {
