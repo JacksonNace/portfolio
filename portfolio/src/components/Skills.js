@@ -27,9 +27,9 @@ function Skills() {
           <img src={cppImage} alt="C++" />
           <img src={pythonImage} alt="Python" />
           <img src={JavaScriptImage} alt="JavaScript" />
-          <img src={LuaImage} alt="Lua" />
-          <img src={RImage} alt="R" />
           <img src={SQLImage} alt="SQL" />
+          <img src={RImage} alt="R" />
+          <img src={LuaImage} alt="Lua" />
         </div>
       </div>
       <div className="skills-section">
