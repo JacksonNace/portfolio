@@ -35,14 +35,14 @@ function Skills() {
       <div className="skills-section">
         <h2 className="skills-title">Technologies</h2>
         <div className="technologies">
-          <img src={AWSImage} alt="AWS" />
-          <img src={AzureImage} alt="Azure" />
-          <img src={CloudflareImage} alt="Cloudflare" />
-          <img src={GitImage} alt="Git" />
-          <img src={LinuxImage} alt="Linux" />
-          <img src={PostmanImage} alt="Postman" />
           <img src={ReactImage} alt="React" />
+          <img src={GitImage} alt="Git" />
+          <img src={AzureImage} alt="Azure" />
+          <img src={AWSImage} alt="AWS" />
+          <img src={LinuxImage} alt="Linux" />
           <img src={WindowsImage} alt="Windows" />
+          <img src={CloudflareImage} alt="Cloudflare" />
+          <img src={PostmanImage} alt="Postman" />
         </div>
       </div>
     </div>

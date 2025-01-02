@@ -18,20 +18,20 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: lightblue; /* Dark brown background */
-  color: #5C4033; /* White text color */
+  background-color: lightblue;
+  color: #5C4033;
   text-align: center;
   font-family: 'Arial', sans-serif;
-  height: 100vh; /* Full screen height */
-  height: 100vh; /* Full screen height */
-  width: 100vw; /* Full screen width */
-  padding: 50px 0;
+  height: 100vh;
+  height: 100vh;
+  width: 100vw;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding:30vh 0;
 }
 
 .hero-text {
@@ -75,7 +75,7 @@ html, body {
 }
 
 .hero-skills .skills-box {
-  background-color: #5d4037; /* Medium brown background */
+  background-color: #5d4037;
   padding: 20px;
   border-radius: 10px;
   width: 80%;
@@ -93,7 +93,7 @@ html, body {
 }
 
 .hero button {
-  background-color: #5d4037; /* Medium brown button */
+  background-color: #5d4037;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
@@ -103,7 +103,7 @@ html, body {
 }
 
 .hero button:hover {
-  background-color: #4e342e; /* Darker brown on hover */
+  background-color: #4e342e;
 }
 
 @media (min-width: 768px) {

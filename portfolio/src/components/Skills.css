@@ -23,16 +23,19 @@
 .technologies {
   display: flex; 
   flex-wrap: wrap;   
-  gap: 20px;    
+  gap: 10px;
   justify-content: center; 
 }
 
 .coding-languages img,
 .technologies img {
-  max-width: 100px;
+  max-width: 120px;
   height: auto;
+  background-color: #666666;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
 
 @media (max-width: 1200px) {
   .skills-title {
@@ -41,7 +44,7 @@
 
   .coding-languages img,
   .technologies img {
-    max-width: 90px;
+    max-width: 110px;
   }
 }
 
@@ -52,7 +55,7 @@
 
   .coding-languages img,
   .technologies img {
-    max-width: 80px;
+    max-width: 100px;
   }
 }
 
@@ -63,6 +66,6 @@
 
   .coding-languages img,
   .technologies img {
-    max-width: 70px;
+    max-width: 90px;
   }
 }
