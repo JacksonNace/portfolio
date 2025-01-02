@@ -34,7 +34,7 @@ function Experience() {
       jobTitle: "Programming Tutor",
       description: [
         "Conducted 150+ personalized lessons for students aged 8-16.",
-        "Effectively planned, organized, and executed lessons in Python and Lua.",
+        "Effectively planned, organized, and executed lessons in Python, Lua, and Roblox Studio.",
       ],
       imageUrl: CoderKidsLogo
     }
