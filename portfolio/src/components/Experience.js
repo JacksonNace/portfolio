@@ -1,8 +1,8 @@
 import React from 'react';
 import './Experience.css';
-// import UHLogo from '../images/UH.png';
-// import LavnerLogo from '../images/Lavner.webp';
-// import CoderKidsLogo from '../images/CoderKids.png';
+import UHLogo from '../images/UH.png';
+import LavnerLogo from '../images/Lavner.webp';
+import CoderKidsLogo from '../images/CoderKids.png';
 
 function Experience() {
   const experiences = [
@@ -15,7 +15,7 @@ function Experience() {
         "Installed new technology and learned foundational skills in re-imaging, Active Directory, diagnostics, and BIOS.",
         "Utilized Excel to manage and maintain an inventory of 110+ devices, including Computers, Simulation Robots, iPads, Cameras, and Printers ensuring optimal performance and timely updates."
       ],
-      //imageUrl: UHLogo
+      imageUrl: UHLogo
     },
     {
       company: "Lavner Education",
@@ -26,7 +26,7 @@ function Experience() {
         "Independently led classes of up to 25 students in topics like High School C++, Python, Intro to AI, and multiple variations of Robotics classes.",
         "Ended my internship teaching over 200+ students."
       ],
-      //imageUrl: LavnerLogo
+      imageUrl: LavnerLogo
     },
     {
       company: "Coder Kids",
@@ -36,7 +36,7 @@ function Experience() {
         "Conducted 150+ personalized lessons for students aged 8-16.",
         "Effectively planned, organized, and executed lessons in Python, Lua, and Roblox Studio.",
       ],
-      // imageUrl: CoderKidsLogo
+      imageUrl: CoderKidsLogo
     }
   ];
 
@@ -44,11 +44,11 @@ function Experience() {
     <div className="experience-container">
       {experiences.map((experience, index) => (
         <div className="experience-box" key={index}>
-          {/* <img
+          <img
             src={experience.imageUrl}
             alt={`${experience.company} logo`}
             className="experience-image"
-          /> */}
+          />
           <h3 className="experience-company">{experience.company}</h3>
           <p className="experience-date">{experience.date}</p>
           <h4 className="experience-jobTitle">{experience.jobTitle}</h4>
