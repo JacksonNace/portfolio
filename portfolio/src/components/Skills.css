@@ -1,7 +1,7 @@
 .skills-container {
   display: flex;
   flex-direction: column; 
-  gap: 30px;
+  gap: 10px;
   padding: 20px;
   background-color: lightblue;
 }
@@ -9,14 +9,7 @@
 .skills-section {
   width: 100%;
   display: block; 
-  margin-bottom: 20px; 
-}
-
-.skills-title {
-  font-size: 1.5rem;
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px; 
 }
 
 .coding-languages,
@@ -29,7 +22,7 @@
 
 .coding-languages img,
 .technologies img {
-  max-width: 120px;
+  max-width: 100px;
   height: auto;
   background-color: #666666;
   border-radius: 10px;
@@ -45,10 +38,6 @@
 }
 
 @media (max-width: 1200px) {
-  .skills-title {
-    font-size: 1.3rem;
-  }
-
   .coding-languages img,
   .technologies img {
     max-width: 110px;
@@ -56,10 +45,6 @@
 }
 
 @media (max-width: 768px) {
-  .skills-title {
-    font-size: 1.2rem;
-  }
-
   .coding-languages img,
   .technologies img {
     max-width: 100px;
@@ -67,10 +52,6 @@
 }
 
 @media (max-width: 500px) {
-  .skills-title {
-    font-size: 1rem;
-  }
-
   .coding-languages img,
   .technologies img {
     max-width: 90px;

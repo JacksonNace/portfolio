@@ -22,7 +22,6 @@ function Skills() {
   return (
     <div className="skills-container">
       <div className="skills-section">
-        <h2 className="skills-title">Coding Languages</h2>
         <div className="coding-languages">
           <img src={cppImage} alt="C++" />
           <img src={pythonImage} alt="Python" />
@@ -33,7 +32,6 @@ function Skills() {
         </div>
       </div>
       <div className="skills-section">
-        <h2 className="skills-title">Technologies</h2>
         <div className="technologies">
           <img src={ReactImage} alt="React" />
           <img src={GitImage} alt="Git" />
