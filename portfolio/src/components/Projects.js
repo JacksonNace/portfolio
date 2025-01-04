@@ -6,7 +6,40 @@ function Projects() {
 
   const projects = [
     {
-      id: 1,
+      id: 7,
+      title: "CodeRED 2025",
+      imageUrl: "www.google.com", 
+      technologies: ["Supabase, NextJS, TailwindCSS, Cloudflare"],
+      description: [
+        "Lead CodeRED Web dev team to build our main site, linking to all our previous hackathons.",
+        " ",
+      ],
+      githubLink: "https://github.com/JacksonNace/portfolio", // i have a conditional check in the JSX below that checks if the GithubLink is valid
+    },
+    {
+      id: 8,
+      title: "CodeRED Discord Bot",
+      imageUrl: "www.google.com", 
+      technologies: ["Go"],
+      description: [
+        "Built basic discord bot",
+        " ",
+      ],
+      githubLink: "https://github.com/JacksonNace/portfolio", // i have a conditional check in the JSX below that checks if the GithubLink is valid
+    },
+    {
+      id: 9,
+      title: "CodeRED Main Site",
+      imageUrl: "www.google.com", 
+      technologies: ["NextJS, TailwindCSS"],
+      description: [
+        "Lead CodeRED Web dev team to build our main site, linking to all our previous hackathons.",
+        " ",
+      ],
+      githubLink: "https://github.com/JacksonNace/portfolio", // i have a conditional check in the JSX below that checks if the GithubLink is valid
+    },
+    {
+      id: 10,
       title: "Portfolio Website",
       imageUrl: "www.google.com", 
       technologies: ["React, JavaScript, Azure Function, CosmosDB"],
@@ -17,7 +50,7 @@ function Projects() {
       githubLink: "https://github.com/JacksonNace/portfolio", // i have a conditional check in the JSX below that checks if the GithubLink is valid
     },
     {
-      id: 2,
+      id: 11,
       title: "CodeRED Astra 2024",
       imageUrl: "www.google.com", 
       technologies: ["React", "JavaScript"],
@@ -29,7 +62,7 @@ function Projects() {
       githubLink: null,
     },
     {
-      id: 3,
+      id: 12,
       title: "Bleach RPG",
       imageUrl: "www.google.com", 
       technologies: ["C++"], 
@@ -40,7 +73,7 @@ function Projects() {
       githubLink: "https://github.com/JacksonNace/BleachRPG",
     },
     {
-      id: 4,
+      id: 13,
       title: "Mockey Interview - HackTX 2024",
       imageUrl: "www.google.com", 
       technologies: ["PostgreSQL", "NodeJS", "NextJS"],
@@ -52,7 +85,7 @@ function Projects() {
       githubLink: "https://github.com/JacksonNace/MockeyInterview-HackTX",
     },
     {
-      id: 5,
+      id: 14,
       title: "MarketMentor - HackRice 2024",
       imageUrl: "www.google.com", 
       technologies: ["React", "CSS", "HTML"],
