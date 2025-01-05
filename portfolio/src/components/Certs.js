@@ -28,7 +28,7 @@ function Certs() {
 
   return (
     <div className="Cert-container">
-      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="false">
         <div className="carousel-inner">
           {certificates.map((cert, index) => (
             <div

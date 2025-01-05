@@ -1,6 +1,12 @@
 import React from "react";
 import "./Projects.css";
+
+//socials
 import GithubLogo from "../images/Github.svg"
+
+// projects
+import BleachRPG from "../images/projects/BleachRPG.jpg"
+import MockeyInterview from "../images/projects/MockeyInterview.jpg"
 
 function Projects() {
 
@@ -64,7 +70,7 @@ function Projects() {
     {
       id: 12,
       title: "Bleach RPG",
-      imageUrl: "www.google.com", 
+      imageUrl: BleachRPG, 
       technologies: ["C++"], 
       description: [
         "Created a turn-based battle system inspired by Bleach, with mechanics using inheritance and polymorphism.",
@@ -75,7 +81,7 @@ function Projects() {
     {
       id: 13,
       title: "Mockey Interview - HackTX 2024",
-      imageUrl: "www.google.com", 
+      imageUrl: MockeyInterview, 
       technologies: ["PostgreSQL", "NodeJS", "NextJS"],
       description: [
         "Built a mock interview platform for HackTX 2024.",
