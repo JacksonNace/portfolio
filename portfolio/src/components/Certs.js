@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Certs.css';
 import AzureImg from "../images/azure.png";
-import bleach from "../images/ichigopfp.jpg";
+import SecurityImg from "../images/security.jpg"
 
 function Certs() {
   const certificates = [
@@ -9,13 +9,13 @@ function Certs() {
       id: 1,
       src: AzureImg,
       title: 'Microsoft Azure Fundamentals',
-      description: 'This is the Microsoft Azure Fundamentals certification.',
+      description: 'Studied for and obtained my AZ-900 in January 2024. ',
     },
     {
       id: 2,
-      src: bleach,
-      title: 'Certificate 2',
-      description: 'This is another certificate description.',
+      src: SecurityImg,
+      title: 'CompTIA Security+',
+      description: 'studying rn  for this, unfortunate',
     },
   ];
 
