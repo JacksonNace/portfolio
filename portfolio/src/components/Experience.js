@@ -1,8 +1,8 @@
 import React from 'react';
 import './Experience.css';
-import UHLogo from '../images/UH.png';
-import LavnerLogo from '../images/Lavner.webp';
-import CoderKidsLogo from '../images/CoderKids.png';
+import UHLogo from '../images/experience/UH.png';
+import LavnerLogo from '../images/experience/Lavner.webp';
+import CoderKidsLogo from '../images/experience/CoderKids.png';
 
 function Experience() {
   const experiences = [

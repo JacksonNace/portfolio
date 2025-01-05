@@ -1,8 +1,8 @@
 import React from 'react';
 import './Hero.css'; 
 import me from '../images/ichigopfp.jpg';
-import GithubImage from '../images/Github.svg'; 
-import LinkedinImage from '../images/LinkedIn.png';
+import GithubImage from '../images/socials/Github.svg'; 
+import LinkedinImage from '../images/socials/LinkedIn.png';
 
 
 const Hero = () => {

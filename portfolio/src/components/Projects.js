@@ -2,11 +2,13 @@ import React from "react";
 import "./Projects.css";
 
 //socials
-import GithubLogo from "../images/Github.svg"
+import GithubLogo from "../images/socials/Github.svg"
+import YoutubeLogo from "../images/socials/Youtube.png"
 
 // projects
 import BleachRPG from "../images/projects/BleachRPG.jpg"
 import MockeyInterview from "../images/projects/MockeyInterview.jpg"
+import MarketMentor from "../images/projects/MarketMentor.jpg"
 
 function Projects() {
 
@@ -20,7 +22,12 @@ function Projects() {
         "Lead CodeRED Web dev team to build our main site, linking to all our previous hackathons.",
         " ",
       ],
-      githubLink: "https://github.com/JacksonNace/portfolio", // i have a conditional check in the JSX below that checks if the GithubLink is valid
+      social: [
+        // { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        // { type: "youtube", link: "https://youtube.com" }
+      ],
+      
+      // githubLink: "https://github.com/JacksonNace/portfolio", // i have a conditional check in the JSX below that checks if the GithubLink is valid
     },
     {
       id: 8,
@@ -31,7 +38,10 @@ function Projects() {
         "Built basic discord bot",
         " ",
       ],
-      githubLink: "https://github.com/JacksonNace/portfolio", // i have a conditional check in the JSX below that checks if the GithubLink is valid
+      social: [
+        // { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        // { type: "youtube", link: "https://youtube.com" }
+      ],
     },
     {
       id: 9,
@@ -42,7 +52,10 @@ function Projects() {
         "Lead CodeRED Web dev team to build our main site, linking to all our previous hackathons.",
         " ",
       ],
-      githubLink: "https://github.com/JacksonNace/portfolio", // i have a conditional check in the JSX below that checks if the GithubLink is valid
+      social: [
+        // { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        // { type: "youtube", link: "https://youtube.com" }
+      ],
     },
     {
       id: 10,
@@ -53,7 +66,10 @@ function Projects() {
         "yeppers",
         " cloud resume challenge.",
       ],
-      githubLink: "https://github.com/JacksonNace/portfolio", // i have a conditional check in the JSX below that checks if the GithubLink is valid
+      social: [
+        { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        // { type: "youtube", link: "https://youtube.com" }
+      ],
     },
     {
       id: 11,
@@ -65,7 +81,10 @@ function Projects() {
         "Prepared for CodeRED Astra 2024.",
         "Used libraries like Ant Design.",
       ],
-      githubLink: null,
+      social: [
+        // { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        // { type: "youtube", link: "https://youtube.com" }
+      ],
     },
     {
       id: 12,
@@ -76,7 +95,10 @@ function Projects() {
         "Created a turn-based battle system inspired by Bleach, with mechanics using inheritance and polymorphism.",
         "Developed a save/load system with file handling to ensure seamless continuation of gameplay sessions",
       ], 
-      githubLink: "https://github.com/JacksonNace/BleachRPG",
+      social: [
+        { type: "github", link: "https://github.com/JacksonNace/BleachRPG" },
+        { type: "youtube", link: "https://www.youtube.com/watch?v=ex_-Qy1oqus&t=2s" }
+      ],
     },
     {
       id: 13,
@@ -88,19 +110,24 @@ function Projects() {
         "Engineered a mock interview game with Next.js and PostgreSQL, securing player data with password hashing and JWT - Hosted using Neon.",
         "Integrated Claude AI as a virtual interviewer, offering real-time prompts and feedback on data structure tasks.",
       ], 
-      githubLink: "https://github.com/JacksonNace/MockeyInterview-HackTX",
+      social: [
+        { type: "github", link: "https://github.com/JacksonNace/MockeyInterview-HackTX" },
+      ],
     },
     {
       id: 14,
       title: "MarketMentor - HackRice 2024",
-      imageUrl: "www.google.com", 
+      imageUrl: MarketMentor, 
       technologies: ["React", "CSS", "HTML"],
       description: [
         "Created a website to trade stocks with fake cash, connecting to the Llama API and displaying graphs.",
         "Developed and integrated the Google Gemini API, enabling seamless data retrieval and enhancing app functionality.",
         "Leveraged Postman to troubleshoot 7 API calls, ensuring smooth interaction between the frontend and backend",
       ], 
-      githubLink: "https://github.com/JacksonNace/MarketMentor-HackRice",
+      social: [
+        { type: "github", link: "https://github.com/JacksonNace/MarketMentor-HackRice" },
+        { type: "youtube", link: "https://www.youtube.com/watch?v=yuofK7RWgjU" }
+      ],
     },
   ];
 
@@ -108,11 +135,7 @@ function Projects() {
     <div className="projects-container">
       {projects.map((project) => (
         <div key={project.id} className="project-card">
-          <img
-            src={project.imageUrl} 
-            alt={project.title} 
-            className="project-image" 
-          />
+          <img src={project.imageUrl} alt={project.title} className="project-image" />
           <h3 className="project-title">{project.title}</h3>
           <ul className="project-technologies">
             {project.technologies.map((tech, index) => (
@@ -125,14 +148,28 @@ function Projects() {
             ))}
           </ul>
 
-          <div className="github-logo-container"> {/*conditional github logo*/} 
-            {project.githubLink && (
+          {/* <div className="github-logo-container"> {/*conditional github logo*/} 
+            {/* {project.githubLink && (
               <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
                 <img src={GithubLogo} alt="GitHub Logo" className="github-logo" />
               </a>
             )}
-
+          </div> */}
+          <div className="social-links">
+            {project.social && project.social.map((item, index) => (
+              <a 
+                key={index}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`social-icon ${item.type}`}
+              >
+                {item.type === "github" && <img src={GithubLogo} alt="GitHub Link" />}
+                {item.type === "youtube" && <img src={YoutubeLogo} alt="YouTube Link" />}
+              </a>
+            ))}
           </div>
+          
         </div>
       ))}
     </div>

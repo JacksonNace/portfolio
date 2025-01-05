@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Certs.css';
-import AzureImg from "../images/azure.png";
-import SecurityImg from "../images/security.jpg"
+import AzureImg from "../images/certs/azure.png";
+import SecurityImg from "../images/certs/security.jpg"
 
 function Certs() {
   const certificates = [
