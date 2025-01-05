@@ -4,6 +4,8 @@ import me from '../images/ichigopfp.jpg';
 import GithubImage from '../images/socials/Github.svg'; 
 import LinkedinImage from '../images/socials/LinkedIn.png';
 
+import Skills from "./Skills";
+import "./Skills.css";
 
 const Hero = () => {
   return (
@@ -26,6 +28,9 @@ const Hero = () => {
             <img src={LinkedinImage} alt="LinkedIn" />
           </a>
         </div>
+      </div>
+      <div className="skills-container">
+        <Skills />
       </div>
     </section>
   );

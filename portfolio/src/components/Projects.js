@@ -9,7 +9,8 @@ import YoutubeLogo from "../images/socials/Youtube.png"
 import BleachRPG from "../images/projects/BleachRPG.jpg"
 import MockeyInterview from "../images/projects/MockeyInterview.jpg"
 import MarketMentor from "../images/projects/MarketMentor.jpg"
-
+import AstraLogo from "../images/projects/Astra.png"
+import DiscordLogo from "../images/projects/Discord.jpg"
 function Projects() {
 
   const projects = [
@@ -32,7 +33,7 @@ function Projects() {
     {
       id: 8,
       title: "CodeRED Discord Bot",
-      imageUrl: "www.google.com", 
+      imageUrl: DiscordLogo, 
       technologies: ["Go"],
       description: [
         "Built basic discord bot",
@@ -74,7 +75,7 @@ function Projects() {
     {
       id: 11,
       title: "CodeRED Astra 2024",
-      imageUrl: "www.google.com", 
+      imageUrl: AstraLogo, 
       technologies: ["React", "JavaScript"],
       description: [
         "Built 8 frontend components in React.",
