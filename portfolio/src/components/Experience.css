@@ -13,7 +13,7 @@
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 250px;
+  width: 500px;
   text-align: left;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
@@ -22,16 +22,22 @@
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
+.image-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  
+}
 .experience-image {
   width: 80%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 10px;
+  max-width:200px;
 }
 
 .experience-company {
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: black;
   margin: 8px 0;

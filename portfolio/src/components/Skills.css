@@ -21,7 +21,7 @@
 
 .coding-languages img,
 .technologies img {
-  max-width: 70px;
+  max-width: 100px;
   height: auto;
   background-color: #666666;
   border-radius: 10px;
@@ -39,14 +39,14 @@
 @media (max-width: 1200px) {
   .coding-languages img,
   .technologies img {
-    max-width: 110px;
+    max-width: 90px;
   }
 }
 
 @media (max-width: 768px) {
   .coding-languages img,
   .technologies img {
-    max-width: 100px;
+    max-width: 80px;
   }
 
   .skills-container{
@@ -57,6 +57,6 @@
 @media (max-width: 500px) {
   .coding-languages img,
   .technologies img {
-    max-width: 90px;
+    max-width: 50px;
   }
 }

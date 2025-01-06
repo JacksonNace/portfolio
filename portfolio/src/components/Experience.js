@@ -33,7 +33,7 @@ function Experience() {
       date: "August 2023 - March 2024",
       jobTitle: "Programming Tutor",
       description: [
-        "Conducted 150+ personalized lessons for students aged 8-16.",
+        "Conducted 150+ personalized lessons for students aged 8-16.", //every comment or line is used as sentence variable below
         "Effectively planned, organized, and executed lessons in Python, Lua, and Roblox Studio.",
       ],
       imageUrl: CoderKidsLogo
@@ -44,17 +44,19 @@ function Experience() {
     <div className="experience-container">
       {experiences.map((experience, index) => (
         <div className="experience-box" key={index}>
-          <img
-            src={experience.imageUrl}
-            alt={`${experience.company} logo`}
-            className="experience-image"
-          />
+          <div className='image-container'>
+            <img
+              src={experience.imageUrl}
+              alt={`${experience.company} logo`}
+              className="experience-image"
+            />
+          </div>
           <h3 className="experience-company">{experience.company}</h3>
           <p className="experience-date">{experience.date}</p>
           <h4 className="experience-jobTitle">{experience.jobTitle}</h4>
           <ul className="experience-description">
-            {experience.description.map((point, idx) => (
-              <li key={idx}>{point}</li>
+            {experience.description.map((sentence, idx) => (
+              <li key={idx}>{sentence}</li>
             ))}
           </ul>
         </div>

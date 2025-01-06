@@ -29,3 +29,12 @@
   font-size: 1.2rem;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 30%;
+  background-size: contain;
+}
+
+
+
