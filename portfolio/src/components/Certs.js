@@ -33,7 +33,8 @@ function Certs() {
           {certificates.map((cert, index) => (
             <div
               key={cert.id}
-              className={`carousel-item ${index === activeIndex ? 'active' : ''}`}
+              className={`carousel-item ${
+                index === activeIndex ? 'active' : ''}`}
               onClick={() => setActiveIndex(index)}
             >
               <img src={cert.src} className="d-block w-100" alt={cert.title} />

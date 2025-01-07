@@ -7,6 +7,36 @@
   height:100vh;
 }
 
+.scrolling-images { 
+  top:0;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 150%;
+  height: 100px;
+  margin: 10px 0;
+}
+
+.image-loop {
+  display: flex;
+  animation: scroll 10s linear infinite;
+}
+
+.image-loop img {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 .about-text {
   display: flex;
   flex-direction: column;
@@ -51,3 +81,5 @@
     max-width: 300px;
   }
 }
+
+
