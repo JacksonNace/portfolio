@@ -1,29 +1,8 @@
-import React, { useEffect } from 'react'
 import './About.css'
-import ichigopfp from '../images/ichigopfp.jpg'
-import CoderKidLogo from '../images/experience/CoderKids.png';
-import LavnerLogo from '../images/experience/Lavner.webp';
-import UHLogo from '../images/experience/UH.png';
 
-
-// really badly broken image loop
-// https://codepen.io/kevinjannis/pen/DbOzJd
-// https://jsbin.com/jocekocuwe/edit?html,css,output
 function About() {
   return (
       <div className="about-container">
-        <div className="scrolling-images">
-          <div className="image-loop">
-            <img src={CoderKidLogo} alt="CoderKids Logo" />
-            <img src={LavnerLogo} alt="Lavner Logo" />
-            <img src={UHLogo} alt="UH Logo" />
-          </div>
-          <div className="image-loop">
-            <img src={CoderKidLogo} alt="CoderKids Logo" />
-            <img src={LavnerLogo} alt="Lavner Logo" />
-            <img src={UHLogo} alt="UH Logo" />
-          </div>
-        </div>
         <div className="about-text">
           <h1>About Me</h1>
           <p>
@@ -33,7 +12,7 @@ function About() {
           </p>
         </div>
         <div className="about-image">
-          <img src={ichigopfp} alt="profile picture" className= "profile-image"/>
+          <img src="images/ichigopfp.jpg" alt="profile picture" className= "profile-image"/>
         </div>
       </div>
       

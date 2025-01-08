@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
 import './Certs.css';
-import AzureImg from "../images/certs/azure.png";
-import SecurityImg from "../images/certs/security.jpg"
 
 function Certs() {
   const certificates = [
     {
       id: 1,
-      src: AzureImg,
+      src: "images/certs/azure.png",
       title: 'Microsoft Azure Fundamentals',
       description: 'Studied for and obtained my AZ-900 in January 2024. ',
     },
     {
       id: 2,
-      src: SecurityImg,
+      src: "images/certs/security.jpg",
       title: 'CompTIA Security+',
       description: 'studying rn  for this, unfortunate',
     },

@@ -1,8 +1,5 @@
 import React from 'react';
 import './Experience.css';
-import UHLogo from '../images/experience/UH.png';
-import LavnerLogo from '../images/experience/Lavner.webp';
-import CoderKidsLogo from '../images/experience/CoderKids.png';
 
 function Experience() {
   const experiences = [
@@ -15,7 +12,7 @@ function Experience() {
         "Installed new technology and learned foundational skills in re-imaging, Active Directory, diagnostics, and BIOS.",
         "Utilized Excel to manage and maintain an inventory of 110+ devices, including Computers, Simulation Robots, iPads, Cameras, and Printers ensuring optimal performance and timely updates."
       ],
-      imageUrl: UHLogo
+      imageUrl: "images/experience/UH.png"
     },
     {
       company: "Lavner Education",
@@ -26,7 +23,7 @@ function Experience() {
         "Independently led classes of up to 25 students in topics like High School C++, Python, Intro to AI, and multiple variations of Robotics classes.",
         "Ended my internship teaching over 200+ students."
       ],
-      imageUrl: LavnerLogo
+      imageUrl: "images/experience/Lavner.webp"
     },
     {
       company: "Coder Kids",
@@ -36,7 +33,7 @@ function Experience() {
         "Conducted 150+ personalized lessons for students aged 8-16.", //every comment or line is used as sentence variable below
         "Effectively planned, organized, and executed lessons in Python, Lua, and Roblox Studio.",
       ],
-      imageUrl: CoderKidsLogo
+      imageUrl: "images/experience/CoderKids.png"
     }
   ];
 

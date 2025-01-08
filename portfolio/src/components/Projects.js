@@ -1,16 +1,6 @@
 import React from "react";
 import "./Projects.css";
 
-//socials
-import GithubLogo from "../images/socials/Github.svg"
-import YoutubeLogo from "../images/socials/Youtube.png"
-
-// projects
-import BleachRPG from "../images/projects/BleachRPG.jpg"
-import MockeyInterview from "../images/projects/MockeyInterview.jpg"
-import MarketMentor from "../images/projects/MarketMentor.jpg"
-import AstraLogo from "../images/projects/Astra.png"
-import DiscordLogo from "../images/projects/Discord.jpg"
 function Projects() {
 
   const projects = [
@@ -33,7 +23,7 @@ function Projects() {
     {
       id: 8,
       title: "CodeRED Discord Bot",
-      imageUrl: DiscordLogo, 
+      imageUrl: "images/projects/Discord.jpg", 
       technologies: ["Go"],
       description: [
         "Built basic discord bot",
@@ -75,7 +65,7 @@ function Projects() {
     {
       id: 11,
       title: "CodeRED Astra 2024",
-      imageUrl: AstraLogo, 
+      imageUrl: "images/projects/Astra.png", 
       technologies: ["React", "JavaScript"],
       description: [
         "Built 8 frontend components in React.",
@@ -90,7 +80,7 @@ function Projects() {
     {
       id: 12,
       title: "Bleach RPG",
-      imageUrl: BleachRPG, 
+      imageUrl: "images/projects/BleachRPG.jpg", 
       technologies: ["C++"], 
       description: [
         "Created a turn-based battle system inspired by Bleach, with mechanics using inheritance and polymorphism.",
@@ -104,7 +94,7 @@ function Projects() {
     {
       id: 13,
       title: "Mockey Interview - HackTX 2024",
-      imageUrl: MockeyInterview, 
+      imageUrl: "images/projects/MockeyInterview.jpg", 
       technologies: ["PostgreSQL", "NodeJS", "NextJS"],
       description: [
         "Built a mock interview platform for HackTX 2024.",
@@ -118,7 +108,7 @@ function Projects() {
     {
       id: 14,
       title: "MarketMentor - HackRice 2024",
-      imageUrl: MarketMentor, 
+      imageUrl: "images/projects/MarketMentor.jpg", 
       technologies: ["React", "CSS", "HTML"],
       description: [
         "Created a website to trade stocks with fake cash, connecting to the Llama API and displaying graphs.",
@@ -165,8 +155,8 @@ function Projects() {
                 rel="noopener noreferrer"
                 className={`social-icon ${item.type}`}
               >
-                {item.type === "github" && <img src={GithubLogo} alt="GitHub Link" />}
-                {item.type === "youtube" && <img src={YoutubeLogo} alt="YouTube Link" />}
+                {item.type === "github" && <img src="images/socials/Github.svg" alt="GitHub Link" />}
+                {item.type === "youtube" && <img src="images/socials/Youtube.png" alt="YouTube Link" />}
               </a>
             ))}
           </div>
