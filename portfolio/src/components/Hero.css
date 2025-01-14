@@ -28,14 +28,19 @@ html, body {
   overflow: hidden;
 }
 
-.hero-content {
+.hero-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   flex-grow: 1; 
   padding: 20px; 
   gap: 20px; 
 }
+
+.hero-content {
+  flex-flow: row wrap;
+}
+
 .hero-text {
   flex: 1;
   text-align: left;
@@ -50,17 +55,12 @@ html, body {
   max-width: 200px;
 }
 
-.hero img.profile {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
 
 .hero-socials {
   display: flex;
-  justify-content: center;
+  align-items:start;
   margin-top: 20px;
+  align-items:row;
 }
 
 .hero-socials img {
@@ -146,4 +146,119 @@ html, body {
 }
 
 
+
+
+ /* Base CSS is already mobile-friendly due to column flex-direction in .hero */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column; /* Stack text and image */
+    gap: 10px; /* Reduce spacing */
+    padding: 10px; /* Less padding for smaller screens */
+  }
+
+  .hero-text, .hero-image {
+    flex: unset; /* Prevent forcing equal widths */
+    text-align: center; /* Center text for better alignment */
+  }
+
+  .hero img {
+    max-width: 150px; /* Reduce image size */
+  }
+
+  .hero-socials img {
+    width: 60px; /* Reduce size of social icons */
+    height: 60px;
+  }
+
+  .hero h1 {
+    font-size: 1.5em; /* Reduce font size for headers */
+  }
+
+  .hero p {
+    font-size: 0.9em; /* Reduce paragraph font size */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-container {
+    flex-direction: row; /* Switch to side-by-side layout */
+    gap: 15px; /* Adjust gap for medium-sized screens */
+  }
+
+  .hero-text, .hero-image {
+    flex: 1; /* Distribute space equally */
+  }
+
+  .hero img {
+    max-width: 180px; /* Slightly reduce image size */
+  }
+
+  .hero-socials {
+    justify-content: center; /* Center align socials */
+  }
+
+  .hero-socials img {
+    width: 70px; /* Adjust social icon size */
+    height: 70px;
+  }
+
+  .hero h1 {
+    font-size: 2em; /* Adjust header size */
+  }
+
+  .hero p {
+    font-size: 1em; /* Standard paragraph size */
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .hero-container {
+    flex-direction: row; /* Maintain side-by-side layout */
+    gap: 20px; /* Add more space between elements */
+    padding: 30px; /* Reduce padding to minimize blank space */
+  }
+
+  .hero img {
+    max-width: 200px; /* Standard image size for larger screens */
+  }
+
+  .hero-text {
+    flex: 1.2; /* Give text slightly more space */
+  }
+
+  .hero-image {
+    flex: 0.8; /* Reduce image container space */
+  }
+
+  .hero h1 {
+    font-size: 2.5em; /* Increase header size slightly */
+  }
+
+  .hero p {
+    font-size: 1.1em; /* Slightly larger text */
+  }
+}
+
+@media (min-width: 1441px) {
+  .hero-container {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center content horizontally */
+  }
+
+  .hero-text, .hero-image {
+    flex: 1; /* Ensure equal space distribution */
+  }
+
+  .hero h1 {
+    font-size: 3em; /* Larger header for big screens */
+  }
+
+  .hero p {
+    font-size: 1.2em; /* Larger paragraph text */
+  }
+
+  .hero img {
+    max-width: 220px; /* Increase image size slightly */
+  }
+}
 

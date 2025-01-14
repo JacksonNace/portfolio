@@ -48,10 +48,6 @@
   .technologies img {
     max-width: 80px;
   }
-
-  .skills-container{
-    display:none;
-  }
 }
 
 @media (max-width: 500px) {
