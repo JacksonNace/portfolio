@@ -44,7 +44,7 @@
 }
 
 @media (max-width: 768px) {
-  .coding-languages img,
+.coding-languages img,
   .technologies img {
     max-width: 80px;
   }
