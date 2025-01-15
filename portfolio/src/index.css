@@ -1,17 +1,14 @@
-body{
+/* * {
+  background
+} */
+
+
+.body{
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
-  background: url(http://i.stack.imgur.com/iofJk.png) repeat-x;
+  background-color:lightblue;
   background-size: 660px 83px;
   animation: clouds 100000s linear infinite;
-}
-@keyframes clouds {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 10000000px 0;
-  }
 }

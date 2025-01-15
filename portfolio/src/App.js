@@ -27,24 +27,24 @@ function App() {
     let ctx = gsap.context(() => {
       const t1 = gsap.timeline() // gsap timeline simplifies sequences for animations
       t1.from("#intro-slider", {
-         xPercent: "-100", 
-         duration: 1.3,
-         delay:0.3,
+         yPercent: "-100", 
+         duration: 0.8,
+         delay:1.0,
       }).from(["#title-1", "#title-2", "#title-3"], {
         opacity: 0,
         y: "+=30",
-        stagger:0.5,
+        stagger:1.5,
       }).to(["#title-1", "#title-2", "#title-3"], {
         opacity: 0,
         y: "-=30",
         delay:0.3,
         stagger: 0.5,
       }).to("#intro-slider", {
-        xPercent: "-100",
-        duration: 1.3,
-      }).from("#app", {
-        opacity:0,
+        yPercent: "-100",
         duration: 0.5,
+      }).from("#app", {
+        opacity:1,
+        duration: 1.2,
       })
     }, comp)
     return () => ctx.revert() // prevents memory leak with the library
@@ -60,7 +60,7 @@ function App() {
         <div className="role" id="title-3">Software Engineer</div>
       </div>
       <div className="App" id="app">
-        {/* <Navbar /> */}
+        <Navbar />
         <Hero />
         <About />
         <Experience />
