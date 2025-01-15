@@ -1,10 +1,9 @@
 import React from "react";
+import "./App.css";
 
 import About from "./components/About";
 import Certs from "./components/Certs";
 import Education from "./components/Education";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 import Experience from "./components/Experience";
@@ -15,15 +14,22 @@ import Projects from "./components/Projects";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Education />
-      <Certs />
-      <Projects />
-      <Footer />
+    <div className="app-container">
+      <div className="Intro">
+        <div>Software Engineer</div>
+        <div>Student</div>
+        <div>Software Engineer</div>
+      </div>
+      <div className="App">
+        {/* <Navbar /> */}
+        <Hero />
+        <About />
+        <Experience />
+        <Education />
+        <Certs />
+        <Projects />
+        <Footer />
+      </div>
     </div>
   );
 }
