@@ -1,70 +1,57 @@
-import React from "react";
-import "./App.css";
-import { useLayoutEffect, useRef, useEffect } from "react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./ScrollSection.css";
 
-import About from "./components/About";
-import Certs from "./components/Certs";
-import Education from "./components/Education";
+import About from "../components/About";
+import Experience from "../components/Experience";
+import Hero from "../components/Hero";
 
-import Experience from "./components/Experience";
-import Footer from "./components/Footer"
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
+gsap.registerPlugin(ScrollTrigger);
 
 function ScrollSection() {
-  // horizontal scrolling function
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
-  function ScrollSection() {
-  
-    gsap.registerPlugin(ScrollTrigger);
-  
-    useEffect(() => {
-      const pin = gsap.fromTo(
-        sectionRef.current,
-        {
-          translateX: 0,
-        },
-        {
-          translateX: "-300vw",
-          ease: "none",
-          duration: 1,
-          scrollTrigger: {
-            trigger: triggerRef.current,
-            start: "top top",
-            end: "2000 top",
-            scrub: 0.6,
-            pin: true,
-          },
-        }
-      );
-      return () => {
-        {/* A return function for killing the animation on component unmount */ }
-        pin.kill();
-      };
-    }, []);
-  }
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    // Debugging widths
+    const sectionCount = section.querySelectorAll("section").length;
+    const expectedWidth = sectionCount * window.innerWidth;
+    console.log("Expected Width:", expectedWidth);
+    console.log("Actual Scroll Width:", section.scrollWidth);
+
+    gsap.to(section, {
+      x: () => `-${section.scrollWidth - window.innerWidth}px`,
+      ease: "none",
+      scrollTrigger: {
+        trigger: triggerRef.current,
+        start: "top top",
+        end: () => `+=${section.scrollWidth - window.innerWidth}`,
+        scrub: 0.6,
+        pin: true,
+        markers: true,
+        invalidateOnRefresh: true,
+      },
+    });
+
+    return () => {
+      gsap.killTweensOf(section); // Cleanup animation
+    };
+  }, []);
 
   return (
     <section>
-      <div className="App" id="app" ref ={triggerRef}>
-        <div className="horizontal-scroll" ref={sectionRef}>
+      <div id="app" ref={triggerRef} className="scroll-section-outer">
+        <div ref={sectionRef} className="scroll-section-inner">
           <Hero />
           <About />
-          <div className="vertical-scroll" id="vertical-scroll">
-            <Experience />
-            <Education />
-            <Certs />
-            <Projects />
-            <Footer />
-          </div>
+          <Experience />
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default ScrollSection;

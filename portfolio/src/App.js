@@ -2,15 +2,13 @@ import React from "react";
 import "./App.css";
 import { useLayoutEffect, useRef, useEffect } from "react"
 import gsap from "gsap"
-import ScrollSection from "gsap/ScrollTrigger"
+import ScrollSection from "./components/ScrollSection"
 
-import About from "./components/About";
 import Certs from "./components/Certs";
 import Education from "./components/Education";
 
-import Experience from "./components/Experience";
+//import Experience from "./components/Experience";
 import Footer from "./components/Footer"
-import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 
@@ -67,10 +65,7 @@ function App() {
       </div>
       <div className="App" id="app">
         <Navbar />
-        <Hero />
-        <About />
         <ScrollSection/>
-        <Experience />
         <Education />
         <Certs />
         <Projects />

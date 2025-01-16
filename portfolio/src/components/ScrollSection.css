@@ -1,0 +1,18 @@
+/* ScrollSection.css */
+.scroll-section-outer {
+  position: relative;
+  width: 100%; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Hide unwanted scrollbars */
+}
+
+.scroll-section-inner {
+  display: flex; /* Align sections horizontally */
+  width: max-content; /* Allow content to extend horizontally */
+  height: 100%; /* Full height of the viewport */
+}
+
+section {
+  flex: 0 0 100vw;
+  height: 100vh; /* Full height of the viewport */
+}
