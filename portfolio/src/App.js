@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
-import { useLayoutEffect, useRef } from "react"
+import { useLayoutEffect, useRef, useEffect } from "react"
 import gsap from "gsap"
+import ScrollSection from "gsap/ScrollTrigger"
 
 import About from "./components/About";
 import Certs from "./components/Certs";
@@ -14,6 +15,7 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 
 
+
 //.from() - opacity from->current 
 //.to() - opacity current->to
 
@@ -21,7 +23,7 @@ import Projects from "./components/Projects";
 function App() {
 
   const comp = useRef(null)
-
+  //intro
   useLayoutEffect(() => { //loads after the dom is done loading, would be great for codered hackathon components if we have a lot of random 3d 
     //BRO PLEASEEEE WATYCH A TUTORIAL ON THIS I NEED MORE
     let ctx = gsap.context(() => {
@@ -49,6 +51,8 @@ function App() {
     }, comp)
     return () => ctx.revert() // prevents memory leak with the library
   }, []) 
+
+
   return (
     <div className="app-container" ref={comp}>
       <div 
@@ -65,6 +69,7 @@ function App() {
         <Navbar />
         <Hero />
         <About />
+        <ScrollSection/>
         <Experience />
         <Education />
         <Certs />
@@ -73,6 +78,7 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
+
