@@ -6,6 +6,8 @@
   width:100vw;
   display:flex;
   flex-direction: column;
+  justify-content:center;
+  align-items:center;
   gap:10;
   position:absolute;
 }
@@ -14,4 +16,13 @@
   font-size:8rem;
   line-height:1.75;
   color:white;
+  display:flex;
+}
+
+@media (max-width: 768px) {
+  .device {
+    width: 200px; 
+    height: 150px;
+    font-size: 1.2rem;
+  }
 }

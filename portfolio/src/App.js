@@ -27,18 +27,18 @@ function App() {
     let ctx = gsap.context(() => {
       const t1 = gsap.timeline() // gsap timeline simplifies sequences for animations
       t1.from("#intro-slider", {
-         yPercent: "-100", 
+        //  yPercent: "-100", 
          duration: 0.8,
-         delay:1.0,
-      }).from(["#title-1", "#title-2", "#title-3"], {
+         delay:0.5,
+      }).from(["#title-1", "#title-2", "#title-3", "#title-4", "#title-5"], {
         opacity: 0,
         y: "+=30",
-        stagger:1.5,
-      }).to(["#title-1", "#title-2", "#title-3"], {
+        stagger:0.6,
+      }).to(["#title-1", "#title-2", "#title-3", "#title-4", "#title-5"], {
         opacity: 0,
         y: "-=30",
-        delay:0.3,
-        stagger: 0.5,
+        delay:0.4,
+        stagger: 0.15,
       }).to("#intro-slider", {
         yPercent: "-100",
         duration: 0.5,
@@ -55,9 +55,11 @@ function App() {
         id="intro-slider"
         className="Intro"
       >
-        <div className="role" id="title-1">Software Engineer</div>
-        <div className="role" id="title-2">Software Engineer</div>
-        <div className="role" id="title-3">Software Engineer</div>
+        <div className="role" id="title-1">Goal-Oriented</div>
+        <div className="role" id="title-2">Problem-Solver</div>
+        <div className="role" id="title-3">Determined</div>
+        <div className="role" id="title-4">CS Student at the University of Houston</div>
+        <div className="role" id="title-5">Jackson Nace</div>
       </div>
       <div className="App" id="app">
         <Navbar />
