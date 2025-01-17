@@ -1,18 +1,74 @@
 /* ScrollSection.css */
-.scroll-section-outer {
+/* .scroll-section-outer {
   position: relative;
-  width: 100%; /* Full width of the viewport */
-  height: 100vh; /* Full height of the viewport */
-  overflow: hidden; /* Hide unwanted scrollbars */
+  width: 100vh;
+  height: 100vh; 
+  overflow: hidden; 
 }
 
 .scroll-section-inner {
-  display: flex; /* Align sections horizontally */
-  width: max-content; /* Allow content to extend horizontally */
-  height: 100%; /* Full height of the viewport */
+  display: flex; 
+  width: max-content;
+  height: 100%;
 }
 
 section {
   flex: 0 0 100vw;
-  height: 100vh; /* Full height of the viewport */
+  height: 100vh;
+} */
+
+.scroll-section-outer {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.scroll-section-inner {
+  display: flex;
+  flex-direction: row;
+  width: calc(100vw * 3); /* Assuming 3 sections (Hero, About, Experience) */
+  height: 100%;
+}
+
+
+.section-wrapper {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+}
+
+
+section {
+  width: 100vw; /* Match viewport width */
+  height: 100vh; /* Match viewport height */
+  flex-shrink: 0; /* Prevent shrinking */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove padding */
+}
+
+.section-wrapper:nth-child(1) { background-color: red; }
+.section-wrapper:nth-child(2) { background-color: blue; }
+.section-wrapper:nth-child(3) { background-color: green; }
+
+@media (min-width: 768px) {
+  .scroll-section-inner {
+    display: flex; /* Horizontal layout for larger screens */
+  }
+
+  section {
+    flex: 0 0 100vw;
+    height: 200vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-section-inner {
+    display: block; /* Vertical layout for smaller screens */
+  }
+
+  section {
+    width: 100%; /* Full width for vertical layout */
+    height: auto; /* Adjust height for content */
+  }
 }

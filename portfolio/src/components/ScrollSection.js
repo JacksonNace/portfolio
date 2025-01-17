@@ -17,10 +17,12 @@ function ScrollSection() {
     const section = sectionRef.current;
 
     // Debugging widths
-    const sectionCount = section.querySelectorAll("section").length;
+    const sectionCount = section.querySelectorAll("section").length - 1;
     const expectedWidth = sectionCount * window.innerWidth;
     console.log("Expected Width:", expectedWidth);
     console.log("Actual Scroll Width:", section.scrollWidth);
+    console.log("window.innerWidth:", window.innerWidth )
+    console.log("sectionCount:", sectionCount)
 
     gsap.to(section, {
       x: () => `-${section.scrollWidth - window.innerWidth}px`,
@@ -42,16 +44,21 @@ function ScrollSection() {
   }, []);
 
   return (
-    <section>
       <div id="app" ref={triggerRef} className="scroll-section-outer">
         <div ref={sectionRef} className="scroll-section-inner">
-          <Hero />
-          <About />
-          <Experience />
+          <section className="section-wrapper">
+            <Hero />
+          </section>
+          <section className="section-wrapper">
+            <About />
+          </section>
+          <section className="section-wrapper">
+            <Experience />
+          </section>
         </div>
       </div>
-    </section>
   );
 }
 
 export default ScrollSection;
+
