@@ -1,74 +1,44 @@
-/* ScrollSection.css */
-/* .scroll-section-outer {
-  position: relative;
-  width: 100vh;
-  height: 100vh; 
-  overflow: hidden; 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.scroll-section-inner {
-  display: flex; 
-  width: max-content;
-  height: 100%;
+html,
+body {
+  font-family: 'Signika Negative', sans-serif, Arial;
 }
 
-section {
-  flex: 0 0 100vw;
-  height: 100vh;
-} */
-
-.scroll-section-outer {
-  overflow: hidden;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
-.scroll-section-inner {
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 0 1rem;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  will-change: transform;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  width: calc(100vw * 3); /* Assuming 3 sections (Hero, About, Experience) */
-  height: 100%;
+  justify-content: space-between;
 }
-
-
-.section-wrapper {
-  width: 100vw;
-  height: 100vh;
-  flex-shrink: 0;
-}
-
 
 section {
-  width: 100vw; /* Match viewport width */
-  height: 100vh; /* Match viewport height */
-  flex-shrink: 0; /* Prevent shrinking */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove padding */
+  width: 100%;
 }
 
-.section-wrapper:nth-child(1) { background-color: red; }
-.section-wrapper:nth-child(2) { background-color: blue; }
-.section-wrapper:nth-child(3) { background-color: green; }
-
-@media (min-width: 768px) {
-  .scroll-section-inner {
-    display: flex; /* Horizontal layout for larger screens */
-  }
-
-  section {
-    flex: 0 0 100vw;
-    height: 200vh;
-  }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 768px) {
-  .scroll-section-inner {
-    display: block; /* Vertical layout for smaller screens */
-  }
+.horizontal-section {
+  display: flex;
+  width: 100%;
+}
 
-  section {
-    width: 100%; /* Full width for vertical layout */
-    height: auto; /* Adjust height for content */
-  }
+.horizontal-panel {
+  width: 100vh;
+  flex: 1 0 100%;
 }

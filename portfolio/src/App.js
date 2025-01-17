@@ -28,23 +28,23 @@ function App() {
       const t1 = gsap.timeline() // gsap timeline simplifies sequences for animations
       t1.from("#intro-slider", {
         //  yPercent: "-100", 
-         duration: 0.8,
-         delay:0.5,
+         duration: 0.1,
+         delay:0.1,
       }).from(["#title-1", "#title-2", "#title-3", "#title-4", "#title-5"], {
         opacity: 0,
         y: "+=30",
-        stagger:0.6,
+        stagger:0.1,
       }).to(["#title-1", "#title-2", "#title-3", "#title-4", "#title-5"], {
         opacity: 0,
         y: "-=30",
-        delay:0.4,
-        stagger: 0.15,
+        delay:0.1,
+        stagger: 0.1,
       }).to("#intro-slider", {
         yPercent: "-100",
-        duration: 0.5,
+        duration: 0.1,
       }).from("#app", {
         opacity:1,
-        duration: 1.2,
+        duration: 0.1,
       })
     }, comp)
     return () => ctx.revert() // prevents memory leak with the library
@@ -66,10 +66,12 @@ function App() {
       <div className="App" id="app">
         <Navbar />
         <ScrollSection/>
-        <Education />
-        <Certs />
-        <Projects />
-        <Footer />
+        {/* <section> */}
+          <Education />
+          <Certs />
+          <Projects />
+          <Footer />
+        {/* </section> */}
       </div>
     </div>
   );

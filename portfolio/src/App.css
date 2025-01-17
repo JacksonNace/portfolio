@@ -46,7 +46,7 @@
   color: white;
   display: flex;
   text-align: center; /* Center align text for responsiveness */
-  padding: 0 10px; /* Added padding to prevent overflow */
+  padding: 0 10px;
 }
 
 @media (max-width: 768px) {

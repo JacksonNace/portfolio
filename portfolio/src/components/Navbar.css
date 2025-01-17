@@ -11,7 +11,7 @@
   transform: translateX(-50%);
   width: auto;
   z-index: 10;
-  overflow-x: auto;
+
   scrollbar-width: none;
 }
 
