@@ -18,7 +18,8 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: yellow;
+  /* background-color: lightblue; */
+  background: url("../components/img/1.png");
   text-align: center;
   font-family: 'Arial', sans-serif;
   height: 100vh;

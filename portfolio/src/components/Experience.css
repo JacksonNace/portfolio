@@ -1,14 +1,14 @@
 .experience-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Reduced gap for smaller screens */
+  gap: 20px;
   justify-content: center;
-  background-color: green;
+  /* background-color: lightblue; */
+  background: url("../components/img/3.png");
   width: 100%; 
-  padding: 20px; /* Add padding to prevent overlap */
+  padding: 20px;
   min-height: 100vh;
-  border: 5px solid black;
-  box-sizing: border-box; /* Ensures padding doesn't affect width calculations */
+  box-sizing: border-box;
 }
 
 .experience-box {
@@ -17,14 +17,14 @@
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 90%; /* Make it responsive */
-  max-width: 400px; /* Limit the size on larger screens */
+  width: 90%;
+  max-width: 400px;
   text-align: left;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .experience-box:hover {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -39,11 +39,11 @@
   height: auto;
   border-radius: 10px;
   margin-bottom: 10px;
-  max-width: 150px; /* Limit image size */
+  max-width: 150px;
 }
 
 .experience-company {
-  font-size: 1.5rem; /* Adjust font size */
+  font-size: 1.5rem;
   font-weight: bold;
   color: black;
   margin: 8px 0;
@@ -70,20 +70,19 @@
   font-size: 0.9rem;
 }
 
-/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
   .experience-container {
-    gap: 10px; /* Reduce gap for smaller screens */
-    padding: 10px; /* Adjust padding */
+    gap: 10px;
+    padding: 10px;
   }
 
   .experience-box {
-    width: 100%; /* Full width for smaller screens */
-    max-width: none; /* Remove the maximum width limit */
+    width: 100%;
+    max-width: none;
   }
 
   .experience-company {
-    font-size: 1.2rem; /* Smaller font size */
+    font-size: 1.2rem;
   }
 
   .experience-jobTitle {
@@ -91,10 +90,10 @@
   }
 
   .experience-description {
-    font-size: 0.8rem; /* Adjust font size for readability */
+    font-size: 0.8rem;
   }
 
   .experience-image {
-    width: 70%; /* Slightly smaller images */
+    width: 70%;
   }
 }
