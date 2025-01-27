@@ -91,7 +91,7 @@ const ScrollSection = () => {
           trigger: horizontalSection.current,
           pin: true,
           start: 'top top',
-          end: () => '+=' + (slides.length - 1) * 100 + '%', // 200% for 3 slides cause you move like only 2 slides over, not 3 like you wouild think
+          end: () => '+=' + (slides.length) * 100 + '%', // 200% for 3 slides cause you move like only 2 slides over, not 3 like you wouild think
           markers: true,
           scrub: true,
         },
