@@ -66,7 +66,7 @@ function Experience() {
     },
     {
       company: "CodeRED",
-      jobTitle: "Software Engineer",
+      jobTitle: "Software Engineer Lead",
       date: "March 2024 - Present",
       imageUrl: "images/experience/CodeRED2.jpg"
     },
@@ -86,11 +86,9 @@ function Experience() {
 
   return (
     <section className="experience-section">
-      {/* The large white card */}
       <div className="experience-card">
         <h2 className="section-title">Experience</h2>
 
-        {/* The container that holds each row */}
         <div className="experience-container">
           {experiences.map((experience, index) => (
             <div className="experience-box" key={index}>
