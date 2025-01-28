@@ -72,8 +72,8 @@ function App() {
         <About/>
         <Experience/>
         <Education />
-        <Certs />
         <Projects />
+        <Certs />
         <Footer />
       </div>
     </div>
