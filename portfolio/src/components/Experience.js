@@ -38,27 +38,27 @@ function Experience() {
   ];
 
   return (
-    <div className="experience-container">
-      {experiences.map((experience, index) => (
-        <div className="experience-box" key={index}>
-          <div className='image-container'>
-            <img
-              src={experience.imageUrl}
-              alt={`${experience.company} logo`}
-              className="experience-image"
-            />
+      <div className="experience-container">
+        {experiences.map((experience, index) => (
+          <div className="experience-box" key={index}>
+            <div className='image-container'>
+              <img
+                src={experience.imageUrl}
+                alt={`${experience.company} logo`}
+                className="experience-image"
+              />
+            </div>
+            <h3 className="experience-company">{experience.company}</h3>
+            <p className="experience-date">{experience.date}</p>
+            <h4 className="experience-jobTitle">{experience.jobTitle}</h4>
+            <ul className="experience-description">
+              {experience.description.map((sentence, idx) => (
+                <li key={idx}>{sentence}</li>
+              ))}
+            </ul>
           </div>
-          <h3 className="experience-company">{experience.company}</h3>
-          <p className="experience-date">{experience.date}</p>
-          <h4 className="experience-jobTitle">{experience.jobTitle}</h4>
-          <ul className="experience-description">
-            {experience.description.map((sentence, idx) => (
-              <li key={idx}>{sentence}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
   );
 }
 

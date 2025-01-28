@@ -1,40 +1,25 @@
-.Cert-container {
-  background-color: lightblue;
-  padding: 40px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.cert-container{
+  justify-content:center;
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  padding:1rem;
+  background:lightblue;
 }
 
-#carouselExampleIndicators {
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
+.cert-box {
+  background:white;
+  border: 1px solid #ddd; /* Slight border to define each box */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1rem;
+  margin: 0.5rem; /* Space around each box */
+  width: 20rem; /* Fixed width */
+  text-align: center; /* Center text and image */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
 }
 
-.carousel-inner img {
-  max-width: 300px;
-  max-height: 300px;
-  width: auto;
-  height: auto;
-  margin: 0 auto;
+.cert-box img {
+  max-width: 100%; /* Ensure it scales with the box */
+  max-height: 20rem; /* Your desired max image size */
+  object-fit: contain; /* Maintain aspect ratio */
 }
-
-.carousel-caption-below {
-  text-align: center;
-  margin-top: 20px;
-  color: #333;
-  font-size: 1.2rem;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: black;
-  border-radius: 30%;
-  background-size: contain;
-}
-
-
-
