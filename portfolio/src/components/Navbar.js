@@ -8,7 +8,7 @@ function Navbar() {
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Resume</a></li>
+        <li><a href="images/experience/JacksonNaceResume.pdf" target="_blank">Resume</a></li>
       </ul>
     </nav>
   );
