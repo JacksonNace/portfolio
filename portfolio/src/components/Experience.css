@@ -4,7 +4,7 @@
   gap: 20px;
   justify-content: center;
   /* background-color: lightblue; */
-  background: url("../components/img/3.png");
+  background: lightblue;
   width: 100%; 
   padding: 20px;
   min-height: 100vh;

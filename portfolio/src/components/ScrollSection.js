@@ -1,4 +1,8 @@
-// import React, { useEffect, useRef } from "react";
+// SHELVED HORIZONTAL
+// 
+// 
+// 
+//  import React, { useEffect, useRef } from "react";
 // import gsap from "gsap";
 // import { useGSAP } from "@gsap/react";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -64,54 +68,3 @@
 // }
 
 // export default ScrollSection;
-
-import React, { useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
-import "./ScrollSection.css"
-import About from "../components/About";
-import Experience from "../components/Experience";
-import Hero from "../components/Hero";
-
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger, useGSAP);
-}
-
-const ScrollSection = () => {
-  const horizontalSection = useRef();
-
-  useGSAP(
-    () => {
-      const slides = gsap.utils.toArray('.horizontal-panel');
-      gsap.to(slides, {
-        xPercent: -100 * (slides.length - 1),
-        ease: 'none',
-        scrollTrigger: {
-          trigger: horizontalSection.current,
-          pin: true,
-          start: 'top top',
-          end: () => '+=' + (slides.length) * 100 + '%', // 200% for 3 slides cause you move like only 2 slides over, not 3 like you wouild think
-          markers: true,
-          scrub: true,
-        },
-      });
-    },
-    {
-      scope: horizontalSection,
-    }
-  );
-  
-  return (
-    <>
-      <section className="horizontal-section" ref={horizontalSection}>
-        <div className="horizontal-panel"><Hero/></div>
-        <div className="horizontal-panel"><About/></div>
-        <div className="horizontal-panel"><Experience/></div>
-      </section>
-      <section className='black'></section>
-    </>
-  );
-};
-
-export default ScrollSection;

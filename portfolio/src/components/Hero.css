@@ -19,7 +19,7 @@ html, body {
   align-items: center;
   justify-content: space-between;
   /* background-color: lightblue; */
-  background: url("../components/img/1.png");
+  background: lightblue;
   text-align: center;
   font-family: 'Arial', sans-serif;
   height: 100vh;
