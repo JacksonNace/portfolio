@@ -1,9 +1,8 @@
 import React from "react";
 import "./App.css";
-import { useLayoutEffect, useRef, useEffect } from "react"
+import { useLayoutEffect, useRef } from "react"
 import gsap from "gsap"
 import Hero from "./components/Hero";
-import About from "./components/About";
 import Experience from "./components/Experience";
 import Certs from "./components/Certs";
 import Education from "./components/Education";
@@ -15,6 +14,7 @@ import Projects from "./components/Projects";
 
 //SHELVED
 //import ScrollSection from "./components/ScrollSection"
+// import About from "./components/About";
 
 //.from() - opacity from->current 
 //.to() - opacity current->to
@@ -69,7 +69,7 @@ function App() {
       <div className="App" id="app">
         <Navbar />
         <Hero/>
-        <About/>
+        {/* <About/> */}
         <Experience/>
         <Education />
         <Projects />
