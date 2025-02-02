@@ -1,7 +1,7 @@
 import React from "react";
-import "./Projects.css";
+import "./TopProjects.css";
 
-function Projects() {
+function TopProjects() {
 
   const projects = [
     {
@@ -167,4 +167,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default TopProjects;
