@@ -20,6 +20,8 @@ function Home() {
 
   const comp = useRef(null)
   //intro
+
+  
   useLayoutEffect(() => { //loads after the dom is done loading, would be great for codered hackathon components if we have a lot of random 3d 
     //BRO PLEASEEEE WATYCH A TUTORIAL ON THIS I NEED MORE
     let ctx = gsap.context(() => {
