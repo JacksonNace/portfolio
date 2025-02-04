@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-socials">
           <a href="https://github.com/JacksonNace" target="_blank" rel="noopener noreferrer">
-            <img src="images/socials/Github.svg" alt="GitHub" />
+            Github
           </a>
           <a href="https://www.linkedin.com/in/jacksonnace/" target="_blank" rel="noopener noreferrer">
-            <img src="images/socials/LinkedIn.png" alt="LinkedIn" />
+            LinkedIn
           </a>
         </div>
       </div>
