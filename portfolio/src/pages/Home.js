@@ -6,6 +6,7 @@ import About from "../components/About"
 import Experience from "../components/Experience";
 import Education from "../components/Education";
 import Projects from "../components/Projects";
+import Skills from "../components/Skills";
 import "./Home.css"
 
 //SHELVED
@@ -51,6 +52,7 @@ function Home() {
       <div className="App" id="app">
         <Hero/>
         <About/>
+        <Skills/>
         <Experience/>
         <Education />
         <Projects />

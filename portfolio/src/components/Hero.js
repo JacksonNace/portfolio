@@ -1,9 +1,6 @@
 import React from 'react';
 import './Hero.css'; 
 
-import Skills from "./Skills";
-import "./Skills.css";
-
 const Hero = () => {  
   
   return (
@@ -21,9 +18,6 @@ const Hero = () => {
           <h2>Visitor Counter</h2>
           {/* <p>Number of visitors: {visitorCount}</p> */}
         </div>
-      <div className="skills-container">
-        <Skills />
-      </div>
     </section>
   );
 };
