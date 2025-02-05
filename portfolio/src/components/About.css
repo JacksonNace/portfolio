@@ -1,0 +1,121 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: lightblue;
+  height: 100vh;
+  width: 100vw;
+}
+
+.aboutTitle {
+  font-size:2rem;
+  font-weight:580;
+  margin:30px;
+}
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.about-text {
+  flex: 1;
+  margin: 0 20px;
+}
+.about-text h2{
+  font-weight:500;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.profile-image {
+  max-width: 200px;
+  height: auto;
+  border-radius: 5%;
+}
+
+.certifications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.cert-title, 
+.about-text h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight:300;
+}
+
+.cert-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  background: lightblue;
+  padding: 0 0;
+}
+
+.cert-box {
+  width: 120px;
+  text-align: center;
+}
+
+.cert-box h3{
+  font-size:0.8rem;
+  font-weight:normal;
+}
+
+.cert-box img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .about-me {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .about-text {
+    margin-right: 20px;
+  }
+
+  .about-image {
+    justify-content: flex-end;
+  }
+
+  .profile-image {
+    max-width: 300px;
+  }
+
+  .certifications {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .cert-title, 
+  .about-text h1 {
+    text-align: left;
+  }
+
+  .cert-container {
+    justify-content: flex-start;
+  }
+}
