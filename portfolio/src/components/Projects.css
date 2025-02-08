@@ -1,84 +1,93 @@
-
+/* Projects.css */
 .projects-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
-  justify-content: center;
+  flex-direction: column; /* Arrange projects vertically */
+  gap: 20px; /* Space between project cards */
   padding: 20px;
-  background-color: lightblue;
 }
 
 .project-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 22rem;
-  padding: 1rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  position:relative;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically align items */
+  padding: 20px;
+  border: 1px solid #ccc; /* Add a border (optional) */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-.project-card:hover {
-  transform: scale(1.05);
+.left-image {
+  flex-direction: row; /* Image on the left */
+}
+
+.right-image {
+  flex-direction: row-reverse; /* Image on the right */
+}
+
+
+.project-image-container {
+  width: 300px; /* Adjust image width as needed */
+  margin: 10px; /* Space around image */
+  overflow: hidden; /* Hide overflowing image content */
 }
 
 .project-image {
   width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 4px;
+  object-fit: cover; /* Maintain aspect ratio and cover container */
+}
+
+.project-content {
+    flex: 1; /* Allow content to take up available space */
+    padding: 20px;
 }
 
 .project-title {
-  font-size: 1.5rem;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 .project-technologies {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 .project-technologies li {
-  display: inline;
-  margin: 0 5px;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.toggle-description {
-  padding: 8px 15px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.toggle-description:hover {
-  background-color: #0056b3;
+  display: inline-block;
+  margin-right: 5px;
+  background-color: #f0f0f0; /* Example background color */
+  padding: 3px 6px;
+  border-radius: 4px;
 }
 
 .project-description {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #333;
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 10px;
 }
 
 .social-links {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
 }
 
-.social-icon img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+.social-icon {
+  /* ... your existing social icon styles */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column; /* Stack image and content vertically */
+    text-align: center; /* Center text */
+  }
+
+  .project-image-container {
+    width: 200px; /* Smaller image on mobile */
+    margin: 10px auto; /* Center image */
+  }
+
+  .left-image, .right-image { /* Apply to both */
+      flex-direction: column;
+  }
 }
