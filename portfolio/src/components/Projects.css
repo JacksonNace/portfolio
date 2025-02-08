@@ -1,45 +1,45 @@
-/* Projects.css */
 .projects-container {
   display: flex;
-  flex-direction: column; /* Arrange projects vertically */
-  gap: 20px; /* Space between project cards */
+  flex-direction: column;
+  gap: 20px;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .project-card {
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Vertically align items */
+  display: flex;
+  align-items: center;
   padding: 20px;
-  border: 1px solid #ccc; /* Add a border (optional) */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .left-image {
-  flex-direction: row; /* Image on the left */
+  flex-direction: row;
 }
 
 .right-image {
-  flex-direction: row-reverse; /* Image on the right */
+  flex-direction: row-reverse;
 }
 
-
 .project-image-container {
-  width: 300px; /* Adjust image width as needed */
-  margin: 10px; /* Space around image */
-  overflow: hidden; /* Hide overflowing image content */
+  width: 300px;
+  margin: 0px;
+  overflow: hidden;
 }
 
 .project-image {
   width: 100%;
   height: auto;
   border-radius: 4px;
-  object-fit: cover; /* Maintain aspect ratio and cover container */
+  object-fit: cover;
 }
 
 .project-content {
-    flex: 1; /* Allow content to take up available space */
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
 .project-title {
@@ -55,7 +55,7 @@
 .project-technologies li {
   display: inline-block;
   margin-right: 5px;
-  background-color: #f0f0f0; /* Example background color */
+  background-color: #f0f0f0;
   padding: 3px 6px;
   border-radius: 4px;
 }
@@ -71,30 +71,65 @@
   gap: 10px;
 }
 
-.social-icon {
-/* ... your existing social icon styles */
+.social-icon img {
+  max-width: 30px;
+  max-height: 30px;
 }
 
-.social-icon img { /* Target the image inside the social-icon */
-max-width: 30px; /* Set maximum width */
-max-height: 30px; /* Set maximum height */
-/* Or you can use just max-width if you want to maintain aspect ratio */
-/* max-width: 30px;  */
+@media (max-width: 1024px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .left-image, .right-image {
+    flex-direction: column;
+  }
+  .project-image-container {
+    width: 250px;
+    margin: 10px auto;
+  }
 }
 
-/* Responsive adjustments (example) */
 @media (max-width: 768px) {
   .project-card {
-    flex-direction: column; /* Stack image and content vertically */
-    text-align: center; /* Center text */
+    flex-direction: column;
+    text-align: center;
   }
-
+  .left-image, .right-image {
+    flex-direction: column;
+  }
   .project-image-container {
-    width: 200px; /* Smaller image on mobile */
-    margin: 10px auto; /* Center image */
+    width: 200px;
+    margin: 10px auto;
   }
+  .project-content {
+    padding: 10px;
+  }
+}
 
-  .left-image, .right-image { /* Apply to both */
-      flex-direction: column;
+@media (max-width: 480px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+  .left-image, .right-image {
+    flex-direction: column;
+  }
+  .project-image-container {
+    width: 150px;
+    margin: 10px auto;
+  }
+  .project-content {
+    padding: 5px;
+  }
+  .project-title {
+    font-size: 1.2rem;
+  }
+  .project-technologies li {
+    font-size: 0.8rem;
+  }
+  .project-description {
+    font-size: 0.9rem;
   }
 }
