@@ -67,12 +67,19 @@
 }
 
 .social-links {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .social-icon {
-  /* ... your existing social icon styles */
+/* ... your existing social icon styles */
+}
+
+.social-icon img { /* Target the image inside the social-icon */
+max-width: 30px; /* Set maximum width */
+max-height: 30px; /* Set maximum height */
+/* Or you can use just max-width if you want to maintain aspect ratio */
+/* max-width: 30px;  */
 }
 
 /* Responsive adjustments (example) */
