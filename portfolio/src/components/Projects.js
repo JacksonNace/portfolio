@@ -4,21 +4,6 @@ import "./Projects.css";
 function Projects() {
   const projects = [
     {
-      id: 7,
-      title: "CodeRED 2025",
-      imageUrl: "www.google.com",
-      technologies: ["Supabase, NextJS, TailwindCSS, Cloudflare"],
-      description: [
-        "Lead CodeRED Web dev team to build our main site, linking to all our previous hackathons.",
-        " ",
-      ],
-      social: [
-        // { type: "github", link: "https://github.com/JacksonNace/portfolio" },
-        // { type: "youtube", link: "https://youtube.com" }
-      ],
-      // githubLink: "https://github.com/JacksonNace/portfolio", // i have a conditional check in the JSX below that checks if the GithubLink is valid
-    },
-    {
       id: 10,
       title: "Portfolio Website",
       imageUrl: "www.google.com",
