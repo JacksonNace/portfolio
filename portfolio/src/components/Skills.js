@@ -34,13 +34,13 @@ function Skills() {
           <h3>{category}</h3>
           <div className="skills-box">
             {skills[category].map((skill) => (
-              <div key={skill.name} className="skill-item"> {/* Added a wrapper div */}
+              <div key={skill.name} className="skill-item">
                 <img
                   src={skill.image}
                   alt={skill.name}
                   title={skill.name}
                 />
-                <span className="skill-label">{skill.name}</span> {/* Added the label */}
+                <span className="skill-label">{skill.name}</span>
               </div>
             ))}
           </div>
