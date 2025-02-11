@@ -2,30 +2,48 @@ import React from 'react';
 import "./Skills.css";
 
 function Skills() {
+  const skills = {
+    "Languages": [
+      { name: "C++", image: "images/languages/C++.png" },
+      { name: "Python", image: "images/languages/python.png" },
+      { name: "JavaScript", image: "images/languages/Javascript.png" },
+      { name: "SQL", image: "images/languages/SQL.png" },
+      { name: "R", image: "images/languages/R.png" },
+      { name: "Lua", image: "images/languages/Lua.png" },
+    ],
+    "Cloud/IT/Backend": [
+      { name: "Azure", image: "images/technologies/Azure.png" },
+      { name: "AWS", image: "images/technologies/AWS.webp" },
+      { name: "Linux", image: "images/technologies/Linux.png" },
+      { name: "Windows", image: "images/technologies/Windows.png" },
+      { name: "Cloudflare", image: "images/technologies/Cloudflare.png" },
+    ],
+    "Frontend/Web": [
+      { name: "React", image: "images/technologies/React.webp" },
+      { name: "Git", image: "images/technologies/Git.png" },
+      { name: "Postman", image: "images/technologies/Postman.png" },
+    ],
+  };
+
+  const categoryOrder = ["Languages", "Cloud/IT/Backend", "Frontend/Web"]; // Define the desired order
+
   return (
     <div className="skills-container">
-      <div className="skills-section">
-        <div className="coding-languages">
-          <img src="images/languages/C++.png" alt="C++" />
-          <img src="images/languages/python.png" alt="Python" />
-          <img src="images/languages/Javascript.png" alt="JavaScript" />
-          <img src="images/languages/SQL.png" alt="SQL" />
-          <img src="images/languages/R.png" alt="R" />
-          <img src="images/languages/Lua.png" alt="Lua" />
+      {categoryOrder.map(category => ( // Iterate in the specified order
+        <div key={category} className="skill-category">
+          <h3>{category}</h3>
+          <div className="skills-box">
+            {skills[category].map((skill) => ( // Access skills using the category name
+              <img
+                key={skill.name}
+                src={skill.image}
+                alt={skill.name}
+                title={skill.name}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="skills-section">
-        <div className="technologies">
-          <img src="images/technologies/React.webp" alt="React" />
-          <img src="images/technologies/Git.png" alt="Git" />
-          <img src="images/technologies/Azure.png" alt="Azure" />
-          <img src="images/technologies/AWS.webp" alt="AWS" />
-          <img src="images/technologies/Linux.png" alt="Linux" />
-          <img src="images/technologies/Windows.png" alt="Windows" />
-          <img src="images/technologies/Cloudflare.png" alt="Cloudflare" />
-          <img src="images/technologies/Postman.png" alt="Postman" />
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
