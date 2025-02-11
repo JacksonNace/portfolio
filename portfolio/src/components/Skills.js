@@ -25,21 +25,23 @@ function Skills() {
     ],
   };
 
-  const categoryOrder = ["Languages", "Cloud/IT/Backend", "Frontend/Web"]; // Define the desired order
+  const categoryOrder = ["Languages", "Cloud/IT/Backend", "Frontend/Web"];
 
   return (
     <div className="skills-container">
-      {categoryOrder.map(category => ( // Iterate in the specified order
+      {categoryOrder.map(category => (
         <div key={category} className="skill-category">
           <h3>{category}</h3>
           <div className="skills-box">
-            {skills[category].map((skill) => ( // Access skills using the category name
-              <img
-                key={skill.name}
-                src={skill.image}
-                alt={skill.name}
-                title={skill.name}
-              />
+            {skills[category].map((skill) => (
+              <div key={skill.name} className="skill-item"> {/* Added a wrapper div */}
+                <img
+                  src={skill.image}
+                  alt={skill.name}
+                  title={skill.name}
+                />
+                <span className="skill-label">{skill.name}</span> {/* Added the label */}
+              </div>
             ))}
           </div>
         </div>

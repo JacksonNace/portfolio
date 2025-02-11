@@ -4,6 +4,20 @@ import "./Projects.css";
 function Projects() {
   const projects = [
     {
+      id: 9,
+      title: "S3 File Upload",
+      imageUrl: "www.google.com",
+      technologies: ["React, AWS, Spring Boot"],
+      description: [
+        "yeppers",
+        " cloud resume challenge.",
+      ],
+      social: [
+        { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        // { type: "youtube", link: "https://youtube.com" }
+      ],
+    },
+    {
       id: 10,
       title: "Portfolio Website",
       imageUrl: "www.google.com",
