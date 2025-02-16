@@ -6,7 +6,7 @@ function Projects() {
     {
       id: 7,
       title: "Cloud Security Hardening",
-      imageUrl: "www.google.com",
+      imageUrl: "images/projects/Fortress.jpg",
       technologies: ["AWS"],
       description: [
         "yeppers",
@@ -20,7 +20,7 @@ function Projects() {
     {
       id: 8,
       title: "Intrusion Detection Machine Learning Model",
-      imageUrl: "www.google.com",
+      imageUrl: "images/projects/ML.png",
       technologies: ["C++"],
       description: [
         "yeppers",
@@ -34,7 +34,7 @@ function Projects() {
     {
       id: 9,
       title: "DIY Secure Network Load Balancer",
-      imageUrl: "www.google.com",
+      imageUrl: "images/projects/Network.png",
       technologies: ["C++"],
       description: [
         "yeppers",
@@ -57,20 +57,6 @@ function Projects() {
       social: [
         { type: "github", link: "https://github.com/JacksonNace/portfolio" },
         // { type: "youtube", link: "https://youtube.com" }
-      ],
-    },
-    {
-      id: 12,
-      title: "Bleach RPG",
-      imageUrl: "images/projects/BleachRPG.jpg",
-      technologies: ["C++"],
-      description: [
-        "Created a turn-based battle system inspired by Bleach, with mechanics using inheritance and polymorphism.",
-        "Developed a save/load system with file handling to ensure seamless continuation of gameplay sessions",
-      ],
-      social: [
-        { type: "github", link: "https://github.com/JacksonNace/BleachRPG" },
-        { type: "youtube", link: "https://www.youtube.com/watch?v=ex_-Qy1oqus&t=2s" },
       ],
     },
     {
@@ -100,6 +86,20 @@ function Projects() {
       social: [
         { type: "github", link: "https://github.com/JacksonNace/MarketMentor-HackRice" },
         { type: "youtube", link: "https://www.youtube.com/watch?v=yuofK7RWgjU" },
+      ],
+    },
+    {
+      id: 15,
+      title: "Bleach RPG",
+      imageUrl: "images/projects/BleachRPG.jpg",
+      technologies: ["C++"],
+      description: [
+        "Created a turn-based battle system inspired by Bleach, with mechanics using inheritance and polymorphism.",
+        "Developed a save/load system with file handling to ensure seamless continuation of gameplay sessions",
+      ],
+      social: [
+        { type: "github", link: "https://github.com/JacksonNace/BleachRPG" },
+        { type: "youtube", link: "https://www.youtube.com/watch?v=ex_-Qy1oqus&t=2s" },
       ],
     },
   ];
