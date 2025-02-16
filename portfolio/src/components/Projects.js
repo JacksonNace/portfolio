@@ -4,16 +4,44 @@ import "./Projects.css";
 function Projects() {
   const projects = [
     {
-      id: 9,
-      title: "S3 File Upload",
+      id: 7,
+      title: "Cloud Security Hardening",
       imageUrl: "www.google.com",
-      technologies: ["React, AWS, Spring Boot"],
+      technologies: ["AWS"],
       description: [
         "yeppers",
         " cloud resume challenge.",
       ],
       social: [
-        { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        { type: "github", link: "https://github.com/JacksonNace/LoadBalancer" },
+        // { type: "youtube", link: "https://youtube.com" }
+      ],
+    },
+    {
+      id: 8,
+      title: "Intrusion Detection Machine Learning Model",
+      imageUrl: "www.google.com",
+      technologies: ["C++"],
+      description: [
+        "yeppers",
+        " cloud resume challenge.",
+      ],
+      social: [
+        { type: "github", link: "https://github.com/JacksonNace/LoadBalancer" },
+        // { type: "youtube", link: "https://youtube.com" }
+      ],
+    },
+    {
+      id: 9,
+      title: "DIY Secure Network Load Balancer",
+      imageUrl: "www.google.com",
+      technologies: ["C++"],
+      description: [
+        "yeppers",
+        " cloud resume challenge.",
+      ],
+      social: [
+        { type: "github", link: "https://github.com/JacksonNace/LoadBalancer" },
         // { type: "youtube", link: "https://youtube.com" }
       ],
     },
@@ -28,21 +56,6 @@ function Projects() {
       ],
       social: [
         { type: "github", link: "https://github.com/JacksonNace/portfolio" },
-        // { type: "youtube", link: "https://youtube.com" }
-      ],
-    },
-    {
-      id: 11,
-      title: "CodeRED Astra 2024",
-      imageUrl: "images/projects/Astra.png",
-      technologies: ["React", "JavaScript"],
-      description: [
-        "Built 8 frontend components in React.",
-        "Prepared for CodeRED Astra 2024.",
-        "Used libraries like Ant Design.",
-      ],
-      social: [
-        // { type: "github", link: "https://github.com/JacksonNace/portfolio" },
         // { type: "youtube", link: "https://youtube.com" }
       ],
     },
