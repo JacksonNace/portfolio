@@ -5,9 +5,15 @@ import './Experience.css';
 function Experience() {
   const experiences = [
     {
+      company: "Derrick Corporation",
+      jobTitle: "IT Intern",
+      date: "March 2025 - Present",
+      imageUrl: "images/experience/UH.png"
+    },
+    {
       company: "University of Houston",
       jobTitle: "IT Assistant",
-      date: "August 2024 - Present",
+      date: "August 2024 - March 2025",
       imageUrl: "images/experience/UH.png"
     },
     {
