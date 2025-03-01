@@ -1,80 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Navbar Styling */
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.9); 
-  padding: 0.5rem 1rem;
+  background: #fff;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
   position: fixed;
-  top: 10px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 999;
+  border-radius: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+  padding: 0 20px;
   width: auto;
-  z-index: 50;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  border: none;
 }
 
-.navbar-links {
-  list-style: none;
+/* Navbar container (for layout) */
+.navbar__container {
   display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
+  justify-content: space-between;
   align-items: center;
-  white-space: nowrap;
+  width: 100%;
 }
 
-.navbar-links li {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar-links a {
-  text-decoration: none;
+/* Navbar menu (on desktop) */
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
   font-size: 1rem;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  padding: 0.3rem 0.6rem;
-  border-radius: 10px;
+  gap: 30px;
 }
 
-.navbar-links a:hover {
-  color: #007bff;
-  text-decoration: underline;
+/* Navbar links styling */
+.navbar__links {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #64A14E;
+  text-decoration: none;
+  padding: 10px 20px;
+  position: relative;
+  transition: 
+    color 0.3s ease, 
+    font-weight 0.3s ease, 
+    padding 0.3s ease;
 }
 
-@media (max-width: 1200px) {
+/* Hover effect on links */
+.navbar__links::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  background-color: #64A14E;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar__links:hover {
+  color: #64A14E;
+  font-weight: 600;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.navbar__links:hover::after {
+  transform: scaleX(1);
+}
+
+/* Hamburger menu (mobile) */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;  /* Adjust height */
+  cursor: pointer;
+  position: absolute;
+  top: 15px;  /* Position it a little lower than the top */
+}
+
+.navbar__hamburger div {
+  width: 100%;
+  height: 4px;
+  background-color: #64A14E;  /* Ensure visibility */
+  transition: all 0.3s ease;
+}
+
+/* Media query for mobile */
+@media (max-width: 1000px) {
+  .navbar__menu {
+    display: none; /* Hide the menu by default on mobile */
+    flex-direction: column;
+    gap: 20px;
+    width: 250px;  /* Set width of the menu */
+    position: absolute;
+    top: 20px;  /* Move it lower from the top */
+    right: 20px;  /* Align the menu to the right */
+    align-items: flex-end;  /* Align menu items to the right */
+    padding: 20px;  /* Add some padding inside the menu */
+    background-color: white;  /* Background for the menu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Optional shadow */
+    border-radius: 8px;  /* Optional rounded corners */
+  }
+
   .navbar {
-    width: 55%;
+    left: auto;  /* Remove left positioning */
+    padding-right: 50px;
+    margin-right: 30px;
+    right: 0;  /* Align navbar to the right */
+    transform: none; /* Remove translateX for mobile */
+    border: 0px;
+    justify-content: flex-start;  /* Align content to the left */
+    background-color: #ffffff;
+  }
+  .navbar__hamburger {
+    display: flex; /* Show hamburger icon on mobile */
   }
 
-  .navbar-links a {
-    font-size: 0.95rem;
+  .navbar__menu.active {
+    align-items: right;
+    display: flex; /* Show the menu when active class is added */
+    max-width: 9rem;
   }
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    width: 70%;
-    padding: 0.4rem;
-  }
-
-  .navbar-links {
-    gap: 0.6rem;
-  }
-
-  .navbar-links a {
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .navbar {
-    display: none;
-  }
+.navbar__menu {
+  transition: transform 0.3s ease-out;
 }
