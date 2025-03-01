@@ -1,20 +1,24 @@
 import React from 'react';
 import './Hero.css'; 
 import { TextFade } from './TextFade'; 
+import heroImage from './hero.png';  // Import the image
 
-const Hero = () => {  
+const Hero = () => {
   return (
     <section className="hero">
-      <TextFade direction="up" className="hero-container">
-        <div className="hero-text">
-          <h1>Hey, I'm Jackson!</h1>
-          <p>Studying computer science with a minor in math @ the University of Houston.</p>
-          <h3>IT Intern @ Derrick Corporation</h3>
-          <img src="images/hero.gif" alt="Hero animation" className="hero-gif" />
-        </div>
-        <div className="hero-image-container"></div>
+      <TextFade direction="up" className="hero__content">
+        <h11>Hey, I’m Jackson!</h11>
+        <p>
+        Studying computer science with <br/>a minor in math @ the University of Houston.
+        </p>
+        <p>IT Intern @ <span className="redhighlight"> Derrick Corporation</span></p>
       </TextFade>
-      
+
+      <img
+        src={heroImage}  // Use the imported image here
+        alt="Alyssa on a bike"
+        className="hero__image"
+      />
       <div className="visitor-counter">
         <h2>Visitor Counter</h2>
         {/* <p>Number of visitors: {visitorCount}</p> */}
@@ -24,4 +28,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

@@ -1,217 +1,77 @@
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
 
-#root {
-  height: 100%;
-  width: 100%;
-}
-
+/* Section container */
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background: #FFFDF0;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  height: 100vh;
-  width: 100vw;
+    display: flex; 
+    background-color: #FFFDF0;            /* Use flexbox for layout */
+    flex-direction: column;    /* Stack children vertically */
+    justify-content: center;   /* Center elements horizontally */
+    align-items: center;       /* Center elements vertically */
+    padding: 20px;
+    text-align: center;        /* Center the text */
+    height: 100vh;             /* Make sure it takes full viewport height */
 }
 
-.hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.25rem; 
-  gap: 1.25rem; 
-  text-align: center;
-  width: 100%;
-  height: 100%;
+/* Image styling */
+.hero__image {
+    width: 100%;
+    height: auto;
+    max-width: 100vh;
+    transition: transform 0.3s ease-in-out;
 }
 
-.hero-text {
-  flex: 1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;}
-
-.hero img {
-  max-width: 12.5rem;
-}
-
-.hero-skills {
-  margin-top: 1.25rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-skills .skills-box {
-  background-color: #5d4037;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 90%;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2em;
-  line-height: 10px;
-}
-
-.hero p {
-  font-size: 1em;
-  margin-bottom: 1rem;
-
-}
-
-.hero h3 {
-  font-size: 1em;
-  font-weight: 400;
-  margin-top: 0.3rem;
-  margin-bottom: 0; /* Ensure no margin below h3 */
-}
-
-
-@media (min-width: 768px) {
-  .hero {
-    padding: 50px;
-  }
-
-  .hero-content {
-    flex-direction: row;
-  }
-
-  .hero-text {
-    text-align: left;
-  }
-
-  .hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-  }
-
-  .hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-  }
-
-  .hero button {
-    padding: 15px 30px;
+  
+  /* Content section */
+  .hero__content {
+    margin-top: 3rem;
+    max-width: 600px;
+    max-height: 100px;
   }
   
-}
-
-
-
-@media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column; 
-    gap: 10px;
-    padding: 10px;
+  .hero__content h11 {
+    font-family: poppins;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #2a2a2a; 
+    margin-bottom: 1rem;
+  }
+  
+  .hero__content p {
+    font-size: 1rem;
+    font-family: poppins;
   }
 
-  .hero img {
-    max-width: 150px;
+  .redhighlight {
+    color: #ff3434; 
+    font-weight: 600;
+  }
+  
+/* Image styling */
+.hero__image {
+    width: 100%;
+    height: auto;
+    max-width: 100vh;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Animation for scroll effect */
+  .hero__image.scroll-effect {
+    transform: translateX(calc(300px - var(--scroll-offset)));
   }
 
-  .hero-socials img {
-    width: 60px;
-    height: 60px;
-  }
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: 0; /* Remove any extra padding on top */
+      text-align: left; /* Adjust text alignment for better readability */
+    }
+    
+    .hero__content {
+      margin-bottom: 20px; /* Add some space below the text on mobile */
+    }
 
-  .hero h1 {
-    font-size: 1.5em;
+    .hero__image {
+        margin-top: 300px
+    }
   }
-
-  .hero p {
-    font-size: 0.9em;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .hero-container {
-    flex-direction: row;
-    gap: 15px;
-  }
-
-  .hero-text {
-    flex: 1;
-  }
-
-  .hero img {
-    max-width: 180px;
-  }
-
-  .hero-socials {
-    justify-content: center;
-  }
-
-  .hero-socials img {
-    width: 70px; 
-    height: 70px;
-  }
-
-  .hero h1 {
-    font-size: 2em; 
-  }
-
-  .hero p {
-    font-size: 1em;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .hero-container {
-    flex-direction: row;
-    gap: 20px;
-    padding: 30px;
-  }
-
-  .hero-text {
-    flex: 1.2;
-  }
-
-  .hero h1 {
-    font-size: 2.5em;
-  }
-
-  .hero p {
-    font-size: 1.1em;
-  }
-}
-
-@media (min-width: 1441px) {
-  .hero-container {
-    max-width: 1200px; 
-    margin: 0 auto; 
-  }
-
-  .hero-text {
-    flex: 1; 
-  }
-
-  .hero h1 {
-    font-size: 3em;
-  }
-
-  .hero p {
-    font-size: 1.2em;
-  }
-
-  .hero img {
-    max-width: 220px;
-  }
-}
-

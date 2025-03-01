@@ -41,7 +41,7 @@
 
 }
 .about-text h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -65,16 +65,12 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  max-width: 1200px;
-  margin-top: 20px;
-  padding: 10px;
+  max-width: 1000px;
 }
+.cert-title{
+  font-weight: bolder;
+  padding-bottom: 0px;
 
-.cert-title,
-.about-text h1 {
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 300;
 }
 
 .cert-container {
@@ -88,7 +84,7 @@
 }
 
 .cert-box {
-  width: 120px;
+  width: 80px;
   text-align: center;
   padding: 5px;
 }
