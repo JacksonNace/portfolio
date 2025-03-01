@@ -9,7 +9,8 @@ const Hero = () => {
         <div className="hero-text">
           <h1>Hey, I'm Jackson!</h1>
           <p>Studying computer science with a minor in math @ the University of Houston.</p>
-          <h3>IT Student Assistant @ University of Houston</h3>
+          <h3>IT Intern @ Derrick Corporation</h3>
+          <img src="images/hero.gif" alt="Hero animation" className="hero-gif" />
         </div>
         <div className="hero-image-container"></div>
       </TextFade>
@@ -23,3 +24,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

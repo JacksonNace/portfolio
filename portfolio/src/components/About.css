@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .about-container {
   display: flex;
   flex-direction: column;
@@ -7,10 +9,13 @@
   background: #FFFDF0;
   height: 100vh;
   width: 100vw;
+  font-family: poppins;
+
 }
 
 .aboutTitle {
-  font-size: 2rem;
+  font-family: poppins;
+  font-size: 3rem;
   font-weight: 580;
   margin: 30px;
 }
@@ -28,9 +33,15 @@
 .about-text {
   flex: 1;
   margin: 0 20px;
+  text-align: left;
 }
 
+.about-text h1{
+  font-weight: bolder;
+
+}
 .about-text h2 {
+  font-size: 20px;
   font-weight: 500;
 }
 

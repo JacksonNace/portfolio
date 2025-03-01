@@ -1,6 +1,8 @@
 import React from "react";
 import './About.css';
 import { IoLocationOutline } from "react-icons/io5";
+import { LettersPullUp } from './Text-Pull-Up'; 
+
 
 function About() {
   const certs = [
@@ -20,7 +22,7 @@ function About() {
   ];
   return (
     <div className="about-container">
-      <div className="aboutTitle">About me</div>
+      <LettersPullUp text="About me" className="aboutTitle"/>
       <div className="about-me">
       <div className="about-image">
           <img src="images/ichigopfp.jpg" alt="profile picture" className="profile-image" />

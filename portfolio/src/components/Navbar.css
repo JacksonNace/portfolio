@@ -100,7 +100,7 @@
     display: none; /* Hide the menu by default on mobile */
     flex-direction: column;
     gap: 20px;
-    width: 250px;  /* Set width of the menu */
+    width: 290px;  /* Set width of the menu */
     position: absolute;
     top: 20px;  /* Move it lower from the top */
     right: 20px;  /* Align the menu to the right */
