@@ -1,7 +1,6 @@
 import React from 'react';
 import './Hero.css'; 
 import { TextFade } from './TextFade'; 
-import heroImage from './hero.png';  // Import the image
 
 const Hero = () => {
   return (
@@ -15,7 +14,7 @@ const Hero = () => {
       </TextFade>
 
       <img
-        src={heroImage}  // Use the imported image here
+        src="images/hero.png"  // Use the imported image here
         alt="Alyssa on a bike"
         className="hero__image"
       />
