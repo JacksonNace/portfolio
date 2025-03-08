@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <TextFade direction="up" className="hero__content">
-        <h11>Hey, I’m Jackson!</h11>
+        <h4>Hey, I’m Jackson!</h4>
         <p>
         Studying computer science with <br/>a minor in math @ the University of Houston.
         </p>
@@ -14,7 +14,7 @@ const Hero = () => {
       </TextFade>
 
       <img
-        src="images/hero.png"  // Use the imported image here
+        src="images/hero.png"
         alt="Alyssa on a bike"
         className="hero__image"
       />
