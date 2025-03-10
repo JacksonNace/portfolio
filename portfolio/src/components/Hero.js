@@ -8,14 +8,14 @@ const Hero = () => {
       <TextFade direction="up" className="hero__content">
         <h11>Hey, I’m Jackson!</h11>
         <p>
-        Studying computer science with <br/>a minor in math @ the University of Houston.
+        Studying computer science with <br/>a minor in math @ the <span className="highlight">University of Houston</span>.
         </p>
-        <p>IT Intern @ <span className="redhighlight"> Derrick Corporation</span></p>
+        <p>IT Intern @ <span className="highlight"> Derrick Corporation</span></p>
       </TextFade>
 
       <img
         src="images/hero.png"  // Use the imported image here
-        alt="Alyssa on a bike"
+        alt="jackson n monkeys"
         className="hero__image"
       />
       <div className="visitor-counter">
