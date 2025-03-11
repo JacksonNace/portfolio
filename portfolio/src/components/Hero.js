@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <TextFade direction="up" className="hero__content">
-        <h11>Hey, I’m Jackson!</h11>
+        <h4>Hey, I’m Jackson!</h4>
         <p>
         Studying computer science with <br/>a minor in math @ the <span className="highlight">University of Houston</span>.
         </p>
