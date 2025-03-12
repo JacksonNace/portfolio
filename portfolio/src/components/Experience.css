@@ -1,53 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .experience-section {
-  font-family: poppins;
+  font-family: poppins, sans-serif;
   margin: 0 auto;
   padding: 1rem;
   background: #ffffff;
 }
 
-
 .experience-card {
   background: #fff;   
   border: 1px solid #ccc;  
   border-radius: 8px;   
-  width:1200px;
+  width: 1200px;
   margin: 0 auto;          
   padding: 1rem;          
 }
 
-
 .section-title {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
   font-weight: bold;
 }
 
-
 .experience-container {
   display: flex;
   flex-direction: column;
-  gap: 0;        
+  gap: 0;
 }
+
 .experience-box {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 0.75rem 0;
+  padding: 1rem;
   border-bottom: 1px solid #ddd;
+  cursor: pointer;
 }
 
 .experience-box:last-child {
   border-bottom: none;
 }
 
+.header-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.text-area {
+  flex: 1;
+}
+
+.experience-company {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.experience-jobTitle {
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0;
+  color: #555;
+}
+.icon-date-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Centers the icon horizontally */
+  justify-content: center;  /* Centers content vertically inside the container */
+  gap: 5px;  /* Adds space between icon and date */
+}
+
+.experience-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.experience-icon.rotated {
+  transform: rotate(90deg); /* Rotate icon 90 degrees */
+}
+
+.experience-date {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
 .image-container {
   flex-shrink: 0;
-  width: 3rem;
-  height: 3rem;
-  margin-right: 0.75rem;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
 }
 
 .experience-image {
@@ -57,31 +103,9 @@
   border-radius: 50%;
 }
 
-
-.text-area {
-  display: flex;
-  flex-direction: column;
-  margin-right: auto;
-}
-
-
-.experience-company {
-  font-size: 1rem;
-  margin: 0;
-  font-weight: bold;
-}
-
-
-.experience-jobTitle {
-  font-size: 0.9rem;
-  margin: 0.25rem 0 0;
-  color: #555;
-}
-
-
-.experience-date {
-  font-size: 0.85rem;
-  color: #666;
-  margin: 0;
-  text-align: right;
+.experience-bullets {
+  margin-top: 0.5rem;
+  padding-left: 20px;
+  list-style-type: disc;
+  font-size: 14px;
 }

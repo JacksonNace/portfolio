@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Skills.css";
+import { TextFade } from './TextFade'; // Import the TextFade component
 
 function Skills() {
   const skills = {
@@ -31,7 +32,11 @@ function Skills() {
     <div className="skills-container">
       {categoryOrder.map(category => (
         <div key={category} className="skill-category">
-          <h3>{category}</h3>
+          {/* Add TextFade to the category heading */}
+          <TextFade direction="up">
+            <h3>{category}</h3>
+          </TextFade>
+          
           <div className="skills-box">
             {skills[category].map((skill) => (
               <div key={skill.name} className="skill-item">
@@ -40,7 +45,8 @@ function Skills() {
                   alt={skill.name}
                   title={skill.name}
                 />
-                <span className="skill-label">{skill.name}</span>
+                {/* Add TextFade to the skill label */}
+                  <span className="skill-label">{skill.name}</span>
               </div>
             ))}
           </div>

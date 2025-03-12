@@ -3,7 +3,6 @@ import './About.css';
 import { IoLocationOutline } from "react-icons/io5";
 import { LettersPullUp } from './Text-Pull-Up'; 
 
-
 function About() {
   const certs = [
     {
@@ -18,13 +17,13 @@ function About() {
       date: "February 32nd, 2026",
       expire: "TODAY",
     },
-
   ];
+
   return (
-    <div className="about-container">
+    <div className="about-container" id="about">
       <LettersPullUp text="About me" className="aboutTitle"/>
       <div className="about-me">
-      <div className="about-image">
+        <div className="about-image">
           <img src="images/ichigopfp.jpg" alt="profile picture" className="profile-image" />
         </div>
         <div className="about-text">
@@ -33,7 +32,7 @@ function About() {
             Hello! I'm Jackson, a passionate student and upcoming IT/Software professional. 
             I am always looking for new opportunities to learn and grow as both a student and a professional in every tech career field.
           </p>
-          <h2> <IoLocationOutline /> Houston, TX </h2>
+          <h2>📌  Houston, TX </h2>
           <div className='certifications'>
             <h1 className='cert-title'>Certifications</h1>
             <div className='cert-container'>
@@ -52,4 +51,3 @@ function About() {
 }
 
 export default About;
-

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link as ScrollLink } from "react-scroll"; // Import for smooth scrolling
 import "./Navbar.css"; // Ensure your CSS file is correctly linked
 
 const Navbar = () => {
@@ -14,7 +15,10 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__container">
         {/* Hamburger icon */}
-        <div className="navbar__hamburger" onClick={toggleMenu}>
+        <div 
+          className={`navbar__hamburger ${menuOpen ? "active" : ""}`} 
+          onClick={toggleMenu}
+        >
           <div></div>
           <div></div>
           <div></div>
@@ -23,19 +27,51 @@ const Navbar = () => {
         {/* Menu items */}
         <ul className={`navbar__menu ${menuOpen ? "active" : ""}`}>
           <li className="navbar__item">
-            <Link to="/" className="navbar__links">Home</Link>
+            <ScrollLink 
+              to="home" 
+              smooth={true} 
+              duration={500} 
+              className="navbar__links" 
+              onClick={() => setMenuOpen(false)}
+            >
+              Home
+            </ScrollLink>
           </li>
           <li className="navbar__item">
-            <Link to="/about" className="navbar__links">About</Link>
+            <ScrollLink 
+              to="about" 
+              smooth={true} 
+              duration={500} 
+              className="navbar__links" 
+              onClick={() => setMenuOpen(false)}
+            >
+              About
+            </ScrollLink>
           </li>
           <li className="navbar__item">
-            <Link to="/experience" className="navbar__links">Experience</Link>
+            <ScrollLink 
+              to="experience" 
+              smooth={true} 
+              duration={500} 
+              className="navbar__links" 
+              onClick={() => setMenuOpen(false)}
+            >
+              Experience
+            </ScrollLink>
           </li>
           <li className="navbar__item">
-            <Link to="/project" className="navbar__links">Project</Link>
+            <ScrollLink 
+              to="projects" 
+              smooth={true} 
+              duration={500} 
+              className="navbar__links" 
+              onClick={() => setMenuOpen(false)}
+            >
+              Projects
+            </ScrollLink>
           </li>
           <li className="navbar__item">
-            <Link to="/project" className="navbar__links">Resume</Link>
+            <Link to="/experience" className="navbar__links" onClick={() => setMenuOpen(false)}>Resume</Link>
           </li>
         </ul>
       </div>

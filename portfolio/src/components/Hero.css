@@ -1,77 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-
-/* Section container */
+/* Hero.css */
+/* Hero.css */
 .hero {
-    display: flex; 
-    background-color: #ffffff;            /* Use flexbox for layout */
-    flex-direction: column;    /* Stack children vertically */
-    justify-content: center;   /* Center elements horizontally */
-    align-items: center;       /* Center elements vertically */
-    padding: 20px;
-    text-align: center;        /* Center the text */
-    height: 100vh;             /* Make sure it takes full viewport height */
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 0 5%;
 }
 
-/* Image styling */
-.hero__image {
-    width: 100%;
-    height: auto;
-    max-width: 100vh;
-    transition: transform 0.3s ease-in-out;
+/* Content section */
+.hero__content {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 1); /* Make text more readable */
+  padding-left: 5%; /* Add padding to the left */
 }
 
-  
-  /* Content section */
-  .hero__content {
-    margin-top: 3rem;
-    max-width: 600px;
-    max-height: 100px;
-  }
-  
-  .hero__content h4 {
-    font-family: poppins;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #2a2a2a; 
-    margin-bottom: 1rem;
-  }
-  
-  .hero__content p {
-    font-size: 1.3rem;
-    color: rgb(77, 77, 77);
-    font-family: poppins;
-  }
+.hero__content h4 {
+  font-family: Poppins;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
 
-  .highlight {
-    color: #d60000; 
-  }
-  
-/* Image styling */
-.hero__image {
-    width: 100%;
-    height: auto;
-    max-width: 100vh;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  /* Animation for scroll effect */
-  .hero__image.scroll-effect {
-    transform: translateX(calc(300px - var(--scroll-offset)));
-  }
+.hero__content p {
+  font-size: 2rem;
+  font-family: Poppins;
+  font-weight: 600;
+  color: #ffffff; /* Green text color */
+  text-shadow: 
+    1px 1px 0 rgb(122, 122, 122), 
+    -1px -1px 0 rgb(122, 122, 122), 
+    1px -1px 0 rgb(122, 122, 122), 
+    -1px 1px 0rgb(122, 122, 122), ; /* White outline effect */}
+    
 
-  @media (max-width: 768px) {
-    .hero {
-      padding-top: 0; /* Remove any extra padding on top */
-      text-align: left; /* Adjust text alignment for better readability */
+
+    a {
+      text-decoration: none; /* Remove underline from the link */
+    }
+
+    .highlight {
+      color: #e04343;
+      text-shadow: 
+        1px 1px 0 rgb(88, 17, 17), 
+        -1px -1px 0 rgb(88, 17, 17), 
+        1px -1px 0 rgb(88, 17, 17), 
+        -1px 1px 0 rgb(88, 17, 17); /* White outline effect */
+      position: relative; /* For the pseudo-element to position properly */
+      transition: color 0.3s ease; /* Smooth color transition */
     }
     
-    .hero__content {
-      margin-bottom: 20px; /* Add some space below the text on mobile */
+    .highlight::after {
+      content: ''; /* Empty content for the underline effect */
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 4px; /* Thickness of the underline */
+      background-color: #e04343; /* Color of the underline */
+      transition: width 0.3s ease, left 0.3s ease; /* Animate width and left */
     }
-
-    .hero__image {
-        margin-top: 300px
+    
+    .highlight:hover::after {
+      width: 100%; /* Make the underline full width on hover */
+      left: 0; /* Position it at the left side */
     }
+    
+    .highlight:hover {
+      text-decoration: none; /* Remove default underline */
+    }
+    
+/* Responsive styling */
+@media (max-width: 768px) {
+  .hero__content {
+    top: 20%;
+    left: 10%; /* Increased padding on the left for smaller screens */
+    padding-left: 10%; /* Ensure this is consistent */
   }
+
+  .hero__content h4 {
+    font-size: 2.5rem;
+  }
+
+  .hero__content p {
+    font-size: 1.1rem;
+  }
+}

@@ -5,9 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   background: #ffffff;
   font-family: poppins;
+  
 
 }
 
@@ -16,45 +16,53 @@
   font-size: 3rem;
   font-weight: 580;
   margin: 30px;
+  margin-top: 50px;
 }
 
 .about-me {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  flex-direction: row; /* Image on the left, text on the right */
+  align-items: center; /* Center vertically on large screens */
+  justify-content: flex-start; /* Ensure they are aligned to the left */
   width: 90%;
   max-width: 1200px;
-  padding: 10px;
 }
 
 .about-text {
   flex: 1;
-  margin: 0 20px;
+  margin-left: 20px; /* Space between image and text */
   text-align: left;
-}
-
-.about-text h1{
-  font-weight: bolder;
-
-}
-.about-text h2 {
-  font-size: 18px;
-  font-weight: 500;
 }
 
 .about-image {
   flex: 1;
   display: flex;
   justify-content: center;
-  margin: 0;
   padding: 30px;
+  max-width: 500px;
+  max-height: 500px;
+
 }
 
 .profile-image {
-  max-width: 200px;
-  height: auto;
   border-radius: 5%;
+}
+
+.about-text p{
+  font-size: 1.3rem;
+  color: rgb(78, 78, 78);
+  text-align: left;
+}
+
+.about-text h1{
+  font-size: 2rem;
+  font-weight: bolder;
+
+}
+.about-text h2 {
+  font-size: 1.4rem;
+  color: rgb(121, 121, 121);
+  font-weight: 500;
 }
 
 .certifications {
@@ -67,7 +75,7 @@
 }
 .cert-title{
   font-weight: bolder;
-  padding-bottom: 0px;
+  margin-bottom: 0;
 
 }
 
@@ -78,7 +86,6 @@
   gap: 20px;
   width: 100%;
   background: #ffffff;
-  padding: 10px;
 }
 
 .cert-box {
@@ -94,6 +101,7 @@
 
 .cert-box img {
   max-width: 100%;
+  border-radius: 10%;
   object-fit: contain;
 }
 
