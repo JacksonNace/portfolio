@@ -3,53 +3,53 @@ import "./Projects.css";
 
 function Projects() {
   const projects = [
-    {
-      id: 7,
-      title: "Cloud Security Hardening",
-      imageUrl: "images/projects/Fortress.jpg",
-      technologies: ["AWS"],
-      description: [
-        "yeppers",
-        " cloud resume challenge.",
-      ],
-      social: [
-        { type: "github", link: "https://github.com/JacksonNace/LoadBalancer" },
-        // { type: "youtube", link: "https://youtube.com" }
-      ],
-    },
-    {
-      id: 8,
-      title: "Intrusion Detection Machine Learning Model",
-      imageUrl: "images/projects/ML.png",
-      technologies: ["C++"],
-      description: [
-        "yeppers",
-        " cloud resume challenge.",
-      ],
-      social: [
-        { type: "github", link: "https://github.com/JacksonNace/LoadBalancer" },
-        // { type: "youtube", link: "https://youtube.com" }
-      ],
-    },
-    {
-      id: 9,
-      title: "DIY Secure Network Load Balancer",
-      imageUrl: "images/projects/Network.png",
-      technologies: ["C++"],
-      description: [
-        "yeppers",
-        " cloud resume challenge.",
-      ],
-      social: [
-        { type: "github", link: "https://github.com/JacksonNace/LoadBalancer" },
-        // { type: "youtube", link: "https://youtube.com" }
-      ],
-    },
+    // {
+    //   id: 7,
+    //   title: "Cloud Security Hardening",
+    //   imageUrl: "images/projects/Fortress.jpg",
+    //   technologies: ["AWS"],
+    //   description: [
+    //     "yeppers",
+    //     " cloud resume challenge.",
+    //   ],
+    //   social: [
+    //     { type: "github", link: "https://github.com/JacksonNace/LoadBalancer" },
+    //     // { type: "youtube", link: "https://youtube.com" }
+    //   ],
+    // },
+    // {
+    //   id: 8,
+    //   title: "Intrusion Detection Machine Learning Model",
+    //   imageUrl: "images/projects/ML.png",
+    //   technologies: ["C++"],
+    //   description: [
+    //     "yeppers",
+    //     " cloud resume challenge.",
+    //   ],
+    //   social: [
+    //     { type: "github", link: "https://github.com/JacksonNace/LoadBalancer" },
+    //     // { type: "youtube", link: "https://youtube.com" }
+    //   ],
+    // },
+    // {
+    //   id: 9,
+    //   title: "DIY Secure Network Load Balancer",
+    //   imageUrl: "images/projects/Network.png",
+    //   technologies: ["C++"],
+    //   description: [
+    //     "yeppers",
+    //     " cloud resume challenge.",
+    //   ],
+    //   social: [
+    //     { type: "github", link: "https://github.com/JacksonNace/LoadBalancer" },
+    //     // { type: "youtube", link: "https://youtube.com" }
+    //   ],
+    // },
     {
       id: 10,
       title: "Portfolio Website",
-      imageUrl: "www.google.com",
-      technologies: ["React, JavaScript, Azure Function, CosmosDB"],
+      imageUrl: "images/projects/Portfolio.png",
+      technologies: ["React", "JavaScript", "Azure Function", "CosmosDB"],
       description: [
         "yeppers",
         " cloud resume challenge.",
@@ -61,8 +61,8 @@ function Projects() {
     },
     {
       id: 13,
-      title: "Mockey Interview - HackTX 2024",
-      imageUrl: "images/projects/MockeyInterview.jpg",
+      title: "Mockey Interview",
+      imageUrl: "images/projects/MonkeyInterview.png",
       technologies: ["PostgreSQL", "NodeJS", "NextJS"],
       description: [
         "Built a mock interview platform for HackTX 2024.",
@@ -75,8 +75,8 @@ function Projects() {
     },
     {
       id: 14,
-      title: "MarketMentor - HackRice 2024",
-      imageUrl: "images/projects/MarketMentor.jpg",
+      title: "MarketMentor",
+      imageUrl: "images/projects/MarketMentor.png",
       technologies: ["React", "CSS", "HTML"],
       description: [
         "Created a website to trade stocks with fake cash, connecting to the Llama API and displaying graphs.",
@@ -91,7 +91,7 @@ function Projects() {
     {
       id: 15,
       title: "Bleach RPG",
-      imageUrl: "images/projects/BleachRPG.jpg",
+      imageUrl: "images/projects/BleachRPG.png",
       technologies: ["C++"],
       description: [
         "Created a turn-based battle system inspired by Bleach, with mechanics using inheritance and polymorphism.",
@@ -116,34 +116,36 @@ function Projects() {
           </div>
           <div className="project-content">
             <h3 className="project-title">{project.title}</h3>
-            <ul className="project-technologies">
-              {project.technologies.map((tech, techIndex) => (
-                <li key={techIndex}>{tech}</li>
-              ))}
-            </ul>
             <ul className="project-description">
               {project.description.map((point, pointIndex) => (
                 <li key={pointIndex}>{point}</li>
               ))}
             </ul>
-            <div className="social-links">
-              {project.social &&
-                project.social.map((item, socialIndex) => (
-                  <a
-                    key={socialIndex}
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`social-icon ${item.type}`}
-                  >
-                    {item.type === "github" && (
-                      <img src="images/socials/Github.svg" alt="GitHub Link" />
-                    )}
-                    {item.type === "youtube" && (
-                      <img src="images/socials/Youtube.png" alt="YouTube Link" />
-                    )}
-                  </a>
+            <div className="technologies-and-links flex justify-between items-center mt-2">
+              <ul className="project-technologies flex gap-2">
+                {project.technologies.map((tech, techIndex) => (
+                  <li key={techIndex}>{tech}</li>
                 ))}
+              </ul>
+              <div className="social-links flex gap-2">
+                {project.social &&
+                  project.social.map((item, socialIndex) => (
+                    <a
+                      key={socialIndex}
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`social-icon ${item.type}`}
+                    >
+                      {item.type === "github" && (
+                        <img src="images/socials/Github.svg" alt="GitHub Link" />
+                      )}
+                      {item.type === "youtube" && (
+                        <img src="images/socials/Youtube.png" alt="YouTube Link" />
+                      )}
+                    </a>
+                  ))}
+              </div>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@
   padding: 20px;
   max-width: 100%;
   margin: 0 auto;
-  background:#FFFDF0;
+  background:#ffffff;
   align-items:center;
 }
 
@@ -16,10 +16,10 @@
   display: flex;
   align-items: center;
   padding: 20px;
+  background:#ffffff;
   width:1200px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .left-image {
@@ -31,45 +31,53 @@
 }
 
 .project-image-container {
-  width: 300px;
+  width: 400px;
+  height: 100%;
   margin: 0px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .project-image {
   width: 100%;
-  height: auto;
-  border-radius: 4px;
+  height: 100%;
   object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1); /* Increased shadow size */
 }
 
 .project-content {
   flex: 1;
-  padding: 20px;
+  padding: 10px 30px;
 }
 
 .project-title {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
 }
 
+.technologies-and-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Adjusted styles for better alignment */
 .project-technologies {
+  display: flex;
+  gap: 5px;
   list-style: none;
   padding: 0;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .project-technologies li {
   display: inline-block;
-  margin-right: 5px;
-  background-color: #f0f0f0;
+  border: 2px solid #000000;
+  background-color: #ffffff;
   padding: 3px 6px;
   border-radius: 4px;
-}
-
-.project-description {
-  list-style: disc;
-  padding-left: 20px;
-  margin-bottom: 10px;
+  font-size: 0.9rem;
 }
 
 .social-links {
@@ -77,9 +85,18 @@
   gap: 10px;
 }
 
+
 .social-icon img {
   max-width: 30px;
   max-height: 30px;
+}
+
+
+.project-description {
+  list-style: disc;
+  padding-left: 20px;
+  color: rgb(109, 109, 109);
+  margin-bottom: 10px;
 }
 
 @media (max-width: 1024px) {

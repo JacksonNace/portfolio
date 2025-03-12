@@ -5,7 +5,7 @@
 /* Section container */
 .hero {
     display: flex; 
-    background-color: #FFFDF0;            /* Use flexbox for layout */
+    background-color: #ffffff;            /* Use flexbox for layout */
     flex-direction: column;    /* Stack children vertically */
     justify-content: center;   /* Center elements horizontally */
     align-items: center;       /* Center elements vertically */
@@ -39,7 +39,8 @@
   }
   
   .hero__content p {
-    font-size: 1rem;
+    font-size: 1.3rem;
+    color: rgb(77, 77, 77);
     font-family: poppins;
   }
 

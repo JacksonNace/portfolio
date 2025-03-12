@@ -19,7 +19,7 @@ const Hero = () => {
         className="hero__image"
       />
       <div className="visitor-counter">
-        <h2>Visitor Counter</h2>
+        {/* <h2>Visitor Counter</h2> */}
         {/* <p>Number of visitors: {visitorCount}</p> */}
       </div>
     </section>
