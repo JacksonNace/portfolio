@@ -51,8 +51,7 @@ function Projects() {
       imageUrl: "images/projects/Portfolio.png",
       technologies: ["React", "JavaScript", "Azure Function", "CosmosDB"],
       description: [
-        "yeppers",
-        " cloud resume challenge.",
+        "Yep, the website you're seeing right now!",
       ],
       social: [
         { type: "github", link: "https://github.com/JacksonNace/portfolio" },
