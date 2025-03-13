@@ -10,12 +10,12 @@ function About() {
       date: "January 23rd, 2024",
       expire: "NEVER",
     },
-    {
-      imgUrl: "images/certs/security.jpg",
-      title: "CompTIA Security+",
-      date: "February 32nd, 2026",
-      expire: "TODAY",
-    },
+    // {
+    //   imgUrl: "images/certs/security.jpg",
+    //   title: "CompTIA Security+",
+    //   date: "February 32nd, 2026",
+    //   expire: "TODAY",
+    // },
   ];
 
   return (
