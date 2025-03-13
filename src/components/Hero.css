@@ -117,15 +117,6 @@ a {
 
   .hero__content {
     top: 15%; /* Adjust the content position further down */
-    left: 5%; /* Maintain consistent padding on the left */
-    padding-left: 10%; /* Add some padding for a better look */
-  }
-
-  .hero__content h4 {
-    font-size: 2rem; /* Even smaller font size for mobile portrait */
-  }
-
-  .hero__content p {
-    font-size: 1rem; /* Smaller font size for mobile portrait */
+    padding-left: 0%; /* Ensure this is consistent */
   }
 }
