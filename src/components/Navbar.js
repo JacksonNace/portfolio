@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
 import { Link as ScrollLink } from "react-scroll"; // Import for smooth scrolling
 import "./Navbar.css"; // Ensure your CSS file is correctly linked
 
