@@ -127,7 +127,19 @@
   list-style-type: disc;
   font-size: 14px;
 }
+/* Mobile-friendly adjustments */
+@media (max-width: 900px) {
+  .section-title {
+    font-size: 2rem; /* Smaller title on mobile */
+    margin-bottom: 1.5rem;
+  }
 
+  .experience-card {
+    padding: 1rem; /* Ensure there's adequate padding */
+    width: 90%; /* Reduce card width on smaller screens */
+  }
+
+}
 /* Mobile-friendly adjustments */
 @media (max-width: 768px) {
   .section-title {

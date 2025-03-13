@@ -76,9 +76,20 @@ a {
 .highlight:hover {
   text-decoration: none; /* Remove default underline */
 }
+@media (max-width: 970px) {
 
-/* Responsive styling */
-@media (max-width: 768px) {
+  .hero__content {
+    max-width: 90%;
+    top: 10%; /* Adjust content placement for smaller screens */
+    padding-left: 0%; /* Ensure this is consistent */
+  }
+
+  .hero__content h4 {
+    font-size: 4rem; /* Smaller font size for mobile screens */
+  }
+
+}
+@media (max-width: 770px) {
   .hero {
     background-size: cover;
     background-position: top center; /* Adjust the background position */
@@ -86,8 +97,7 @@ a {
 
   .hero__content {
     top: 10%; /* Adjust content placement for smaller screens */
-    left: 5%; /* Slightly adjust left positioning */
-    padding-left: 10%; /* Ensure this is consistent */
+    padding-left: 0%; /* Ensure this is consistent */
   }
 
   .hero__content h4 {
