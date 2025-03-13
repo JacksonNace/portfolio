@@ -73,14 +73,15 @@
 }
 
 .experience-company {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .experience-jobTitle {
-  font-size: 0.9rem;
-  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  margin: 0;
   color: #555;
 }
 
