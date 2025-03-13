@@ -71,8 +71,17 @@ const Navbar = () => {
             </ScrollLink>
           </li>
           <li className="navbar__item">
-            <Link to="/experience" className="navbar__links" onClick={() => setMenuOpen(false)}>Resume</Link>
-          </li>
+  <a 
+    href="images/JacksonNaceResume.pdf" 
+    className="navbar__links" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    onClick={() => setMenuOpen(false)}
+  >
+    Resume
+  </a>
+</li>
+
         </ul>
       </div>
     </nav>

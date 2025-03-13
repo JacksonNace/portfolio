@@ -89,13 +89,19 @@
 }
 
 .cert-box {
-  width: 80px;
+  width: 90px;
   text-align: center;
   padding: 5px;
+  transition: transform 0.3s, width 0.3s;
+}
+
+.cert-box:hover {
+  transform: scale(1.1);
+  width: 100px;
 }
 
 .cert-box h3 {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: normal;
 }
 

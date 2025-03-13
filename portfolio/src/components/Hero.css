@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-/* Hero.css */
+
 /* Hero.css */
 .hero {
   position: relative;
@@ -39,58 +39,83 @@
     1px 1px 0 rgb(122, 122, 122), 
     -1px -1px 0 rgb(122, 122, 122), 
     1px -1px 0 rgb(122, 122, 122), 
-    -1px 1px 0rgb(122, 122, 122), ; /* White outline effect */}
-    
+    -1px 1px 0rgb(122, 122, 122); /* White outline effect */
+}
 
+a {
+  text-decoration: none; /* Remove underline from the link */
+}
 
-    a {
-      text-decoration: none; /* Remove underline from the link */
-    }
+.highlight {
+  color: #e04343;
+  text-shadow: 
+    1px 1px 0 rgb(88, 17, 17), 
+    -1px -1px 0 rgb(88, 17, 17), 
+    1px -1px 0 rgb(88, 17, 17), 
+    -1px 1px 0 rgb(88, 17, 17); /* White outline effect */
+  position: relative; /* For the pseudo-element to position properly */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
 
-    .highlight {
-      color: #e04343;
-      text-shadow: 
-        1px 1px 0 rgb(88, 17, 17), 
-        -1px -1px 0 rgb(88, 17, 17), 
-        1px -1px 0 rgb(88, 17, 17), 
-        -1px 1px 0 rgb(88, 17, 17); /* White outline effect */
-      position: relative; /* For the pseudo-element to position properly */
-      transition: color 0.3s ease; /* Smooth color transition */
-    }
-    
-    .highlight::after {
-      content: ''; /* Empty content for the underline effect */
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0;
-      height: 4px; /* Thickness of the underline */
-      background-color: #e04343; /* Color of the underline */
-      transition: width 0.3s ease, left 0.3s ease; /* Animate width and left */
-    }
-    
-    .highlight:hover::after {
-      width: 100%; /* Make the underline full width on hover */
-      left: 0; /* Position it at the left side */
-    }
-    
-    .highlight:hover {
-      text-decoration: none; /* Remove default underline */
-    }
-    
+.highlight::after {
+  content: ''; /* Empty content for the underline effect */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px; /* Thickness of the underline */
+  background-color: #e04343; /* Color of the underline */
+  transition: width 0.3s ease, left 0.3s ease; /* Animate width and left */
+}
+
+.highlight:hover::after {
+  width: 100%; /* Make the underline full width on hover */
+  left: 0; /* Position it at the left side */
+}
+
+.highlight:hover {
+  text-decoration: none; /* Remove default underline */
+}
+
 /* Responsive styling */
 @media (max-width: 768px) {
+  .hero {
+    background-size: cover;
+    background-position: top center; /* Adjust the background position */
+  }
+
   .hero__content {
-    top: 20%;
-    left: 10%; /* Increased padding on the left for smaller screens */
+    top: 10%; /* Adjust content placement for smaller screens */
+    left: 5%; /* Slightly adjust left positioning */
     padding-left: 10%; /* Ensure this is consistent */
   }
 
   .hero__content h4 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Smaller font size for mobile screens */
   }
 
   .hero__content p {
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* Adjust paragraph font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    background-size: cover;
+    background-position: top center; /* Ensure the image stays centered */
+  }
+
+  .hero__content {
+    top: 15%; /* Adjust the content position further down */
+    left: 5%; /* Maintain consistent padding on the left */
+    padding-left: 10%; /* Add some padding for a better look */
+  }
+
+  .hero__content h4 {
+    font-size: 2rem; /* Even smaller font size for mobile portrait */
+  }
+
+  .hero__content p {
+    font-size: 1rem; /* Smaller font size for mobile portrait */
   }
 }

@@ -1,19 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 .experience-section {
-  font-family: poppins, sans-serif;
+  font-family: Poppins, sans-serif;
   margin: 0 auto;
   padding: 1rem;
   background: #ffffff;
 }
 
 .experience-card {
-  background: #fff;   
-  border: 1px solid #ccc;  
-  border-radius: 8px;   
-  width: 1200px;
-  margin: 0 auto;          
-  padding: 1rem;          
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%; /* Use 100% for responsiveness */
+  max-width: 1200px; /* Ensures the card doesn’t stretch too wide */
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.experience-company a {
+  color: black;
+  text-decoration: none; /* Optional: removes underline */
+}
+
+.experience-company a:hover {
+  color: #1c8532; /* Optional: darker color on hover for better interaction */
 }
 
 .section-title {
@@ -37,6 +47,13 @@
   padding: 1rem;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for expand/collapse */
+  max-height: 80px; /* Initial height */
+  overflow: hidden;
+}
+
+.experience-box.expanded {
+  max-height: 500px; /* Adjust as needed for expanded height */
 }
 
 .experience-box:last-child {
@@ -45,7 +62,8 @@
 
 .header-container {
   display: flex;
-  align-items: flex-start;
+  flex-direction: row; /* Keep items in a row on larger screens */
+  align-items: center; /* Center items vertically */
   justify-content: space-between;
   width: 100%;
 }
@@ -65,12 +83,12 @@
   margin: 0.25rem 0 0;
   color: #555;
 }
+
 .icon-date-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;  /* Centers the icon horizontally */
-  justify-content: center;  /* Centers content vertically inside the container */
-  gap: 5px;  /* Adds space between icon and date */
+  flex-direction: row; /* Align icon and date horizontally */
+  align-items: center;  /* Align icon and date vertically */
+  gap: 10px;  /* Space between icon and date */
 }
 
 .experience-icon {
@@ -105,7 +123,71 @@
 
 .experience-bullets {
   margin-top: 0.5rem;
-  padding-left: 20px;
+  padding-left: 30px;
   list-style-type: disc;
   font-size: 14px;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem; /* Smaller title on mobile */
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-card {
+    padding: 1rem; /* Ensure there's adequate padding */
+    width: 90%; /* Reduce card width on smaller screens */
+  }
+
+  .header-container {
+    flex-direction: row; /* Keep content in a row (image left, text right, icon right) */
+    align-items: center; /* Keep items centered vertically */
+  }
+
+  .image-container {
+    width: 3rem;
+    height: 3rem; /* Smaller image size on mobile */
+    margin-right: 1rem; /* Space between image and text */
+    margin-bottom: 0; /* No margin below image */
+  }
+
+  .experience-company,
+  .experience-jobTitle {
+    font-size: 1rem; /* Adjust text size */
+  }
+
+  .experience-box {
+    padding: 1rem;
+    max-height: none; /* Allow content to expand freely */
+    overflow: visible; /* Make sure the full content is visible */
+  }
+
+  .experience-bullets {
+    padding-left: 20px;
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .experience-icon {
+    width: 28px;
+    height: 28px; /* Smaller icons for mobile */
+  }
+
+  .experience-box.expanded {
+    max-height: none; /* Allow full expansion */
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-company {
+    font-size: 1rem; /* Ensure readable text on very small screens */
+  }
+
+  .experience-card {
+    padding: 0.5rem; /* Adjust padding for extra small screens */
+  }
+
+  .experience-bullets {
+    padding-left: 15px; /* Reduce padding on very small screens */
+  }
 }

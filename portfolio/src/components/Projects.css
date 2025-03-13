@@ -9,8 +9,8 @@
   max-width: 100%;
   margin: 0 auto;
   margin-bottom: 50px;
-  background:#ffffff;
-  align-items:center;
+  background: #ffffff;
+  align-items: center;
 }
 .section-title {
   font-size: 3rem;
@@ -28,13 +28,13 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
 }
 
 .project-card:hover {
   transform: scale(1.05); /* Expands the card by 5% */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect on hover */
 }
-
 
 .left-image {
   flex-direction: row;
@@ -62,6 +62,7 @@
 .project-content {
   flex: 1;
   padding: 10px 30px;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
 }
 
 .project-title {
@@ -74,15 +75,16 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+  flex-wrap: wrap; /* Allow wrapping of content if needed */
 }
 
-/* Adjusted styles for better alignment */
 .project-technologies {
   display: flex;
   gap: 5px;
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap; /* Allow wrapping of technologies if needed */
 }
 
 .project-technologies li {
@@ -92,15 +94,15 @@
   padding: 3px 6px;
   border-radius: 4px;
   font-size: 0.9rem;
+  margin-bottom: 5px; /* Added margin for spacing */
 }
 
 .social-links {
   display: flex;
   gap: 10px;
   transition: background-color 0.3s ease, border-radius 0.3s ease; /* Smooth transition */
+  flex-wrap: wrap; /* Allow wrapping of social icons */
 }
-
-
 
 .social-icon img {
   max-width: 30px;
@@ -118,6 +120,9 @@
   padding-left: 20px;
   color: rgb(109, 109, 109);
   margin-bottom: 10px;
+  text-align: left; /* Align description text to the left */
+  word-wrap: break-word; /* Ensure long words break within the container */
+  overflow-wrap: break-word; /* Break long words that might overflow */
 }
 
 /* Medium screens (Tablet) */
@@ -151,6 +156,8 @@
     flex-direction: column;
     text-align: center;
     padding: 15px;
+    max-width: 100%; /* Ensure the card doesn’t exceed screen width */
+    margin: 0 10px; /* Add some margin on left and right */
   }
 
   .left-image, .right-image {
@@ -158,7 +165,7 @@
   }
 
   .project-image-container {
-    width: 200px;
+    width: 300px; /* Make the image larger */
     margin: 10px auto;
   }
 
@@ -172,10 +179,15 @@
 
   .project-description {
     font-size: 0.9rem; /* Reduce font size */
+    text-align: left; /* Align text left */
   }
 
   .project-technologies li {
     font-size: 0.8rem;
+  }
+
+  .social-links {
+    justify-content: center; /* Center the social links */
   }
 }
 
@@ -185,6 +197,8 @@
     flex-direction: column;
     text-align: center;
     padding: 10px;
+    max-width: 100%; /* Ensure the card doesn’t exceed screen width */
+    margin: 0 10px; /* Add some margin on left and right */
   }
 
   .left-image, .right-image {
@@ -192,7 +206,7 @@
   }
 
   .project-image-container {
-    width: 150px;
+    width: 350px; /* Increase image size */
     margin: 10px auto;
   }
 
@@ -201,7 +215,7 @@
   }
 
   .project-title {
-    font-size: 1rem; /* Even smaller title for very small screens */
+    font-size: 1.6rem; /* Even smaller title for very small screens */
   }
 
   .project-technologies li {
@@ -210,5 +224,8 @@
 
   .project-description {
     font-size: 0.8rem;
+    text-align: left; /* Align text left */
+    word-wrap: break-word; /* Ensure long words break within the container */
+    overflow-wrap: break-word; /* Break long words that might overflow */
   }
 }

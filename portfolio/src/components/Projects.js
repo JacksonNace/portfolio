@@ -63,7 +63,7 @@ function Projects() {
       id: 13,
       title: "Mockey Interview",
       imageUrl: "images/projects/MonkeyInterview.png",
-      technologies: ["PostgreSQL", "NodeJS", "NextJS"],
+      technologies: ["PostgreSQL", "NodeJS", "NextJS", "Express","TailwindCSS", "Claude", "Postman" ],
       description: [
         "Built a mock interview platform for HackTX 2024.",
         "Engineered a mock interview game with Next.js and PostgreSQL, securing player data with password hashing and JWT - Hosted using Neon.",
@@ -77,7 +77,7 @@ function Projects() {
       id: 14,
       title: "MarketMentor",
       imageUrl: "images/projects/MarketMentor.png",
-      technologies: ["React", "CSS", "HTML"],
+      technologies: ["React", "CSS", "React", "Google Gemini", "Postman", "Auth0"],
       description: [
         "Created a website to trade stocks with fake cash, connecting to the Llama API and displaying graphs.",
         "Developed and integrated the Google Gemini API, enabling seamless data retrieval and enhancing app functionality.",

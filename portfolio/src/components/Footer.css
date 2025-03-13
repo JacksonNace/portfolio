@@ -9,6 +9,7 @@
   color: white;
   padding: 40px;
   font-size: 16px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .footer-left {
@@ -16,6 +17,8 @@
   flex-direction: column;
   align-items: flex-start;
   margin-left: 20px;
+  flex: 1; /* Take up available space */
+  margin-bottom: 20px; /* Add spacing below on smaller screens */
 }
 
 .footer-message {
@@ -30,12 +33,18 @@
 
 .footer-right {
   display: flex;
+  justify-content: flex-end; /* Align social icons to the right on larger screens */
   margin-right: 20px;
+  flex: 1; /* Take up available space */
+  margin-bottom: 20px; /* Add spacing below on smaller screens */
+  justify-content: flex-start; /* Override for small screens */
 }
 
 .footer-socials {
   display: flex;
   gap: 20px;
+  justify-content: flex-end; /* Ensure icons are aligned to the right */
+  margin-left: auto; /* Push icons to the right */
 }
 
 .footer-socials a {
@@ -49,4 +58,34 @@
 
 .footer-socials a:hover {
   text-decoration: underline;
+}
+
+/* Medium screens (Tablet) */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .footer-left, .footer-right {
+    flex: 1 1 100%; /* Allow each section to take full width */
+    justify-content: center; /* Center the content */
+    text-align: center; /* Center text */
+  }
+
+  .footer-message {
+    font-size: 24px; /* Slightly smaller font for medium screens */
+  }
+
+  .footer-copyright {
+    font-size: 14px; /* Smaller font for copyright */
+  }
+
+  .footer-socials {
+    gap: 15px; /* Reduce gap between icons */
+    justify-content: center; /* Center the social icons on tablets */
+  }
+
+  .footer-socials a {
+    font-size: 16px; /* Smaller icons font */
+  }
 }
