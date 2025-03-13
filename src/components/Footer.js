@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import { IoIosLink } from "react-icons/io";
 
 const Footer = () => {
   return (

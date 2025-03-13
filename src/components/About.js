@@ -1,6 +1,5 @@
 import React from "react";
 import './About.css';
-import { IoLocationOutline } from "react-icons/io5";
 import { LettersPullUp } from './Text-Pull-Up'; 
 
 function About() {

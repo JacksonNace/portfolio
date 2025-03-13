@@ -12,11 +12,11 @@ const Hero = () => {
       <TextFade direction="up" className="hero__content">
         <h4>Hey, I’m Jackson!</h4>
         <p>
-          Studying computer science with <br/>a minor in math @ <a href="https://uh.edu/" target="_blank">
+          Studying computer science with <br/>a minor in math @ <a href="https://uh.edu/" target="_blank" rel="noopener noreferrer">
             <span className="highlight">University of Houston</span>
           </a>
         </p>
-        <p>IT Intern @ <a href="https://derrick.com/" target="_blank">
+        <p>IT Intern @ <a href="https://derrick.com/" target="_blank" rel="noopener noreferrer">
             <span className="highlight">Derrick Corporation</span>
           </a></p>
       </TextFade>
