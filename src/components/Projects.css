@@ -141,7 +141,11 @@
   word-wrap: break-word; /* Ensure long words break within the container */
   overflow-wrap: break-word; /* Break long words that might overflow */
 }
-
+@media (max-width: 1200px) {
+  .project-card {
+    max-width: 100%;
+  }
+}
 /* Medium screens (Tablet) */
 @media (max-width: 1024px) {
   .project-card {
