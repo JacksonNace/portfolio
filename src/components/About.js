@@ -5,17 +5,17 @@ import { LettersPullUp } from './Text-Pull-Up';
 function About() {
   const certs = [
     {
+      imgUrl: "images/certs/security.jpg",
+      title: "CompTIA Security+",
+      date: "August 26, 2025",
+      expire: "August 26, 2028",
+    },
+    {
       imgUrl: "images/certs/azure.png",
       title: "Microsoft Azure Fundamentals",
       date: "January 23rd, 2024",
       expire: "NEVER",
     },
-    // {
-    //   imgUrl: "images/certs/security.jpg",
-    //   title: "CompTIA Security+",
-    //   date: "February 32nd, 2026",
-    //   expire: "TODAY",
-    // },
   ];
 
   return (
@@ -28,8 +28,9 @@ function About() {
         <div className="about-text">
           <h1>Who am I?</h1>
           <p>
-            Hello! I'm Jackson, a passionate student and upcoming IT/Software professional. 
+            Hello! I'm Jackson. I thrive on a good challenge.<br></br>
             I am always looking for new opportunities to learn and grow as both a student and a professional in every tech career field.
+            I come with experience in Linux, cloud, server management, and have a solid understanding on data handling.
           </p>
           <h2>📌  Houston, TX </h2>
           <div className='certifications'>

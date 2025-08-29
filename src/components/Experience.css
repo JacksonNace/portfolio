@@ -72,6 +72,19 @@
   flex: 1;
 }
 
+.bullet-title {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  list-style: none;
+  font-size: 1.1em;
+}
+
+.sub-bullets {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
 .experience-company {
   font-size: 1rem;
   margin: 0;

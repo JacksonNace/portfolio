@@ -1,28 +1,31 @@
 import React from 'react';
 import "./Skills.css";
-import { TextFade } from './TextFade'; // Import the TextFade component
+import { TextFade } from './TextFade';
 
 function Skills() {
   const skills = {
     "Languages": [
-      { name: "C++", image: "images/languages/C++.png" },
       { name: "Python", image: "images/languages/python.png" },
-      { name: "JavaScript", image: "images/languages/Javascript.png" },
       { name: "SQL", image: "images/languages/SQL.png" },
       { name: "R", image: "images/languages/R.png" },
+      { name: "C++", image: "images/languages/C++.png" },
+      { name: "JavaScript", image: "images/languages/Javascript.png" },
       { name: "Lua", image: "images/languages/Lua.png" },
     ],
     "Cloud/IT/Backend": [
       { name: "Azure", image: "images/technologies/Azure.png" },
       { name: "AWS", image: "images/technologies/AWS.webp" },
-      { name: "Linux", image: "images/technologies/Linux.png" },
-      { name: "Windows", image: "images/technologies/Windows.png" },
       { name: "Cloudflare", image: "images/technologies/Cloudflare.png" },
     ],
     "Frontend/Web": [
       { name: "React", image: "images/technologies/React.webp" },
       { name: "Git", image: "images/technologies/Git.png" },
       { name: "Postman", image: "images/technologies/Postman.png" },
+    ],
+    "Operating Systems": [
+      { name: "Linux", image: "images/technologies/Linux.png" },
+      { name: "Windows", image: "images/technologies/Windows.png" },
+      { name: "MacOS", image: "images/technologies/Postman.png" },
     ],
   };
 
