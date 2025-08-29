@@ -12,24 +12,20 @@ function Skills() {
       { name: "JavaScript", image: "images/languages/Javascript.png" },
       { name: "Lua", image: "images/languages/Lua.png" },
     ],
-    "Cloud/IT/Backend": [
+    "Cloud/DevOps": [
       { name: "Azure", image: "images/technologies/Azure.png" },
       { name: "AWS", image: "images/technologies/AWS.webp" },
-      { name: "Cloudflare", image: "images/technologies/Cloudflare.png" },
-    ],
-    "Frontend/Web": [
-      { name: "React", image: "images/technologies/React.webp" },
       { name: "Git", image: "images/technologies/Git.png" },
-      { name: "Postman", image: "images/technologies/Postman.png" },
     ],
-    "Operating Systems": [
+    "System Administration": [
       { name: "Linux", image: "images/technologies/Linux.png" },
       { name: "Windows", image: "images/technologies/Windows.png" },
       { name: "MacOS", image: "images/technologies/Postman.png" },
+      { name: "Jamf Pro", image: "images/technologies/Postman.png" },
     ],
   };
 
-  const categoryOrder = ["Languages", "Cloud/IT/Backend", "Frontend/Web"];
+  const categoryOrder = ["Languages", "Cloud/DevOps", "System Administration"];
 
   return (
     <div className="skills-container">
