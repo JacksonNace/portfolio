@@ -19,7 +19,7 @@
   top: 20%;
   left: 15%;
   color: white;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 1); /* Make text more readable */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 3); /* Make text more readable */
   padding-left: 5%; /* Add padding to the left */
 }
 
@@ -76,9 +76,20 @@ a {
 .highlight:hover {
   text-decoration: none; /* Remove default underline */
 }
+@media (max-width: 970px) {
 
-/* Responsive styling */
-@media (max-width: 768px) {
+  .hero__content {
+    max-width: 90%;
+    top: 10%; /* Adjust content placement for smaller screens */
+    padding-left: 0%; /* Ensure this is consistent */
+  }
+
+  .hero__content h4 {
+    font-size: 4rem; /* Smaller font size for mobile screens */
+  }
+
+}
+@media (max-width: 770px) {
   .hero {
     background-size: cover;
     background-position: top center; /* Adjust the background position */
@@ -86,8 +97,7 @@ a {
 
   .hero__content {
     top: 10%; /* Adjust content placement for smaller screens */
-    left: 5%; /* Slightly adjust left positioning */
-    padding-left: 10%; /* Ensure this is consistent */
+    padding-left: 0%; /* Ensure this is consistent */
   }
 
   .hero__content h4 {
@@ -107,15 +117,6 @@ a {
 
   .hero__content {
     top: 15%; /* Adjust the content position further down */
-    left: 5%; /* Maintain consistent padding on the left */
-    padding-left: 10%; /* Add some padding for a better look */
-  }
-
-  .hero__content h4 {
-    font-size: 2rem; /* Even smaller font size for mobile portrait */
-  }
-
-  .hero__content p {
-    font-size: 1rem; /* Smaller font size for mobile portrait */
+    padding-left: 0%; /* Ensure this is consistent */
   }
 }

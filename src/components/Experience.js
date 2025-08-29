@@ -3,7 +3,7 @@ import './Experience.css';
 import { TextFade } from './TextFade';
 
 function Experience() {
-  const [expandedIndex, setExpandedIndex] = useState(0); // Set initial state to 0 to open the first item
+  const [expandedIndex, setExpandedIndex] = useState(0); // Set default to 0 (Derrick Corporation)
 
   const experiences = [
     {

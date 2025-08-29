@@ -51,11 +51,28 @@
   overflow: visible;
 }
 
+
+/* WebKit (Safari, Chrome) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #82c791; /* Color of the scrollbar handle */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1c8532; /* Color of the scrollbar handle on hover */
+}
 .project-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1); /* Increased shadow size */
 }
 
@@ -124,12 +141,17 @@
   word-wrap: break-word; /* Ensure long words break within the container */
   overflow-wrap: break-word; /* Break long words that might overflow */
 }
-
+@media (max-width: 1200px) {
+  .project-card {
+    max-width: 100%;
+  }
+}
 /* Medium screens (Tablet) */
 @media (max-width: 1024px) {
   .project-card {
     flex-direction: column;
     text-align: center;
+    max-width: 100%;
   }
 
   .left-image, .right-image {
@@ -137,7 +159,7 @@
   }
 
   .project-image-container {
-    width: 250px;
+    max-width: 100%;
     margin: 10px auto;
   }
 

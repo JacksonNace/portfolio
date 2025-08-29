@@ -86,14 +86,15 @@
 }
 
 .experience-company {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .experience-jobTitle {
-  font-size: 0.9rem;
-  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  margin: 0;
   color: #555;
 }
 
@@ -140,7 +141,19 @@
   list-style-type: disc;
   font-size: 14px;
 }
+/* Mobile-friendly adjustments */
+@media (max-width: 900px) {
+  .section-title {
+    font-size: 2rem; /* Smaller title on mobile */
+    margin-bottom: 1.5rem;
+  }
 
+  .experience-card {
+    padding: 1rem; /* Ensure there's adequate padding */
+    width: 90%; /* Reduce card width on smaller screens */
+  }
+
+}
 /* Mobile-friendly adjustments */
 @media (max-width: 768px) {
   .section-title {

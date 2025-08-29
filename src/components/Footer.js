@@ -11,10 +11,10 @@ const Footer = () => {
       <div className="footer-right">
         <div className="footer-socials">
           <a href="https://github.com/JacksonNace" target="_blank" rel="noopener noreferrer">
-            Github &#8599;
+            Github <span className="emoji">&#8599;</span>
           </a>
           <a href="https://www.linkedin.com/in/jacksonnace/" target="_blank" rel="noopener noreferrer">
-            LinkedIn &#8599;
+            LinkedIn <span className="emoji">&#8599;</span>
           </a>
         </div>
       </div>
