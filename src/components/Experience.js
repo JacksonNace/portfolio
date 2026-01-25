@@ -3,7 +3,7 @@ import './Experience.css';
 import { TextFade } from './TextFade';
 
 function Experience() {
-  const [expandedIndex, setExpandedIndex] = useState(0); // Set default to 0 (Derrick Corporation)
+  const [expandedIndex, setExpandedIndex] = useState(0);
 
   const experiences = [
     {
@@ -17,23 +17,10 @@ function Experience() {
         {
           title: "Automating Processes & Workflows",
           list: [
-            "Designed and implemented 15+ automated workflows using a no-code platform, streamlining business operations for marketing, sales, and HR.",
-            "Automated key business processes, including purchase and inspection reminders, safety kit updates, and new employee onboarding, reducing manual effort and improving communication.",
-            "Developed a dynamic workflow to automate vehicle value updates from a bid-to-sold process, ensuring real-time data accuracy for sales teams.",
-          ],
-        },
-        {
-          title: "Infrastructure & Data Management",
-          list: [
-            "Configured and deployed a 40TB Network-Attached Storage (NAS) solution, utilizing a RAID 5 configuration to provide 60TB of usable storage for critical business data with fault tolerance.",
-            "Engineered the deployment of Immich using Docker on the NAS, establishing a robust, self-hosted photo and video management platform for internal team collaboration and data organization.",
-          ],
-        },
-        {
-          title: "Endpoint Management & Security",
-          list: [
-            "Leading the implementation of Jamf Pro for the entire organization, establishing a centralized solution for automated software deployments, update management, and endpoint security across 300+ devices.",
-            "Developed and implemented an automated gate entry and exit system using POST requests on an Apple Shortcut, improving facility access and security.",
+            "Architected 40+ cross-functional workflows using Power Automate Solutions, implementing centralized error handling and data validation to ensure 99% accuracy across $20,000 of inventory.",
+            "Deployed a 60TB Linux-based NAS in a RAID 5 array via Docker, managing containerized media backups and ensuring data redundancy for global organizational assets.",
+            "Engineered an automated document generation pipeline to replace a legacy SaaS, implemented logic to dynamically populate Word templates from Dataverse, execute PDF conversions, and manage temporary file cleanup.",
+            "Optimized notification systems by refactoring legacy logic into batch-processing flows, reducing organizational noise by 1,000+ emails monthly.",
           ],
         },
       ],
@@ -109,59 +96,40 @@ function Experience() {
             >
               <div className="header-container">
                 <div className="image-container">
-                  {experience.linkUrl ? (
-                    <a href={experience.linkUrl} target="_blank" rel="noopener noreferrer">
-                      <img
-                        className="experience-image"
-                        src={experience.imageUrl}
-                        alt={`${experience.company} logo`}
-                      />
-                    </a>
-                  ) : (
-                    <img
-                      className="experience-image"
-                      src={experience.imageUrl}
-                      alt={`${experience.company} logo`}
-                    />
-                  )}
+                  <a href={experience.linkUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                    <img className="experience-image" src={experience.imageUrl} alt={experience.company} />
+                  </a>
                 </div>
 
                 <div className="text-area">
                   <TextFade direction="up">
                     <h3 className="experience-company">
-                      {experience.linkUrl ? (
-                        <a href={experience.linkUrl} target="_blank" rel="noopener noreferrer">
-                          {experience.company}
-                        </a>
-                      ) : (
-                        experience.company
-                      )}
+                      <a href={experience.linkUrl} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                        {experience.company}
+                      </a>
                     </h3>
-                  </TextFade>
-                  <TextFade direction="up">
                     <h4 className="experience-jobTitle">{experience.jobTitle}</h4>
-                  </TextFade>
-                  <TextFade direction="up">
                     <p className="experience-date">{experience.date}</p>
                   </TextFade>
+                  {expandedIndex !== index && (
+                    <span className="experience-hint">Click to expand details</span>
+                  )}
                 </div>
 
                 <div className="icon-date-container">
                   <img
                     className={`experience-icon ${expandedIndex === index ? 'rotated' : ''}`}
                     src={experience.iconUrl}
-                    alt={`${experience.company} icon`}
+                    alt="icon"
                   />
                 </div>
               </div>
 
               {expandedIndex === index && (
-                <ul className="experience-bullets">
+                <div className="experience-bullets">
                   {experience.details.map((section, i) => (
                     <div key={i}>
-                      <li className="bullet-title">
-                        {section.title}
-                      </li>
+                      <p className="bullet-title">{section.title}</p>
                       <ul className="sub-bullets">
                         {section.list.map((bullet, j) => (
                           <li key={j}>{bullet}</li>
@@ -169,7 +137,7 @@ function Experience() {
                       </ul>
                     </div>
                   ))}
-                </ul>
+                </div>
               )}
             </div>
           ))}

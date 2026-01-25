@@ -11,40 +11,36 @@
   background: #444;
   border: 1px solid #000000;
   border-radius: 8px;
-  width: 100%; /* Use 100% for responsiveness */
-  max-width: 1200px; /* Ensures the card doesn’t stretch too wide */
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* Remove default underline and set up hover effect */
 .experience-company a {
-  position: relative;       /* needed for ::after positioning */
+  position: relative;
   color: rgb(204, 204, 204);
-  text-decoration: none;    /* remove default underline */
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
-/* Create the animated underline */
 .experience-company a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px;            /* space below text */
+  bottom: -2px;
   width: 100%;
-  height: 2px;             /* thickness of underline */
+  height: 2px;
   background-color: #ffffff;
-  transform: scaleX(0);    /* start hidden */
+  transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease-in-out;
 }
 
-/* Show underline on hover */
 .experience-company a:hover::after {
   transform: scaleX(1);
 }
 
-/* Optional: lighten text on hover */
 .experience-company a:hover {
   color: #ffffff;
 }
@@ -55,31 +51,27 @@
   text-align: center;
   font-weight: bold;
   color: white;
-
 }
 
 .experience-container {
   display: flex;
   flex-direction: column;
   gap: 0;
- background-color: #444;
+  background-color: #444;
 }
 
 .experience-box {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   border-bottom: 1px solid #838383;
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition for expand/collapse */
-  max-height: 80px; /* Initial height */
-  overflow: hidden;
+  transition: background-color 0.3s ease;
+  height: auto;
 }
 
 .experience-box.expanded {
-  max-height: 500px; /* Adjust as needed for expanded height */
+  background-color: rgba(255, 255, 255, 0.03);
 }
 
 .experience-box:last-child {
@@ -88,15 +80,40 @@
 
 .header-container {
   display: flex;
-  flex-direction: row; /* Keep items in a row on larger screens */
-  align-items: center; /* Center items vertically */
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
+  gap: 1rem;
 }
 
 .text-area {
   flex: 1;
-  color: rgb(204, 204, 204);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.experience-hint {
+  align-self: flex-start;
+  margin-top: 10px;
+  padding: 4px 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00d4ff;
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  border-radius: 20px;
+  background: rgba(0, 212, 255, 0.1);
+  pointer-events: none;
+  animation: hint-pulse 2s infinite ease-in-out;
+}
+
+@keyframes hint-pulse {
+  0% { opacity: 0.7; transform: scale(0.98); }
+  50% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0.7; transform: scale(0.98); }
 }
 
 .bullet-title {
@@ -105,15 +122,17 @@
   margin-bottom: 5px;
   list-style: none;
   font-size: 1.1em;
+  color: white;
 }
 
 .sub-bullets {
   list-style-type: disc;
   margin-left: 20px;
+  color: rgb(204, 204, 204);
 }
 
 .experience-company {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: white;
   margin: 0;
   font-weight: bold;
@@ -122,15 +141,14 @@
 .experience-jobTitle {
   font-size: 1rem;
   margin: 0;
-  color:rgb(255, 255, 255);
-;
+  color: white;
 }
 
 .icon-date-container {
   display: flex;
-  flex-direction: row; /* Align icon and date horizontally */
-  align-items: center;  /* Align icon and date vertically */
-  gap: 10px;  /* Space between icon and date */
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
 .experience-icon {
@@ -140,7 +158,7 @@
 }
 
 .experience-icon.rotated {
-  transform: rotate(90deg); /* Rotate icon 90 degrees */
+  transform: rotate(90deg);
 }
 
 .experience-date {
@@ -154,98 +172,37 @@
   flex-shrink: 0;
   width: 4rem;
   height: 4rem;
-  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .experience-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: contain;
+  padding: 4px;
 }
 
 .experience-bullets {
-  margin-top: 0.5rem;
-  padding-left: 30px;
-  list-style-type: disc;
+  margin-top: 1rem;
+  padding-left: 2rem;
+  list-style-type: none;
   font-size: 1rem;
-  color: rgb(204, 204, 204);
-    font-family: "Space Grotesk", sans-serif;
-
 }
-/* Mobile-friendly adjustments */
-@media (max-width: 900px) {
-  .section-title {
-    font-size: 2rem; /* Smaller title on mobile */
-    margin-bottom: 1.5rem;
-  }
 
-  .experience-card {
-    padding: 1rem; /* Ensure there's adequate padding */
-    width: 90%; /* Reduce card width on smaller screens */
-  }
-
-}
-/* Mobile-friendly adjustments */
 @media (max-width: 768px) {
   .section-title {
-    font-size: 2rem; /* Smaller title on mobile */
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
   }
-
-  .experience-card {
-    padding: 1rem; /* Ensure there's adequate padding */
-    width: 90%; /* Reduce card width on smaller screens */
-  }
-
   .header-container {
-    flex-direction: row; /* Keep content in a row (image left, text right, icon right) */
-    align-items: center; /* Keep items centered vertically */
+    gap: 0.5rem;
   }
-
   .image-container {
-    width: 3rem;
-    height: 3rem; /* Smaller image size on mobile */
-    margin-right: 1rem; /* Space between image and text */
-    margin-bottom: 0; /* No margin below image */
+    width: 3.5rem;
+    height: 3.5rem;
   }
-
-  .experience-company,
-  .experience-jobTitle {
-    font-size: 1rem; /* Adjust text size */
-  }
-
-  .experience-box {
-    padding: 1rem;
-    max-height: none; /* Allow content to expand freely */
-    overflow: visible; /* Make sure the full content is visible */
-  }
-
-  .experience-bullets {
-    padding-left: 20px;
-    font-size: 12px; /* Smaller font size for mobile */
-  }
-
-  .experience-icon {
-    width: 28px;
-    height: 28px; /* Smaller icons for mobile */
-  }
-
-  .experience-box.expanded {
-    max-height: none; /* Allow full expansion */
-  }
-}
-
-@media (max-width: 480px) {
   .experience-company {
-    font-size: 1rem; /* Ensure readable text on very small screens */
-  }
-
-  .experience-card {
-    padding: 0.5rem; /* Adjust padding for extra small screens */
-  }
-
-  .experience-bullets {
-    padding-left: 15px; /* Reduce padding on very small screens */
+    font-size: 1.1rem;
   }
 }

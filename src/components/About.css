@@ -1,223 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Space+Grotesk:wght@400;700&display=swap');
 
 .about-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background: #222;
-  font-family: poppins;
-  
-
+  font-family: 'Poppins', sans-serif;
+  padding: 60px 20px;
 }
 
 .aboutTitle {
-  font-family: poppins;
-  color: white;
+  color: #ffffff;
   font-size: 3rem;
-  font-weight: 580;
-  margin: 30px;
-  margin-top: 50px;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
 .about-me {
   display: flex;
-  flex-direction: row; /* Image on the left, text on the right */
-  align-items: center; /* Center vertically on large screens */
-  justify-content: flex-start; /* Ensure they are aligned to the left */
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
   width: 100%;
-  max-width: 1200px;
-    font-family: "Space Grotesk", sans-serif;
+  max-width: 1100px;
+  font-family: "Space Grotesk", sans-serif;
+}
 
+.about-image {
+  flex: 0 0 350px;
+}
+
+.profile-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid #444;
 }
 
 .about-text {
   flex: 1;
-  margin-left: 20px; /* Space between image and text */
-  text-align: left;
-}
-.about-image {
-  display: flex;
-  justify-content: center;
-  padding-right: 10%;
-  width: 100%;
-  max-width: 400px; /* Increase this value if you want a larger image */
+  color: rgb(204, 204, 204);
 }
 
-.profile-image {
-  border-radius: 5%;
-  width: 100%; /* This ensures the image scales to fit the container */
-  max-width: 400px; /* Control maximum size */
-  height: auto; /* Maintain aspect ratio */
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
-
-.about-text p{
-  font-size: 1.3rem;
-  color: rgb(168, 168, 168);
-  text-align: left;
-}
-
-.about-text h1{
-  font-size: 2rem;
-  font-weight: bolder;
+.cert-title {
   color: white;
-
-}
-.about-text h2 {
-  font-size: 1.4rem;
-  color: rgb(168, 168, 168);
-  font-weight: 500;
-}
-
-.certifications {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  text-align: left;
-  width: 100%;
-  max-width: 1000px;
-}
-.cert-title{
-  font-weight: bolder;
-  margin-bottom: 0;
-  text-align: left;
-
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .cert-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
-  gap: 20px;
-  width: 100%;
-  background: #222;
+  gap: 15px;
 }
 
 .cert-box {
-  width: 90px;
-  text-align: center;
-  padding: 5px;
-  transition: transform 0.3s, width 0.3s;
+  width: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
 .cert-box:hover {
-  transform: scale(1.1);
-  width: 100px;
-}
-
-.cert-box h3 {
-  font-size: 0.7rem;
-  font-weight: normal;
-    color: rgb(168, 168, 168);
+  transform: translateY(-5px);
 }
 
 .cert-box img {
-  max-width: 100%;
-  border-radius: 10%;
+  width: 100%;
+  height: 100px;
   object-fit: contain;
+  background: transparent;
+  border-radius: 8px;
+  padding: 5px;
+  margin-bottom: 8px;
 }
 
-/* Media Queries */
-
-@media (max-width: 1200px) {
-  .about-me {
-      max-width: 1400px;
-  }
-  .profile-image {
-      max-width: 500px;
-      margin-left: 100px;
-  }
-  .cert-container {
-      justify-content: left;
-  }
+.cert-box h3 {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #ccc;
+  text-align: center;
+  line-height: 1.2;
 }
 
-
-@media (max-width: 970px){
+@media (max-width: 970px) {
   .about-me {
-      flex-direction: column;
-      align-items: center;
-      text-align: left;
-  }
-  .about-text {
-      margin-top: 20px;
-      max-width: 90%;
-      text-align: left;
+    flex-direction: column;
+    align-items: center;
   }
   .about-image {
-      justify-content: center;
-      padding-right: 0px;
-      margin-left: 0px;
-  }
-  .profile-image {
-      max-width: 500px;
-      padding-right: 0px;
-      margin-left: 0px;
-
-  }
-  .certifications {
-      align-items: left;
-      text-align: left;
-  }
-  .cert-container {
-      justify-content: left;
-  }
-}
-
-@media (max-width: 600px) {
-  .about-me {
-      flex-direction: column;
-      align-items: center;
-      text-align: left;
+    flex: 0 0 auto;
+    max-width: 400px;
   }
   .about-text {
-      margin: 0 20px;
-  }
-  .about-text p{
-text-align: center;
-  }
-
-  .about-text h2{
     text-align: center;
-      }
-
-  .about-image {
-      justify-content: center;
-      margin-bottom: 20px;
-  }
-  .profile-image {
-      max-width: 400px;
-  }
-  .certifications {
-      align-items: center;
-      text-align: center;
-  }
-  .cert-title,
-  .about-text h1 {
-      text-align: center;
   }
   .cert-container {
-      justify-content: center;
-  }
-  .cert-box {
-      width: 100px;
+    justify-content: center;
   }
 }
 
-@media (max-width: 400px) {
-  .profile-image {
-      max-width: 290px;
-      margin-left: 5px;
-      margin-right: 5px;
-  }
-  .about-text p{
-    font-size: 1rem;
-  }
+@media (max-width: 500px) {
   .cert-box {
-      width: 80px;
+    width: 90px;
   }
-  .cert-box h3 {
-      font-size: 0.7rem;
+  .cert-box img {
+    height: 80px;
   }
 }

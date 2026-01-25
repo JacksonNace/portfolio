@@ -5,13 +5,19 @@ import { LettersPullUp } from './Text-Pull-Up';
 function About() {
   const certs = [
     {
-      imgUrl: "images/certs/security.jpg",
+      imgUrl: "images/certs/azuredeveloper.png",
+      title: "Microsoft Azure Developer Associate",
+      date: "January 25, 2026",
+      expire: "January 25, 2027",
+    },
+    {
+      imgUrl: "images/certs/security.png",
       title: "CompTIA Security+",
       date: "August 26, 2025",
       expire: "August 26, 2028",
     },
     {
-      imgUrl: "images/certs/azure.png",
+      imgUrl: "images/certs/azurefund.png",
       title: "Microsoft Azure Fundamentals",
       date: "January 23rd, 2024",
       expire: "NEVER",
@@ -23,7 +29,7 @@ function About() {
       <LettersPullUp text="About me" className="aboutTitle"/>
       <div className="about-me">
         <div className="about-image">
-          <img src="images/ichigopfp.jpg" alt="profile picture" className="profile-image" />
+          <img src="images/myphotoselfie.jpg" alt="profile picture" className="profile-image" />
         </div>
         <div className="about-text">
           <p>

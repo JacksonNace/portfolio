@@ -5,27 +5,24 @@ import { TextFade } from './TextFade';
 function Skills() {
   const skills = {
     "Languages": [
-      { name: "Python", image: "images/languages/python.png" },
-      { name: "SQL", image: "images/languages/SQL.png" },
-      { name: "R", image: "images/languages/R.png" },
-      { name: "C++", image: "images/languages/C++.png" },
-      { name: "JavaScript", image: "images/languages/Javascript.png" },
-      { name: "Lua", image: "images/languages/Lua.png" },
+      { name: "Python", image: "images/technologies/python.png" },
+      { name: "PostgreSQL", image: "images/technologies/postgresql.png" },
+      { name: "C++", image: "images/technologies/C++.png" },
+      { name: "JavaScript", image: "images/technologies/Javascript.png" },
     ],
     "Cloud/DevOps": [
       { name: "Azure", image: "images/technologies/Azure.png" },
       { name: "AWS", image: "images/technologies/AWS.webp" },
-      { name: "Git", image: "images/technologies/Git.png" },
-    ],
-    "System Administration": [
+      { name: "Kubernetes", image: "images/technologies/kubernetes.png" },
+      { name: "Prometheus", image: "images/technologies/prometheus.png" },
+      { name: "Grafana", image: "images/technologies/grafana_icon.svg" },
+      { name: "ArgoCD", image: "images/technologies/argocd.png" },
+      { name: "Github Actions", image: "images/technologies/githubactions.svg" },
       { name: "Linux", image: "images/technologies/Linux.png" },
-      { name: "Windows", image: "images/technologies/Windows.png" },
-      { name: "MacOS", image: "images/technologies/Postman.png" },
-      { name: "Jamf Pro", image: "images/technologies/Postman.png" },
     ],
   };
 
-  const categoryOrder = ["Languages", "Cloud/DevOps", "System Administration"];
+  const categoryOrder = ["Languages", "Cloud/DevOps"];
 
   return (
     <div className="skills-container">
