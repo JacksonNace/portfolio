@@ -24,7 +24,7 @@ const Hero = () => {
           </span>
         ))}
       </span>
-      !
+  
     </h4>
     <p>
       Studying computer science with a minor in math @{" "}

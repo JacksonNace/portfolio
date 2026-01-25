@@ -35,7 +35,7 @@
 .navbar__links {
     display: inline-block; /* ensures positioning relative to text box */
   line-height: 1;  
-  font-family: 'Poppins', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
   color: #e7e7e7;
   text-decoration: none;
