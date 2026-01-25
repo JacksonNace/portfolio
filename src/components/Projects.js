@@ -7,12 +7,16 @@ function Projects() {
       id: 1,
       title: "desktodunks.site",
       imageUrl: "images/projects/Portfolio.png",
-      technologies: ["React", "JavaScript", "Azure Function", "CosmosDB"],
+      technologies: ["Terraform", "Azure Functions", "CosmosDB", "Python", "Github Actions", "React"],
       description: [
-        "Yep, the website you're seeing right now!",
+        "I recently launched a live serverless analytics platform that’s currently supporting over 20 recurring users with real-time game management and a custom state-driven admin dashboard.",
+        "On the infrastructure side, I used Terraform to architect a reproducible Azure environment, handling everything from Cosmos DB to serverless functions through version-controlled HCL.",
+        "I built the backend using a Python-based Azure Functions API, where I implemented custom header-based auth and managed secrets via environment variables to keep NoSQL operations secure.",
+        "To make the data work for basketball analytics, I designed a schema optimized for performance, using strategic partition keys to handle game logging and leaderboard generation on the fly.",
+        "I also tied everything together with a GitHub Actions CI/CD pipeline, ensuring that what I build locally is exactly what hits production every single time.",
       ],
       social: [
-        { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        { type: "github", link: "https://github.com/JacksonNace/desktodunks.site" },
         // { type: "youtube", link: "https://youtube.com" }
       ],
     },
