@@ -3,50 +3,47 @@ import "./Projects.css";
 
 function Projects() {
   const projects = [
-    // {
-    //   id: 7,
-    //   title: "Cloud Security Hardening",
-    //   imageUrl: "images/projects/Fortress.jpg",
-    //   technologies: ["AWS"],
-    //   description: [
-    //     "yeppers",
-    //     " cloud resume challenge.",
-    //   ],
-    //   social: [
-    //     { type: "github", link: "https://github.com/JacksonNace/LoadBalancer" },
-    //     // { type: "youtube", link: "https://youtube.com" }
-    //   ],
-    // },
-    // {
-    //   id: 8,
-    //   title: "Intrusion Detection Machine Learning Model",
-    //   imageUrl: "images/projects/ML.png",
-    //   technologies: ["C++"],
-    //   description: [
-    //     "yeppers",
-    //     " cloud resume challenge.",
-    //   ],
-    //   social: [
-    //     { type: "github", link: "https://github.com/JacksonNace/LoadBalancer" },
-    //     // { type: "youtube", link: "https://youtube.com" }
-    //   ],
-    // },
-    // {
-    //   id: 9,
-    //   title: "DIY Secure Network Load Balancer",
-    //   imageUrl: "images/projects/Network.png",
-    //   technologies: ["C++"],
-    //   description: [
-    //     "yeppers",
-    //     " cloud resume challenge.",
-    //   ],
-    //   social: [
-    //     { type: "github", link: "https://github.com/JacksonNace/LoadBalancer" },
-    //     // { type: "youtube", link: "https://youtube.com" }
-    //   ],
-    // },
     {
-      id: 10,
+      id: 1,
+      title: "desktodunks.site",
+      imageUrl: "images/projects/Portfolio.png",
+      technologies: ["React", "JavaScript", "Azure Function", "CosmosDB"],
+      description: [
+        "Yep, the website you're seeing right now!",
+      ],
+      social: [
+        { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        // { type: "youtube", link: "https://youtube.com" }
+      ],
+    },
+    {
+      id: 6,
+      title: "Homelab",
+      imageUrl: "images/projects/Portfolio.png",
+      technologies: ["React", "JavaScript", "Azure Function", "CosmosDB"],
+      description: [
+        "Yep, the website you're seeing right now!",
+      ],
+      social: [
+        { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        // { type: "youtube", link: "https://youtube.com" }
+      ],
+    },
+    {
+      id: 11,
+      title: "TheGlowUp.dev",
+      imageUrl: "images/projects/Portfolio.png",
+      technologies: ["React", "JavaScript", "Azure Function", "CosmosDB"],
+      description: [
+        "Yep, the website you're seeing right now!",
+      ],
+      social: [
+        { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        // { type: "youtube", link: "https://youtube.com" }
+      ],
+    },
+    {
+      id: 16,
       title: "Portfolio Website",
       imageUrl: "images/projects/Portfolio.png",
       technologies: ["React", "JavaScript", "Azure Function", "CosmosDB"],
@@ -59,22 +56,8 @@ function Projects() {
       ],
     },
     {
-      id: 13,
-      title: "Mockey Interview",
-      imageUrl: "images/projects/MonkeyInterview.png",
-      technologies: ["PostgreSQL", "NodeJS", "NextJS", "Express","TailwindCSS", "Claude", "Postman" ],
-      description: [
-        "Built a mock interview platform for HackTX 2024.",
-        "Engineered a mock interview game with Next.js and PostgreSQL, securing player data with password hashing and JWT - Hosted using Neon.",
-        "Integrated Claude AI as a virtual interviewer, offering real-time prompts and feedback on data structure tasks.",
-      ],
-      social: [
-        { type: "github", link: "https://github.com/JacksonNace/MockeyInterview-HackTX" },
-      ],
-    },
-    {
-      id: 14,
-      title: "MarketMentor",
+      id: 21,
+      title: "MarketMentor - Rice Hackathon",
       imageUrl: "images/projects/MarketMentor.png",
       technologies: ["React", "CSS", "React", "Google Gemini", "Postman", "Auth0"],
       description: [
@@ -88,7 +71,21 @@ function Projects() {
       ],
     },
     {
-      id: 15,
+      id: 26,
+      title: "Mockey Interview - UT Austin Hackathon",
+      imageUrl: "images/projects/MonkeyInterview.png",
+      technologies: ["PostgreSQL", "NodeJS", "NextJS", "Express","TailwindCSS", "Claude", "Postman" ],
+      description: [
+        "Built a mock interview platform for HackTX 2024.",
+        "Engineered a mock interview game with Next.js and PostgreSQL, securing player data with password hashing and JWT - Hosted using Neon.",
+        "Integrated Claude AI as a virtual interviewer, offering real-time prompts and feedback on data structure tasks.",
+      ],
+      social: [
+        { type: "github", link: "https://github.com/JacksonNace/MockeyInterview-HackTX" },
+      ],
+    },
+    {
+      id: 31,
       title: "Bleach RPG",
       imageUrl: "images/projects/BleachRPG.png",
       technologies: ["C++"],
