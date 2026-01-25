@@ -24,9 +24,13 @@ function Projects() {
       id: 6,
       title: "Homelab",
       imageUrl: "images/projects/Portfolio.png",
-      technologies: ["React", "JavaScript", "Azure Static Web Apps", "Github Actions"],
+      technologies: ["Kubernetes", "ArgoCD/GitOps", "Ansible", "AWS", "Prometheus", "Grafana", "Proxmox", "Ubuntu Linux", "Python"],
       description: [
-        "Yep, the website you're seeing right now!",
+        "I maintain a high-availability *space station* in my house, as my parents like to call it.",
+        "I moved away from manual VM setups on Proxmox to an automated K3s cluster + Longhorn running on Proxmox, with a 12TB NAS and a two computer Proxmox cluster.",
+        "Ansible was used for tons of OS configuration, and when I swapped from 8+ VMs to a control node and 2 worker nodes, it helped configure Kubernetes as well.",
+        "ArgoCD is used with a repo (linked below) so I can use Git to specify what's running.",
+        "Previously ran automated AWS S3 + Docker backups with Python for a super important Minecraft operation between my friends. Very serious...."
       ],
       social: [
         { type: "github", link: "https://github.com/JacksonNace/portfolio" },
