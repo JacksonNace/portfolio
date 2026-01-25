@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.projects-container {
+  display: flex;
+  font-family: poppins;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  background: #222;
+  align-items: center;
+}
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #444;
+  width: 1200px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Expands the card by 5% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect on hover */
+}
+
+.left-image {
+  flex-direction: row;
+}
+
+.right-image {
+  flex-direction: row-reverse;
+}
+
+.project-image-container {
+  width: 400px;
+  height: 100%;
+  margin: 0px;
+  overflow: visible;
+}
+
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1); /* Increased shadow size */
+}
+
+.project-content {
+  flex: 1;
+  padding: 10px 30px;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+.project-title {
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.technologies-and-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap; /* Allow wrapping of content if needed */
+}
+
+.project-technologies {
+  display: flex;
+  gap: 5px;
+    font-family: "Space Grotesk", sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap; /* Allow wrapping of technologies if needed */
+  color: rgb(168, 168, 168)
+}
+
+.project-technologies li {
+  display: inline-block;
+  border: 2px solid rgb(168, 168, 168);
+  background-color: #444;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-bottom: 5px; /* Added margin for spacing */
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease; /* Smooth transition */
+  flex-wrap: wrap; /* Allow wrapping of social icons */
+}
+
+.social-icon img {
+  max-width: 30px;
+  max-height: 30px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease; /* Smooth transition */
+}
+
+.social-icon img:hover {
+  background-color: rgb(168, 168, 168); /* Green background */
+  border-radius: 5px; /* Curved edges */
+}
+
+.project-description {
+    font-family: "Space Grotesk", sans-serif;
+  list-style: disc;
+  padding-left: 20px;
+  color: rgb(168, 168, 168);
+  margin-bottom: 10px;
+  text-align: left; /* Align description text to the left */
+  word-wrap: break-word; /* Ensure long words break within the container */
+  overflow-wrap: break-word; /* Break long words that might overflow */
+}
+@media (max-width: 1200px) {
+  .project-card {
+    max-width: 100%;
+  }
+}
+/* Medium screens (Tablet) */
+@media (max-width: 1024px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .left-image, .right-image {
+    flex-direction: column;
+  }
+
+  .project-image-container {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  .project-title {
+    font-size: 1.3rem; /* Slightly smaller for medium screens */
+  }
+
+  .project-technologies li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small screens (Mobile Landscape) */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    max-width: 100%; /* Ensure the card doesn’t exceed screen width */
+    margin: 0 10px; /* Add some margin on left and right */
+  }
+
+  .left-image, .right-image {
+    flex-direction: column;
+  }
+
+  .project-image-container {
+    width: 300px; /* Make the image larger */
+    margin: 10px auto;
+  }
+
+  .project-content {
+    padding: 10px;
+  }
+
+  .project-title {
+    font-size: 1.2rem; /* Smaller title for smaller screens */
+  }
+
+  .project-description {
+    font-size: 0.9rem; /* Reduce font size */
+    text-align: left; /* Align text left */
+  }
+
+  .project-technologies li {
+    font-size: 0.8rem;
+  }
+
+  .social-links {
+    justify-content: center; /* Center the social links */
+  }
+}
+
+/* Extra Small Screens (Mobile Portrait) */
+@media (max-width: 480px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    max-width: 100%; /* Ensure the card doesn’t exceed screen width */
+    margin: 0 10px; /* Add some margin on left and right */
+  }
+
+  .left-image, .right-image {
+    flex-direction: column;
+  }
+
+  .project-image-container {
+    width: 350px; /* Increase image size */
+    margin: 10px auto;
+  }
+
+  .project-content {
+    padding: 5px;
+  }
+
+  .project-title {
+    font-size: 1.6rem; /* Even smaller title for very small screens */
+  }
+
+  .project-technologies li {
+    font-size: 0.7rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+    text-align: left; /* Align text left */
+    word-wrap: break-word; /* Ensure long words break within the container */
+    overflow-wrap: break-word; /* Break long words that might overflow */
+  }
+}

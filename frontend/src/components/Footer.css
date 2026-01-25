@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.emoji {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.footer {
+  display: flex;
+  font-family: poppins;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  padding: 40px;
+  font-size: 16px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+  flex: 1; /* Take up available space */
+  margin-bottom: 20px; /* Add spacing below on smaller screens */
+}
+
+.footer-message {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.footer-copyright {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: flex-end; /* Align social icons to the right on larger screens */
+  margin-right: 20px;
+  flex: 1; /* Take up available space */
+  margin-bottom: 20px; /* Add spacing below on smaller screens */
+  justify-content: flex-start; /* Override for small screens */
+}
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end; /* Ensure icons are aligned to the right */
+  margin-left: auto; /* Push icons to the right */
+}
+
+.footer-socials a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none; /* No underline by default */
+  font-size: 1.25rem;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out; /* Smooth transition */
+}
+
+.footer-socials a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #ffffff; /* optional, keep same color */
+}
+
+/* Rotate the arrow on hover */
+.footer-socials a .emoji {
+  display: inline-block;       /* Needed for transform */
+  transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.footer-socials a:hover .emoji {
+  transform: rotate(45deg);
+}
+
+/* Medium screens (Tablet) */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .footer-left, .footer-right {
+    flex: 1 1 100%; /* Allow each section to take full width */
+    justify-content: center; /* Center the content */
+    text-align: center; /* Center text */
+  }
+
+  .footer-message {
+    font-size: 24px; /* Slightly smaller font for medium screens */
+  }
+
+  .footer-copyright {
+    font-size: 14px; /* Smaller font for copyright */
+  }
+
+  .footer-socials {
+    gap: 15px; /* Reduce gap between icons */
+    justify-content: center; /* Center the social icons on tablets */
+  }
+
+  .footer-socials a {
+    font-size: 16px; /* Smaller icons font */
+  }
+}
