@@ -5,7 +5,7 @@
   display: flex;
   font-family: poppins;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: #222;
   align-items: center;
 }
 
@@ -18,12 +18,14 @@
 .skill-category h3 {
   margin-bottom: 10px;
   font-size: 1.8rem;
+  color: white;
 }
 .skill-item {
   border: 1px solid #cfcfcf;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 10px;
+  background-color: #555;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
 }
 
@@ -41,6 +43,22 @@
   transition: transform 0.5s ease;
 }
 
+.skill-label {
+  position: absolute;
+    font-family: "Space Grotesk", sans-serif;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* 50% opacity background */
+  color: white;
+  padding: 5px;
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .skills-box img {
   max-width: 80px;
@@ -81,19 +99,3 @@
   position: relative;
 }
 
-.skill-label {
-  position: absolute;
-  bottom: 0; 
-  left: 0; 
-  /* sometimes this makes me want tailwind */
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.2); 
-  color: white;
-  padding: 5px;
-  font-size: 0.8rem;
-  text-align: center;
-  border-radius: 0 0 10px 10px;
-  white-space: nowrap; 
-  overflow: hidden;
-  text-overflow: ellipsis;
-}

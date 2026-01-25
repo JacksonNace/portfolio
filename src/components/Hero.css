@@ -1,122 +1,222 @@
-@import url('https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vidaloka&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Background stars (static, twinkling) */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-/* Hero.css */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* cover the whole hero */
+  z-index: 0;
+  pointer-events: none;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+
+  /* Spread stars across the hero using box-shadow */
+  box-shadow:
+    50vw 10vh white,
+    20vw 20vh #7bf5ff,
+    80vw 15vh #f5d07f,
+    10vw 50vh white,
+    90vw 70vh #7bf5ff,
+    70vw 80vh #f5d07f,
+    40vw 90vh white,
+    60vw 20vh #7bf5ff,
+    30vw 40vh #f5d07f,
+    85vw 60vh white,
+    15vw 75vh #7bf5ff,
+    55vw 35vh #f5d07f,
+    25vw 10vh white,
+    75vw 50vh #7bf5ff;
+
+  background: white;
+  animation: twinkleStars 2s infinite alternate;
+}
+
+/* Twinkle animation only changes opacity */
+@keyframes twinkleStars {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+
+
 .hero {
   position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  padding: 0 5%;
+  background: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
-/* Content section */
-.hero__content {
+/* Style the link underline on hover */
+.hero__content a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.hero__content a::after {
+  content: "";
   position: absolute;
-  top: 20%;
-  left: 15%;
+  left: 0;
+  bottom: -2px; /* small gap below text */
+  width: 100%;
+  height: 2px; /* thickness of underline */
+  background-color: #ffffff; /* underline color */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero__content a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Hero content */
+.hero__content {
+  position: relative;
+  z-index: 2;
   color: white;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 3); /* Make text more readable */
-  padding-left: 5%; /* Add padding to the left */
 }
 
-.hero__content h4 {
+/* Name styling */
+.name {
   font-family: Poppins;
-  font-size: 5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 7rem; /* bigger */
+  font-weight: 800;
+  margin: 0;
 }
 
+.stagger {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.stagger span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* Staggered hover effect for entire name */
+.stagger:hover span {
+  transform: translateY(-15px);
+}
+
+/* Paragraph styling */
 .hero__content p {
-  font-size: 2rem;
-  font-family: Poppins;
-  font-weight: 600;
-  color: #ffffff; /* Green text color */
-  text-shadow: 
-    1px 1px 0 rgb(122, 122, 122), 
-    -1px -1px 0 rgb(122, 122, 122), 
-    1px -1px 0 rgb(122, 122, 122), 
-    -1px 1px 0rgb(122, 122, 122); /* White outline effect */
+  font-size: 1.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  opacity: 0.85;
+  margin: 0.5rem 0;
 }
 
+/* Links */
 a {
-  text-decoration: none; /* Remove underline from the link */
+  text-decoration: none;
+  color: inherit;
 }
 
-.highlight {
-  color: #e04343;
-  text-shadow: 
-    1px 1px 0 rgb(88, 17, 17), 
-    -1px -1px 0 rgb(88, 17, 17), 
-    1px -1px 0 rgb(88, 17, 17), 
-    -1px 1px 0 rgb(88, 17, 17); /* White outline effect */
-  position: relative; /* For the pseudo-element to position properly */
-  transition: color 0.3s ease; /* Smooth color transition */
-}
-
-.highlight::after {
-  content: ''; /* Empty content for the underline effect */
+/* Bottom fade */
+.hero-bottom-fade {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 4px; /* Thickness of the underline */
-  background-color: #e04343; /* Color of the underline */
-  transition: width 0.3s ease, left 0.3s ease; /* Animate width and left */
+  width: 100%;
+  height: 15%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #222);
+  pointer-events: none;
+  z-index: 3;
 }
 
-.highlight:hover::after {
-  width: 100%; /* Make the underline full width on hover */
-  left: 0; /* Position it at the left side */
+/* Floating auras */
+.aura {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  animation: floatAura linear infinite;
 }
 
-.highlight:hover {
-  text-decoration: none; /* Remove default underline */
+.aura:nth-child(1) {
+  top: 10%;
+  left: 15%;
+  animation-duration: 25s;
 }
-@media (max-width: 970px) {
 
-  .hero__content {
-    max-width: 90%;
-    top: 10%; /* Adjust content placement for smaller screens */
-    padding-left: 0%; /* Ensure this is consistent */
-  }
-
-  .hero__content h4 {
-    font-size: 4rem; /* Smaller font size for mobile screens */
-  }
-
+.aura:nth-child(2) {
+  top: 30%;
+  right: 20%;
+  width: 300px;
+  height: 300px;
+  animation-duration: 35s;
 }
-@media (max-width: 770px) {
-  .hero {
-    background-size: cover;
-    background-position: top center; /* Adjust the background position */
-  }
 
-  .hero__content {
-    top: 10%; /* Adjust content placement for smaller screens */
-    padding-left: 0%; /* Ensure this is consistent */
-  }
+.aura:nth-child(3) {
+  bottom: 15%;
+  left: 20%;
+  width: 250px;
+  height: 250px;
+  animation-duration: 30s;
+}
 
-  .hero__content h4 {
-    font-size: 2.5rem; /* Smaller font size for mobile screens */
+@keyframes floatAura {
+  0% {
+    transform: translate(0,0) scale(1);
+    opacity: 0.5;
   }
+  50% {
+    transform: translate(50px, -50px) scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(0,0) scale(1);
+    opacity: 0.5;
+  }
+}
 
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .name {
+    font-size: 5rem;
+  }
   .hero__content p {
-    font-size: 1.1rem; /* Adjust paragraph font size for mobile */
+    font-size: 1.3rem;
   }
 }
 
-@media (max-width: 480px) {
-  .hero {
-    background-size: cover;
-    background-position: top center; /* Ensure the image stays centered */
+@media (max-width: 1024px) {
+  .name {
+    font-size: 4rem;
   }
+  .hero__content p {
+    font-size: 1.1rem;
+  }
+}
 
-  .hero__content {
-    top: 15%; /* Adjust the content position further down */
-    padding-left: 0%; /* Ensure this is consistent */
+@media (max-width: 768px) {
+  .name {
+    font-size: 3rem;
+  }
+  .hero__content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .name {
+    font-size: 2.5rem;
+  }
+  .hero__content p {
+    font-size: 0.9rem;
   }
 }

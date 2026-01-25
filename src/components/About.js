@@ -26,13 +26,11 @@ function About() {
           <img src="images/ichigopfp.jpg" alt="profile picture" className="profile-image" />
         </div>
         <div className="about-text">
-          <h1>Who am I?</h1>
           <p>
-            Hello! I'm Jackson. I thrive on a good challenge.<br></br>
+            Hello! I'm Jackson. I thrive on a good challenge.
             I am always looking for new opportunities to learn and grow as both a student and a professional in every tech career field.
             I come with experience in Linux, cloud, server management, and have a solid understanding on data handling.
           </p>
-          <h2>📌  Houston, TX </h2>
           <div className='certifications'>
             <h1 className='cert-title'>Certifications</h1>
             <div className='cert-container'>

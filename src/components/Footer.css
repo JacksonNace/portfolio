@@ -7,7 +7,7 @@
   font-family: poppins;
   justify-content: space-between;
   align-items: center;
-  background-color: #222;
+  background-color: #000000;
   color: white;
   padding: 40px;
   font-size: 16px;
@@ -52,20 +52,24 @@
 .footer-socials a {
   color: #ffffff;
   font-weight: bold;
-  text-decoration: none;
-  justify-content: flex-start; /* Aligns left */
+  text-decoration: none; /* No underline by default */
   font-size: 1.25rem;
-  transition: color 0.3s ease-in-out; /* Smooth color change */
-}
-
-
-.footer-socials a:hover {
-  text-decoration: underline;
-  color: #1c8532;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out; /* Smooth transition */
 }
 
 .footer-socials a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
+  color: #ffffff; /* optional, keep same color */
+}
+
+/* Rotate the arrow on hover */
+.footer-socials a .emoji {
+  display: inline-block;       /* Needed for transform */
+  transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.footer-socials a:hover .emoji {
+  transform: rotate(45deg);
 }
 
 /* Medium screens (Tablet) */

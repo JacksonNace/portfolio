@@ -3,7 +3,7 @@
 
 /* Navbar Styling */
 .navbar {
-  background: #fff;
+  background-color: #222;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
   transform: translateX(-50%);
   z-index: 999;
   border-radius: 40px;
-  border: 1px solid #ccc;
+  border: 1px solid #a3a3a3; /* white border */
   box-shadow: none;
   padding: 0 20px;
   width: auto;
@@ -33,9 +33,11 @@
 
 /* Navbar links styling */
 .navbar__links {
+    display: inline-block; /* ensures positioning relative to text box */
+  line-height: 1;  
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  color: #1c8532;
+  color: #e7e7e7;
   text-decoration: none;
   padding: 10px;
   position: relative;
@@ -53,42 +55,31 @@
   align-items: center;
   width: 100%;
 }
-/* Hover effect on links */
-.navbar__links {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  color: #1c8532;
-  text-decoration: none;
-  padding-bottom: 0px;
-  position: relative;
-  transition: 
-    color 0.3s ease, 
-    font-weight 0.3s ease, 
-    padding 0.3s ease;
-}
-/* Hover effect on links */
+
 .navbar__links::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0px;
+  bottom: 2px; /* move it slightly below */
   width: 100%;
-  height: 2px;
-  background-color: #1c8532;
+  height: 1px;
+  background-color: #ffffff;
   transform: scaleX(0);
+  transform-origin: left;
   transition: transform 0.3s ease-in-out;
-}
-
-.navbar__links:hover {
-  color: #1c8532;
-  font-weight: 600;
-  padding-left: 25px;
-  padding-right: 25px;
 }
 
 .navbar__links:hover::after {
   transform: scaleX(1);
 }
+
+.navbar__links:hover {
+  color: #e7e7e7;
+  font-weight: 600;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 
 
 /* Hamburger menu (mobile) */
@@ -100,13 +91,14 @@
   height: 21px;  /* Adjust height */
   cursor: pointer;
   position: absolute;
+  color: #e7e7e7;
   top: 15px;  /* Position it a little lower than the top */
 }
 
 .navbar__hamburger div {
   width: 100%;
   height: 4px;
-  background-color: #1c8532;  /* Ensure visibility */
+  background-color: #e0e0e0; /* same as text color */
   transition: all 0.3s ease;
 }
 
@@ -124,7 +116,7 @@
     right: 20px;  /* Align the menu to the right */
     align-items: flex-end;  /* Align menu items to the right */
     padding: 20px;  /* Add some padding inside the menu */
-    border: 1px solid #ccc; /* Grey outline */
+  border: 1px solid #a3a3a3; /* white border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Optional shadow */
     border-radius: 8px;  /* Optional rounded corners */
 
@@ -136,9 +128,8 @@
     margin-right: 20px;
     right: 0;  /* Align navbar to the right */
     transform: none; /* Remove translateX for mobile */
-    border: 0px;
+  border: 1px solid #a3a3a3; /* white border */
     justify-content: flex-start;  /* Align content to the left */
-    border: 1px solid #ccc; /* Grey outline */
     
 
   }
@@ -160,14 +151,15 @@
 }
 /* Ensure no background appears behind the hamburger menu */
 .navbar__hamburger.active {
-  background-color: white; /* Set background to white */
+  background-color: #222; /* Set background to white */
+
 }
 
 /* Hamburger bars */
 .navbar__hamburger div {
   width: 100%;
   height: 4px;
-  background-color: #1c8532;
+  color: #222;
   transition: transform 0.3s ease, opacity 0.3s ease;
   border-radius: 50px; /* Makes the edges rounded */
 
@@ -198,7 +190,7 @@
   top: 60px; /* Moved lower to avoid covering the "X" */
   right: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #a3a3a3; /* white border */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   transition: transform 0.3s ease-out, opacity 0.3s ease;
@@ -211,7 +203,7 @@
   display: flex;
   opacity: 1;
   transform: translateY(0);
-  background-color: white;
+    background-color: #222;
   
 }
 .navbar__item {

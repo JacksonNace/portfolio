@@ -4,12 +4,12 @@
   font-family: Poppins, sans-serif;
   margin: 0 auto;
   padding: 1rem;
-  background: #ffffff;
+  background: #222;
 }
 
 .experience-card {
-  background: #fff;
-  border: 1px solid #ccc;
+  background: #444;
+  border: 1px solid #000000;
   border-radius: 8px;
   width: 100%; /* Use 100% for responsiveness */
   max-width: 1200px; /* Ensures the card doesn’t stretch too wide */
@@ -17,13 +17,36 @@
   padding: 1rem;
 }
 
+/* Remove default underline and set up hover effect */
 .experience-company a {
-  color: black;
-  text-decoration: none; /* Optional: removes underline */
+  position: relative;       /* needed for ::after positioning */
+  color: rgb(204, 204, 204);
+  text-decoration: none;    /* remove default underline */
+  transition: color 0.3s ease;
 }
 
+/* Create the animated underline */
+.experience-company a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;            /* space below text */
+  width: 100%;
+  height: 2px;             /* thickness of underline */
+  background-color: #ffffff;
+  transform: scaleX(0);    /* start hidden */
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Show underline on hover */
+.experience-company a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Optional: lighten text on hover */
 .experience-company a:hover {
-  color: #1c8532; /* Optional: darker color on hover for better interaction */
+  color: #ffffff;
 }
 
 .section-title {
@@ -31,12 +54,15 @@
   margin-bottom: 2rem;
   text-align: center;
   font-weight: bold;
+  color: white;
+
 }
 
 .experience-container {
   display: flex;
   flex-direction: column;
   gap: 0;
+ background-color: #444;
 }
 
 .experience-box {
@@ -45,7 +71,7 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 1rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #838383;
   cursor: pointer;
   transition: all 0.3s ease; /* Smooth transition for expand/collapse */
   max-height: 80px; /* Initial height */
@@ -70,6 +96,7 @@
 
 .text-area {
   flex: 1;
+  color: rgb(204, 204, 204);
 }
 
 .bullet-title {
@@ -87,15 +114,16 @@
 
 .experience-company {
   font-size: 1.2rem;
+  color: white;
   margin: 0;
   font-weight: bold;
-  text-decoration: underline;
 }
 
 .experience-jobTitle {
   font-size: 1rem;
   margin: 0;
-  color: #555;
+  color:rgb(255, 255, 255);
+;
 }
 
 .icon-date-container {
@@ -116,8 +144,9 @@
 }
 
 .experience-date {
-  font-size: 0.85rem;
-  color: #666;
+  font-size: 0.9rem;
+  color: rgb(204, 204, 204);
+  font-family: "Space Grotesk", sans-serif;
   margin: 0;
 }
 
@@ -139,7 +168,10 @@
   margin-top: 0.5rem;
   padding-left: 30px;
   list-style-type: disc;
-  font-size: 14px;
+  font-size: 1rem;
+  color: rgb(204, 204, 204);
+    font-family: "Space Grotesk", sans-serif;
+
 }
 /* Mobile-friendly adjustments */
 @media (max-width: 900px) {

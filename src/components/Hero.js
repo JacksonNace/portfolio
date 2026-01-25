@@ -1,30 +1,42 @@
 import React from 'react';
 import './Hero.css'; 
 import { TextFade } from './TextFade'; 
+import HeroShapes from "./HeroShapes"
 
 const Hero = () => {
   return (
-    <section 
-      id="home"  // Added home ID here
-      className="hero" 
-      style={{ backgroundImage: `url('/images/herobg.png')` }}  // Reference the image directly from public folder
-    >
-      <TextFade direction="up" className="hero__content">
-        <h4>Hey, I’m Jackson!</h4>
-        <p>
-          Studying computer science with <br/>a minor in math @ <a href="https://uh.edu/" target="_blank" rel="noopener noreferrer">
-            <span className="highlight">University of Houston</span>
-          </a>
-        </p>
-        <p>IT Intern @ <a href="https://derrick.com/" target="_blank" rel="noopener noreferrer">
-            <span className="highlight">Derrick Corporation</span>
-          </a></p>
-      </TextFade>
-      <div className="visitor-counter">
-        {/* <h2>Visitor Counter</h2> */}
-        {/* <p>Number of visitors: {visitorCount}</p> */}
-      </div>
-    </section>
+<section id="home" className="hero">
+  {/* Animated shapes in the background */}
+  <HeroShapes />
+
+  {/* Floating auras */}
+  <div className="aura"></div>
+  <div className="aura"></div>
+  <div className="aura"></div>
+
+  {/* Hero text */}
+  <div className="hero__content">
+    <h4 className="name">
+      <span className="stagger">
+        {"Jackson Nace".split("").map((char, i) => (
+          <span key={i} style={{ transitionDelay: `${i * 60}ms` }}>
+            {char === " " ? "\u00A0" : char}
+          </span>
+        ))}
+      </span>
+      !
+    </h4>
+    <p>
+      Studying computer science with a minor in math @{" "}
+      <a href="https://uh.edu/" target="_blank" rel="noopener noreferrer">
+        University of Houston
+      </a>
+    </p>
+  </div>
+
+  <div className="hero-bottom-fade"></div>
+</section>
+
   );
 };
 
