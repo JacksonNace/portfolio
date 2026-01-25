@@ -50,9 +50,12 @@ function Projects() {
       id: 16,
       title: "Portfolio Website",
       imageUrl: "images/projects/Portfolio.png",
-      technologies: ["React", "JavaScript", "Azure Function", "CosmosDB"],
+      technologies: ["Terraform", "React", "Github Actions", "Azure Static Web Apps" ],
       description: [
         "Yep, the website you're seeing right now!",
+        "Hosted on a Terraform-provisioned Azure Static Web app.",
+        "CI/CD pipeline is Github Actions within my .github folder.",
+        "Upgraded from Create-React-App to Vite",
       ],
       social: [
         { type: "github", link: "https://github.com/JacksonNace/portfolio" },
