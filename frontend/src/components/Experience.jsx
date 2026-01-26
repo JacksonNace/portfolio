@@ -12,7 +12,7 @@ function Experience() {
       date: "March 2025 - Present",
       imageUrl: "images/experience/derrick.png",
       linkUrl: "https://derrick.com/",
-      iconUrl: "images/icons/Gas.png",
+      iconUrl: "images/icons/gas.png",
       details: [
         {
           title: "Automating Processes & Workflows",
