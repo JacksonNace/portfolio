@@ -37,19 +37,19 @@ function Projects() {
         // { type: "youtube", link: "https://youtube.com" }
       ],
     },
-    {
-      id: 11,
-      title: "TheGlowUp.dev",
-      imageUrl: "images/projects/Portfolio.png",
-      technologies: ["Terraform", "Python", "React", "JavaScript", "Azure App Service", "CosmosDB"],
-      description: [
-        "Yep, the website you're seeing right now!",
-      ],
-      social: [
-        { type: "github", link: "https://github.com/JacksonNace/portfolio" },
-        // { type: "youtube", link: "https://youtube.com" }
-      ],
-    },
+    // {
+    //   id: 11,
+    //   title: "TheGlowUp.dev",
+    //   imageUrl: "images/projects/Portfolio.png",
+    //   technologies: ["Terraform", "Python", "React", "JavaScript", "Azure App Service", "CosmosDB"],
+    //   description: [
+    //     "Yep, the website you're seeing right now!",
+    //   ],
+    //   social: [
+    //     { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+    //     // { type: "youtube", link: "https://youtube.com" }
+    //   ],
+    // },
     {
       id: 16,
       title: "Portfolio Website",
