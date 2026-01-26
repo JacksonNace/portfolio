@@ -71,7 +71,7 @@ const Navbar = () => {
           </li>
           <li className="navbar__item">
   <a 
-    href="images/JacksonNaceResume.pdf" 
+    href="images/experience/ResumeJacksonNace.pdf" 
     className="navbar__links" 
     target="_blank" 
     rel="noopener noreferrer"
