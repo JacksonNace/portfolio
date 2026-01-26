@@ -6,7 +6,7 @@ function Projects() {
     {
       id: 1,
       title: "desktodunks.site",
-      imageUrl: "images/projects/Portfolio.png",
+      imageUrl: "images/projects/desktodunks.png",
       technologies: ["Terraform", "Azure Functions", "CosmosDB", "Python", "Github Actions", "React"],
       description: [
         "I recently launched a live serverless analytics platform that’s currently supporting over 20 recurring users with real-time game management and a custom state-driven admin dashboard.",
