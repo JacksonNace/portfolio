@@ -9,7 +9,7 @@ function Experience() {
     {
       company: "Derrick Corporation",
       jobTitle: "IT Intern",
-      date: "March 2025 - Present",
+      date: "March 2025 - January 2026",
       imageUrl: "images/experience/derrick.png",
       linkUrl: "https://derrick.com/",
       iconUrl: "images/icons/gas.png",
