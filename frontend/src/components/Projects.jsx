@@ -37,19 +37,23 @@ function Projects() {
         // { type: "youtube", link: "https://youtube.com" }
       ],
     },
-    // {
-    //   id: 11,
-    //   title: "TheGlowUp.dev",
-    //   imageUrl: "images/projects/Portfolio.png",
-    //   technologies: ["Terraform", "Python", "React", "JavaScript", "Azure App Service", "CosmosDB"],
-    //   description: [
-    //     "Yep, the website you're seeing right now!",
-    //   ],
-    //   social: [
-    //     { type: "github", link: "https://github.com/JacksonNace/portfolio" },
-    //     // { type: "youtube", link: "https://youtube.com" }
-    //   ],
-    // },
+    {
+      id: 11,
+      title: "TheGlowUp.dev",
+      imageUrl: "images/projects/theglowupdev.jpg",
+      technologies: ["Terraform", "Golang", "React", "JavaScript", "PostgreSQL", "Github Actions", "Azure (Key Vault, App Service, Managed Identity)"],
+      description: [
+        "I built this specifically with PostgreSQL and Golang as I was very interested in the two technologies. The backend is written in Go for high performance API handling.",
+        "I moved from constantly calling the backend + database to implementing a middleware to handle my JWT role based access control. This ensures my admin dashboard is restricted to specific roles.",
+        "I implemented cookie policies like HttpOnly, Secure, SameSite for authentication.",
+        "I used Terraform to provision 6 azure services, effectively using IAC.",
+        "I configured Github Actions with OIDC for deployments, meaning my CICD pipeline uses managed identities vs storing secrets in Github."
+      ],
+      social: [
+        // { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        // { type: "youtube", link: "https://youtube.com" }
+      ],
+    },
     {
       id: 16,
       title: "Portfolio Website",
