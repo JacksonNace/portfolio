@@ -3,20 +3,21 @@ import "./Projects.css";
 
 function Projects() {
   const projects = [
-    {
+
+      {
       id: 1,
-      title: "desktodunks.site",
-      imageUrl: "images/projects/desktodunks.png",
-      technologies: ["Terraform", "Azure Functions", "CosmosDB", "Python", "Github Actions", "React"],
+      title: "TheGlowUp.dev",
+      imageUrl: "images/projects/theglowupdev.jpg",
+      technologies: ["Terraform", "Golang", "React", "JavaScript", "PostgreSQL", "Github Actions", "Azure (Key Vault, App Service, Managed Identity)"],
       description: [
-        "I recently launched a live serverless analytics platform that’s currently supporting over 20 recurring users with real-time game management and a custom state-driven admin dashboard.",
-        "On the infrastructure side, I used Terraform to architect a reproducible Azure environment, handling everything from Cosmos DB to serverless functions through version-controlled HCL.",
-        "I built the backend using a Python-based Azure Functions API, where I implemented custom header-based auth and managed secrets via environment variables to keep NoSQL operations secure.",
-        "To make the data work for basketball analytics, I designed a schema optimized for performance, using strategic partition keys to handle game logging and leaderboard generation on the fly.",
-        "I also tied everything together with a GitHub Actions CI/CD pipeline, ensuring that what I build locally is exactly what hits production every single time.",
+        "I built this specifically with PostgreSQL and Golang as I was very interested in the two technologies. The backend is written in Go for high performance API handling.",
+        "I moved from constantly calling the backend + database to implementing a middleware to handle my JWT role based access control. This ensures my admin dashboard is restricted to specific roles.",
+        "I implemented cookie policies like HttpOnly, Secure, SameSite for authentication.",
+        "I used Terraform to provision 6 azure services, effectively using IAC.",
+        "I configured Github Actions with OIDC for deployments, meaning my CICD pipeline uses managed identities vs storing secrets in Github."
       ],
       social: [
-        { type: "github", link: "https://github.com/JacksonNace/desktodunks.site" },
+        // { type: "github", link: "https://github.com/JacksonNace/portfolio" },
         // { type: "youtube", link: "https://youtube.com" }
       ],
     },
@@ -39,18 +40,18 @@ function Projects() {
     },
     {
       id: 11,
-      title: "TheGlowUp.dev",
-      imageUrl: "images/projects/theglowupdev.jpg",
-      technologies: ["Terraform", "Golang", "React", "JavaScript", "PostgreSQL", "Github Actions", "Azure (Key Vault, App Service, Managed Identity)"],
+      title: "desktodunks.site",
+      imageUrl: "images/projects/desktodunks.png",
+      technologies: ["Terraform", "Azure Functions", "CosmosDB", "Python", "Github Actions", "React"],
       description: [
-        "I built this specifically with PostgreSQL and Golang as I was very interested in the two technologies. The backend is written in Go for high performance API handling.",
-        "I moved from constantly calling the backend + database to implementing a middleware to handle my JWT role based access control. This ensures my admin dashboard is restricted to specific roles.",
-        "I implemented cookie policies like HttpOnly, Secure, SameSite for authentication.",
-        "I used Terraform to provision 6 azure services, effectively using IAC.",
-        "I configured Github Actions with OIDC for deployments, meaning my CICD pipeline uses managed identities vs storing secrets in Github."
+        "I recently launched a live serverless analytics platform that’s currently supporting over 20 recurring users with real-time game management and a custom state-driven admin dashboard.",
+        "On the infrastructure side, I used Terraform to architect a reproducible Azure environment, handling everything from Cosmos DB to serverless functions through version-controlled HCL.",
+        "I built the backend using a Python-based Azure Functions API, where I implemented custom header-based auth and managed secrets via environment variables to keep NoSQL operations secure.",
+        "To make the data work for basketball analytics, I designed a schema optimized for performance, using strategic partition keys to handle game logging and leaderboard generation on the fly.",
+        "I also tied everything together with a GitHub Actions CI/CD pipeline, ensuring that what I build locally is exactly what hits production every single time.",
       ],
       social: [
-        // { type: "github", link: "https://github.com/JacksonNace/portfolio" },
+        { type: "github", link: "https://github.com/JacksonNace/desktodunks.site" },
         // { type: "youtube", link: "https://youtube.com" }
       ],
     },

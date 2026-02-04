@@ -4,12 +4,12 @@ import { LettersPullUp } from './Text-Pull-Up';
 
 function About() {
   const certs = [
-    {
-      imgUrl: "images/certs/azuredeveloper.png",
-      title: "Microsoft Azure Developer Associate",
-      date: "January 25, 2026",
-      expire: "January 25, 2027",
-    },
+    // {
+    //   imgUrl: "images/certs/azuredeveloper.png",
+    //   title: "Microsoft Azure Developer Associate",
+    //   date: "January 25, 2026",
+    //   expire: "January 25, 2027",
+    // },
     {
       imgUrl: "images/certs/security.png",
       title: "CompTIA Security+",
