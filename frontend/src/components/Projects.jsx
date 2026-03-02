@@ -100,20 +100,6 @@ function Projects() {
         { type: "github", link: "https://github.com/JacksonNace/MockeyInterview-HackTX" },
       ],
     },
-    {
-      id: 31,
-      title: "Bleach RPG",
-      imageUrl: "images/projects/BleachRPG.png",
-      technologies: ["C++"],
-      description: [
-        "Created a turn-based battle system inspired by Bleach, with mechanics using inheritance and polymorphism.",
-        "Developed a save/load system with file handling to ensure seamless continuation of gameplay sessions",
-      ],
-      social: [
-        { type: "github", link: "https://github.com/JacksonNace/BleachRPG" },
-        { type: "youtube", link: "https://www.youtube.com/watch?v=ex_-Qy1oqus&t=2s" },
-      ],
-    },
   ];
 
   return (
