@@ -65,13 +65,11 @@
   flex-direction: column;
   padding: 1.5rem 1rem;
   border-bottom: 1px solid #838383;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
   height: auto;
 }
 
 .experience-box.expanded {
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: transparent;
 }
 
 .experience-box:last-child {
@@ -92,28 +90,6 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
-}
-
-.experience-hint {
-  align-self: flex-start;
-  margin-top: 10px;
-  padding: 4px 12px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #00d4ff;
-  border: 1px solid rgba(0, 212, 255, 0.4);
-  border-radius: 20px;
-  background: rgba(0, 212, 255, 0.1);
-  pointer-events: none;
-  animation: hint-pulse 2s infinite ease-in-out;
-}
-
-@keyframes hint-pulse {
-  0% { opacity: 0.7; transform: scale(0.98); }
-  50% { opacity: 1; transform: scale(1); }
-  100% { opacity: 0.7; transform: scale(0.98); }
 }
 
 .bullet-title {
@@ -154,11 +130,6 @@
 .experience-icon {
   width: 32px;
   height: 32px;
-  transition: transform 0.3s ease;
-}
-
-.experience-icon.rotated {
-  transform: rotate(90deg);
 }
 
 .experience-date {
