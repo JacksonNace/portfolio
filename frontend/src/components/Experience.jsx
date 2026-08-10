@@ -6,22 +6,24 @@ function Experience() {
   const [expandedIndex, setExpandedIndex] = useState(0);
 
   const experiences = [
-    // {
-    //   company: "Halliburton",
-    //   jobTitle: "Cloud Intern",
-    //   date: "May 2026 - August 2026",
-    //   imageUrl: "images/experience/derrick.png",
-    //   linkUrl: "https://www.halliburton.com",
-    //   iconUrl: "images/icons/gas.png",
-    //   details: [
-    //     {
-    //       title: "Speeding up CI/CD Pipelines",
-    //       list: [
-    //         "Incoming Summer 2026!",
-    //       ],
-    //     },
-    //   ],
-    // },
+    {
+      company: "Halliburton",
+      jobTitle: "Cloud Intern",
+      date: "May 2026 - August 2026",
+      imageUrl: "images/experience/halliburton.svg",
+      linkUrl: "https://www.halliburton.com/",
+      iconUrl: "images/icons/gas.png",
+      details: [
+        {
+          title: "Cloud Infrastructure & Full-Stack Automation",
+          list: [
+            "Automated Azure infrastructure deployment using Terraform (App Service, Functions, Key Vault, VNet), securing CI/CD via GitHub Actions OIDC and Managed Identities to eliminate stored credentials.",
+            "Built an automated ingestion pipeline using a GitHub App and Azure Function webhooks to sync markdown documentation across private repos and index 70+ internal skills into Azure AI Search.",
+            "Developed 75% of the web UI (HTML/CSS/JS), integrated an Azure OpenAI assistant widget, and built client-side search debouncing to reduce backend API calls by 90%.",
+          ],
+        },
+      ],
+    },
     {
       company: "Derrick Corporation",
       jobTitle: "IT Intern",

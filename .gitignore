@@ -9,6 +9,9 @@
 
 # production
 /build
+/dist
+dist
+frontend/dist
 
 # misc
 .DS_Store
