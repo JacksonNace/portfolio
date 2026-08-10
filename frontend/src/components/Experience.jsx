@@ -6,6 +6,22 @@ function Experience() {
   const [expandedIndex, setExpandedIndex] = useState(0);
 
   const experiences = [
+    // {
+    //   company: "Halliburton",
+    //   jobTitle: "Cloud Intern",
+    //   date: "May 2026 - August 2026",
+    //   imageUrl: "images/experience/derrick.png",
+    //   linkUrl: "https://www.halliburton.com",
+    //   iconUrl: "images/icons/gas.png",
+    //   details: [
+    //     {
+    //       title: "Speeding up CI/CD Pipelines",
+    //       list: [
+    //         "Incoming Summer 2026!",
+    //       ],
+    //     },
+    //   ],
+    // },
     {
       company: "Derrick Corporation",
       jobTitle: "IT Intern",
